@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tv_hide_noty_system"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingVertical="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnActionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/bgActionLayout"
+            android:layout_width="@dimen/size_bg_action_more_shade"
+            android:layout_height="@dimen/size_bg_action_more_shade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/size_ic_action_more_shade"
+            android:layout_height="@dimen/size_ic_action_more_shade"
+            android:src="@drawable/ic_action_layout"
+            android:tint="@color/color_gray_waning"
+            app:layout_constraintBottom_toBottomOf="@id/bgActionLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bgActionLayout"
+            tools:ignore="UseAppTint" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/menu_layout"
+            app:colorDefaultText="@color/colorTextDayOfMonth"
+            app:layout_constraintTop_toBottomOf="@id/bgActionLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnActionColors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/bgActionColor"
+            android:layout_width="@dimen/size_bg_action_more_shade"
+            android:layout_height="@dimen/size_bg_action_more_shade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/size_ic_action_more_shade"
+            android:layout_height="@dimen/size_ic_action_more_shade"
+            android:layout_marginHorizontal="11dp"
+            android:src="@drawable/ic_action_color"
+            android:tint="@color/color_gray_waning"
+            app:layout_constraintBottom_toBottomOf="@id/bgActionColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bgActionColor"
+            tools:ignore="UseAppTint" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/menu_color"
+            app:colorDefaultText="@color/colorTextDayOfMonth"
+            app:layout_constraintTop_toBottomOf="@id/bgActionColor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnActionEdge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/bgActionEdge"
+            android:layout_width="@dimen/size_bg_action_more_shade"
+            android:layout_height="@dimen/size_bg_action_more_shade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/size_ic_action_more_shade"
+            android:layout_height="@dimen/size_ic_action_more_shade"
+            android:layout_marginHorizontal="11dp"
+            android:src="@drawable/ic_action_edge_triggers"
+            android:tint="@color/color_gray_waning"
+            app:layout_constraintBottom_toBottomOf="@id/bgActionEdge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bgActionEdge"
+            tools:ignore="UseAppTint" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/menu_edge_trigger"
+            app:colorDefaultText="@color/colorTextDayOfMonth"
+            app:layout_constraintTop_toBottomOf="@id/bgActionEdge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnActionMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bgActionMore"
+            android:layout_width="@dimen/size_bg_action_more_shade"
+            android:layout_height="@dimen/size_bg_action_more_shade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/size_ic_action_more_shade"
+            android:layout_height="@dimen/size_ic_action_more_shade"
+            android:layout_marginHorizontal="11dp"
+            android:src="@drawable/baseline_more_horiz_24"
+            android:tint="@color/color_gray_waning"
+            app:layout_constraintBottom_toBottomOf="@id/bgActionMore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bgActionMore"
+            tools:ignore="UseAppTint" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="@string/setting"
+            app:colorDefaultText="@color/colorTextDayOfMonth"
+            app:layout_constraintTop_toBottomOf="@id/bgActionMore" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

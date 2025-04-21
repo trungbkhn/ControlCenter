@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#4376FA"/>
+            <corners android:radius="10dp"/>  <!-- Bo góc -->
+            <padding android:left="4dp" android:top="4dp" android:right="4dp" android:bottom="4dp"/>
+            <shadowColor android:color="#80000000" /> <!-- Màu shadow (màu đen 50%) -->
+        </shape>
+    </item>
+</layer-list>

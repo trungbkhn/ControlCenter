@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="please_intall">Пожалуйста, установите</string>
+    <string name="share_on">Поделись</string>
+    <string name="invite_by_sms">Приглашение по смс</string>
+    <string name="invite_facebook_friends">Пригласите друзей из facebook</string>
+    <string name="invite_by_email">Приглашение по электронной почте</string>
+    <string name="no_email">нет электронной почты</string>
+    <string name="content">Насколько вам нравится наше приложение?</string>
+    <string name="title_dialog">ОЦЕНИ ЭТО ПРИЛОЖЕНИЕ</string>
+    <string name="later">Позже</string>
+    <string name="rateNow">Оценить сейчас</string>
+    <string name="please_rate_5_stars">Пожалуйста, оцените 5 звезд</string>
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">SkyCenter Control</string>
+
+    <!---->
+    <string name="acc_email_feedback" translatable="false">default@recipient.com</string>
+    <string name="link_app_share" translatable="false">https://play.google.com/store/apps/details?id=</string>
+    <string name="link_policy" translatable="false">https://www.google.com.vn</string>
+    <string name="package_led_keyboard" translatable="false">com.facebook.katana</string>
+
+    <!--admob-->
+    <string name="app_id_admob" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <array name="admob_ads_open_id">
+        <item>ca-app-pub-3940256099942544/9257395921</item>
+    </array>
+    <array name="admob_interstitial_id">
+        <item>ca-app-pub-3940256099942544/1033173712</item>
+    </array>
+    <array name="admob_native_id_preview_my_theme">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_choose_style">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_user_manual_control">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_language">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_favorite_theme">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_request_permission">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_onboard_1">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_onboard_2">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_onboard_full">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_store_wallpaper">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_setting_touch">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_home">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <array name="admob_native_id_customize_theme">
+        <item>ca-app-pub-3940256099942544/2247696110</item>
+    </array>
+    <string name="admob_banner_id_home_collapsible" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
+    <string name="admob_banner_id_customize_theme_collapsible" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
+
+
+    <!--applovin ads test-->
+    <string name="applovin_sdk_key" translatable="false">8tzHmVzO2RTSGw_Zn_JbB25mkbZpSCg6peEkO9bxE8mCP1rT_QQNT6d79XmTM9qmq74HgLLsfoMvs_xlu1KQ16</string>
+    <array name="applovin_ads_open_id">
+        <item>413984c574766b2e</item>
+    </array>
+    <array name="applovin_interstitial_id">
+        <item>c9638fd386ac26f8</item>
+    </array>
+    <array name="applovin_id_native_preview_my_theme">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_store_wallpaper">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_setting_touch">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_choose_style">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_user_manual_control">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_language">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_favorite_theme">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_request_permission">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_onboard_1">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_onboard_2">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_onboard_full">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_home">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <array name="applovin_id_native_customize_theme">
+        <item>89d6ae25c73248df</item>
+    </array>
+    <string name="applovin_banner_id_home" translatable="false">c1db37c89406332c</string>
+    <string name="applovin_banner_id_customize_theme" translatable="false">c1db37c89406332c</string>
+
+
+    <!--applovin ads production-->
+<!--    <string name="applovin_sdk_key" translatable="false">8tzHmVzO2RTSGw_Zn_JbB25mkbZpSCg6peEkO9bxE8mCP1rT_QQNT6d79XmTM9qmq74HgLLsfoMvs_xlu1KQ16</string>-->
+<!--    <array name="applovin_ads_open_id">-->
+<!--        <item>a92b81e8da1a9eb1</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_interstitial_id">-->
+<!--        <item>da0c6e0c1ed5d383</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_preview_my_theme">-->
+<!--        <item>31744b3454f37869</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_store_wallpaper">-->
+<!--        <item>ba75723ec9c758e5</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_setting_touch">-->
+<!--        <item>b5d35dcaea5b9211</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_choose_style">-->
+<!--        <item>20a29e029ee02497</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_user_manual_control">-->
+<!--        <item>b5d35dcaea5b9211</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_language">-->
+<!--        <item>a89418b1bf511bc3</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_favorite_theme">-->
+<!--        <item>4627ba35e52dea5a</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_request_permission">-->
+<!--        <item>9542a11b6caeb11c</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_onboard_1">-->
+<!--        <item>2dd4905c42069047</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_onboard_2">-->
+<!--        <item>fd07aba8fa29c5e3</item>-->
+<!--    </array>-->
+<!--    <array name="applovin_id_native_onboard_full">-->
+<!--        <item>4627ba35e52dea5a</item>-->
+<!--    </array>-->
+<!--    <string name="applovin_banner_id_home" translatable="false">6ce1961f1f4980d1</string>-->
+<!--    <string name="applovin_banner_id_customize_theme" translatable="false">2f60010e555d2629</string>-->
+
+
+    <string name="ad_attribution" translatable="false">Ad</string>
+
+    <string name="ironsrc_app_key" translatable="false">15ce45de5</string>
+</resources>

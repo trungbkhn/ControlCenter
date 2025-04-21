@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_F2F2F6"
+        android:layoutDirection="ltr"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_also_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="@string/allowed_people"
+            android:textDirection="ltr"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_ripple_back_settings"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textDirection="ltr"
+            android:textColor="@color/color_FF3B30"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_also_people"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_also_people" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

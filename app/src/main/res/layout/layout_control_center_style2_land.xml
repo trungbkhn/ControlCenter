@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group2.MusicExpandView
+        android:id="@+id/musicExpand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/containerControl"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/containerControl"
+        app:layout_constraintStart_toStartOf="@+id/containerControl"
+        app:layout_constraintTop_toTopOf="@+id/containerControl" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.SettingExpandView
+        android:id="@+id/settingExpand"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="60dp"
+        android:background="@drawable/background_boder_radius_gray_expand"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/containerControl"
+        app:layout_constraintDimensionRatio="h,1:0.5"
+        app:layout_constraintEnd_toEndOf="@+id/containerControl"
+        app:layout_constraintStart_toStartOf="@+id/containerControl"
+        app:layout_constraintTop_toTopOf="@+id/containerControl" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group3.ScreenTimeoutSettingView
+        android:id="@+id/screenTimeoutLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_screen_timeout_setting_view_land"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/containerControl"
+        app:layout_constraintEnd_toEndOf="@+id/containerControl"
+        app:layout_constraintStart_toStartOf="@+id/containerControl"
+        app:layout_constraintTop_toTopOf="@+id/containerControl" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group3.FocusView
+        android:id="@+id/view_focus"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/containerControl"
+        app:layout_constraintEnd_toEndOf="@+id/containerControl"
+        app:layout_constraintStart_toStartOf="@+id/containerControl"
+        app:layout_constraintTop_toTopOf="@+id/containerControl" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group4.BrightnessExpandView
+        android:id="@+id/brightnessExpand"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/containerControl"
+        app:layout_constraintEnd_toEndOf="@+id/containerControl"
+        app:layout_constraintStart_toStartOf="@+id/containerControl"
+        app:layout_constraintTop_toTopOf="@+id/containerControl" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group4.VolumeExpandView
+        android:id="@+id/volumeExpand"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/containerControl"
+        app:layout_constraintEnd_toEndOf="@+id/containerControl"
+        app:layout_constraintStart_toStartOf="@+id/containerControl"
+        app:layout_constraintTop_toTopOf="@+id/containerControl" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerControl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:clipChildren="false"
+        android:focusable="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdCenterBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCenterCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.26" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCenterSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.13" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.27" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.73" />
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.status.StatusControlView
+            android:id="@+id/statusView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:clickable="false"
+            android:focusable="false"
+            app:layout_constraintEnd_toStartOf="@id/guideline8"
+            app:layout_constraintStart_toEndOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:id="@+id/scrollViewLayoutControl1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingBottom="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/guideline7"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/statusView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.SettingView
+                    android:id="@+id/settingView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/background_boder_radius_gray"
+                    android:clickable="true"
+                    android:clipChildren="false"
+                    android:focusable="true"
+                    app:layout_constraintDimensionRatio="h,1.8:1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group2.MusicView
+                    android:id="@+id/musicView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/background_boder_radius_gray"
+                    android:clickable="true"
+                    android:clipChildren="false"
+                    android:focusable="true"
+                    app:layout_constraintDimensionRatio="h,3:1"
+                    app:layout_constraintTop_toBottomOf="@+id/settingView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="@+id/guideline8"
+            app:layout_constraintTop_toBottomOf="@id/statusView">
+
+            <ScrollView
+                android:id="@+id/scrollViewLayoutControl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group3.RotateView
+                        android:id="@+id/rotateView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_boder_radius_gray"
+                        android:clickable="true"
+                        android:clipChildren="false"
+                        android:focusable="true"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/glCenterControl25"
+                        app:layout_constraintTop_toBottomOf="@id/seekbarVolume" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group3.SilentView
+                        android:id="@+id/silientView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/background_boder_radius_gray"
+                        android:clickable="true"
+                        android:clipChildren="false"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/rotateView"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintLeft_toRightOf="@+id/glCenterControl25"
+                        app:layout_constraintRight_toRightOf="@+id/glCenterControlMore"
+                        app:layout_constraintTop_toTopOf="@+id/rotateView" />
+
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group3.ScreenTimeoutView
+                        android:id="@+id/screenTimeoutAction"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/background_boder_radius_gray"
+                        android:clickable="true"
+                        android:clipChildren="false"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="@id/rotateView"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControlMore"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/rotateView" />
+
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group4.SettingBrightnessView
+                        android:id="@+id/seekbarBrightness"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="8dp"
+                        app:isHorizontal="true"
+                        app:layout_constraintDimensionRatio="h,5.5:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group4.SettingVolumeView
+                        android:id="@+id/seekbarVolume"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="16dp"
+                        app:isHorizontal="true"
+                        app:layout_constraintDimensionRatio="h,5.5:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/seekbarBrightness" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glCenterControlMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glCenterControl25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/glCenterControl75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.75" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintDimensionRatio="h,1:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/glCenterControl25"
+                        app:layout_constraintTop_toBottomOf="@id/rotateView" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_1"
+                        app:layout_constraintLeft_toRightOf="@id/glCenterControl25"
+                        app:layout_constraintRight_toRightOf="@id/glCenterControlMore"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_1" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_1"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControlMore"
+                        app:layout_constraintRight_toRightOf="@+id/glCenterControl75"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_1" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_1"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControl75"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_1" />
+
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="16dp"
+                        android:inflatedId="@+id/control_5"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/glCenterControl25"
+                        app:layout_constraintTop_toBottomOf="@id/view_control_1" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_6"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:inflatedId="@+id/control_6"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_5"
+                        app:layout_constraintLeft_toRightOf="@id/glCenterControl25"
+                        app:layout_constraintRight_toRightOf="@id/glCenterControlMore"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_5" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_7"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:inflatedId="@+id/control_7"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_5"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControlMore"
+                        app:layout_constraintRight_toRightOf="@+id/glCenterControl75"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_5" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_8"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:inflatedId="@+id/control_8"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_5"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControl75"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_5" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="16dp"
+                        android:inflatedId="@+id/view_control_9"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/glCenterControl25"
+                        app:layout_constraintTop_toBottomOf="@id/view_control_5" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_10"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:inflatedId="@+id/control_10"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_9"
+                        app:layout_constraintLeft_toRightOf="@id/glCenterControl25"
+                        app:layout_constraintRight_toRightOf="@id/glCenterControlMore"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_9" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_11"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:inflatedId="@+id/view_control_11"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_9"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControlMore"
+                        app:layout_constraintRight_toRightOf="@+id/glCenterControl75"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_9" />
+
+                    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.RelativeLayoutAnimation
+                        android:id="@+id/view_control_12"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:inflatedId="@+id/view_control_12"
+                        app:layout_constraintBottom_toBottomOf="@id/view_control_9"
+                        app:layout_constraintDimensionRatio="w,1:1"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControl75"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/view_control_9" />
+
+                    <View
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="@dimen/size_8dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/glCenterControl25"
+                        app:layout_constraintTop_toBottomOf="@id/view_control_9" />
+
+                    <View
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="@dimen/size_8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/glCenterControl25"
+                        app:layout_constraintRight_toLeftOf="@+id/glCenterControlMore"
+                        app:layout_constraintTop_toBottomOf="@id/view_control_9" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imgViewTouch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_slide_close_noty"
+        app:layout_constraintBottom_toBottomOf="@+id/actionTouchCloseControl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/actionTouchCloseControl"
+        app:layout_constraintVertical_bias="1" />
+
+    <ImageView
+        android:id="@+id/actionTouchCloseControl"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

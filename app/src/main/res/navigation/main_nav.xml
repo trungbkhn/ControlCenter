@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav.xml"
+    app:startDestination="@id/homeMainFragment">
+
+
+    <fragment
+        android:id="@+id/homeMainFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.homemain.HomeMainFragment"
+        android:label="Setting Control Fragment"/>
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.customcontrol.gallery.GalleryFragment"
+        android:label="Customize Control Fragment" />
+
+    <fragment
+        android:id="@+id/colorFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.customcontrol.color.ColorFragment"
+        android:label="Color Fragment">
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/settingTouchFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.edgetriggers.SettingTouchFragment"
+        android:label="Setting Touch Fragment" />
+
+    <fragment
+        android:id="@+id/layoutFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.layout.LayoutFragment"
+        android:label="LayoutFragment">
+        <action
+            android:id="@+id/action_layoutFragment_to_customizeTextFragment"
+            app:destination="@id/customizeTextFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customizeTextFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.customizetext.CustomizeTextFragment"
+        android:label="CustomizeTextFragment" />
+    <fragment
+        android:id="@+id/focusFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.FocusFragment"
+        android:label="FocusFragment">
+        <action
+            android:id="@+id/action_focusFragment_to_focusDetailFragment"
+            app:destination="@id/focusDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_focusFragment_to_createFocusFragment"
+            app:destination="@id/createFocusFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/focusDetailFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.focusdetail.FocusDetailFragment"
+        android:label="FocusDetailFragment">
+        <action
+            android:id="@+id/action_focusDetailFragment_to_allowPeopleFragment"
+            app:destination="@id/allowPeopleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_focusDetailFragment_to_allowAppFragment"
+            app:destination="@id/allowAppFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_focusDetailFragment_to_newAutomationFragment"
+            app:destination="@id/newAutomationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_focusDetailFragment_to_editFocusFragment"
+            app:destination="@id/editFocusFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_focusDetailFragment_to_focusFragment"
+            app:destination="@id/focusFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/focusDetailFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_focusDetailFragment_to_editTimeFocusFragment"
+            app:destination="@id/edittimeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_focusDetailFragment_to_editAppFragment"
+            app:destination="@id/editAppFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_focusDetailFragment_to_editlocationFragment"
+            app:destination="@id/editlocationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/customAllowedPeopleFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.createfocus.allowedpeople.CustomAllowedPeopleFragment"
+        android:label="CustomAllowedPeopleFragment">
+        <action
+            android:id="@+id/action_customAllowedPeopleFragment_to_customNewAllowedAppFragment"
+            app:destination="@id/customNewAllowedAppFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/customNewAllowedAppFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.createfocus.allowedapps.CustomNewAllowedAppFragment"
+        android:label="CustomNewAllowedAppFragment">
+        <action
+            android:id="@+id/action_customNewAllowedAppFragment_to_focusDetailFragment"
+            app:destination="@id/focusDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/createFocusFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFocusFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.createfocus.CreateFocusFragment"
+        android:label="CreateFocusFragment">
+        <action
+            android:id="@+id/action_createFocusFragment_to_customNewAllowPeopleFragment"
+            app:destination="@id/customAllowedPeopleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFocusFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.editfocus.EditFocusFragment"
+        android:label="EditFocusFragment">
+        <action
+            android:id="@+id/action_editFocusFragment_to_focusDetailFragment"
+            app:destination="@id/focusDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/editFocusFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/allowPeopleFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.allowpeople.AllowPeopleFragment"
+        android:label="AllowPeopleFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/allowAppFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.allowapp.AllowAppFragment"
+        android:label="AllowAppFragment" />
+    <fragment
+        android:id="@+id/newAutomationFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.newautomation.NewAutomationFragment"
+        android:label="NewAutomationFragment">
+        <action
+            android:id="@+id/action_newAutomationFragment_to_appsFragment"
+            app:destination="@id/appsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_newAutomationFragment_to_locationFragment"
+            app:destination="@id/locationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_newAutomationFragment_to_timeFragment"
+            app:destination="@id/timeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.time.TimeFragment"
+        android:label="TimeFragment">
+        <action
+            android:id="@+id/action_timeFragment_to_focusDetailFragment"
+            app:destination="@id/focusDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/newAutomationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/edittimeFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.time.edittime.EditTimeFragment"
+        android:label="EditTimeFragment" />
+    <fragment
+        android:id="@+id/editlocationFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.location.editlocation.EditLocationFragment"
+        android:label="EditLocationFragment" />
+
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.location.LocationFragment"
+        android:label="LocationFragment">
+        <action
+            android:id="@+id/action_locationFragment_to_focusDetailFragment"
+            app:destination="@id/focusDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/newAutomationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/appsFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.apps.AppsFragment"
+        android:label="AppsFragment">
+        <action
+            android:id="@+id/action_appsFragment_to_focusDetailFragment"
+            app:destination="@id/focusDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/newAutomationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/wallpaperFragment"-->
+<!--        android:name="com.tapbi.spark.controlcenter.ui.main.customcontrol.color.storewallpaper.WallpaperFragment"-->
+<!--        android:label="WallpaperFragment"-->
+<!--        tools:layout="@layout/fragment_wallpaper">-->
+<!--        <action-->
+<!--            android:id="@+id/action_wallpaperFragment_to_previewWallpaperFragment"-->
+<!--            app:destination="@id/previewWallpaperFragment"-->
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right" />-->
+<!--    </fragment>-->
+    <fragment
+        android:id="@+id/previewWallpaperFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.customcontrol.color.previewwallpaper.PreviewWallpaperFragment"
+        android:label="PreviewWallpaperFragment"
+        tools:layout="@layout/fragment_preview_wallpaper" />
+    <fragment
+        android:id="@+id/editAppFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.focus.apps.editapps.EditAppFragment"
+        android:label="EditAppFragment" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.gallery.TestFragment"
+        android:label="TestFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.homemain.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/myCustomizationFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.homemain.mycustomization.MyCustomizationFragment"
+        android:label="MyCustomizationFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.homemain.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/customizeControlFragment"
+        android:name="com.tapbi.spark.controlcenter.ui.main.customcontrol.CustomizeControlFragment"
+        android:label="CustomizeControlFragment" />
+
+
+
+</navigation>

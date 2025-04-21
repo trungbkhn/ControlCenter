@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <Transition
+    app:constraintSetStart="@layout/activity_main_start"
+    app:constraintSetEnd="@layout/activity_main_center">
+
+<!--    <OnClick app:targetId="@+id/imgView1" app:clickAction="transitionToEnd"/>-->
+
+    <OnSwipe
+      app:maxAcceleration="50"
+      app:dragDirection="dragRight"
+      app:touchAnchorSide="middle"
+      />
+  </Transition>
+
+  <Transition
+    app:constraintSetStart="@layout/activity_main_center"
+    app:constraintSetEnd="@layout/activity_main_end"
+    >
+    <OnSwipe
+      app:maxAcceleration="50"
+      app:dragDirection="dragRight"
+      app:touchAnchorSide="middle"
+      />
+  </Transition>
+
+
+  <Transition
+    app:constraintSetStart="@layout/activity_main_end"
+    app:constraintSetEnd="@layout/activity_main_center"
+   >
+    <OnSwipe
+      app:maxAcceleration="50"
+      app:dragDirection="dragLeft"
+      app:touchAnchorSide="middle"
+      />
+  </Transition>
+
+  <Transition
+    app:constraintSetStart="@layout/activity_main_start"
+    app:constraintSetEnd="@layout/activity_main_end">
+    <OnSwipe
+      app:maxAcceleration="50"
+      app:dragDirection="dragLeft"
+      app:touchAnchorSide="middle"
+      />
+  </Transition>
+
+
+
+
+
+
+
+
+</MotionScene>
+

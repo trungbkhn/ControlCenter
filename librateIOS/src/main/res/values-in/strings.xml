@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">NILAI APLIKASI INI</string>
+    <string name="content">Seberapa besar Anda menyukai aplikasi kami?</string>
+    <string name="no_email">tidak ada email</string>
+    <string name="invite_by_email">Undang melalui email</string>
+    <string name="invite_facebook_friends">Undang teman facebook</string>
+    <string name="invite_by_sms">Undang lewat sms</string>
+    <string name="share_on">Bagikan di</string>
+    <string name="please_intall">Silakan instal</string>
+    <string name="later">Kemudian</string>
+    <string name="rateNow">Nilai sekarang</string>
+    <string name="please_rate_5_stars">Silakan beri peringkat 5 bintang</string>
+</resources>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        tools:context=".ui.layout.LayoutActivity">
+
+        <include
+            android:id="@+id/viewHeader"
+            layout="@layout/view_header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textCustomIcon" />
+
+
+        <View
+            android:id="@+id/lineCenter"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/background_line"
+            app:layout_constraintBottom_toBottomOf="@+id/tvShowDateTime"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:id="@+id/viewNone"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/text_detail_splash"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvClickTextShow" />
+
+        <View
+            android:id="@+id/enableNotificationSection"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:drawableEnd="@drawable/ic_more_icon"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/text_edit_text"
+            android:textColor="@color/colorTextLockBold"
+            android:textSize="17sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/viewNone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/text_detail_splash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvClickTextShow" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textSelectIcon" />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSelectIcon" />
+
+        <View
+            android:id="@+id/v3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCustomText" />
+
+        <View
+            android:id="@+id/v4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvClickTextShow" />
+
+        <View
+            android:id="@+id/v5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/enableNotificationSection" />
+
+        <View
+            android:id="@+id/v6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enableNotificationSection" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupShowDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvTextShow, tvClickTextShow, lineCenter,textCustomText,tvShowDateTime,swShowDateTime, v4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topFrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <TextView
+            android:id="@+id/textCustomIcon"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/text_detail_splash"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:text="@string/text_detail_custom_shape"
+            android:textAllCaps="true"
+            android:textColor="@color/color_3C3C43"
+            android:textDirection="ltr"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewHeader" />
+
+        <TextView
+            android:id="@+id/textSelectIcon"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/ripple_click_rectangle"
+            android:drawableEnd="@drawable/ic_more_icon"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/text_icons_shape"
+            android:textColor="@color/colorTextLockBold"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCustomIcon" />
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textSelectIcon"
+            app:layout_constraintRight_toRightOf="@+id/textSelectIcon"
+            app:layout_constraintTop_toTopOf="@+id/textSelectIcon" />
+
+
+        <TextView
+            android:id="@+id/textCustomText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/text_detail_splash"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:text="@string/text_custom_text"
+            android:textColor="@color/color_3C3C43"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSelectIcon" />
+
+        <TextView
+            android:id="@+id/tvShowDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/text_date_time"
+            android:textColor="@color/colorTextLockBold"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@+id/textCustomText" />
+
+        <TextView
+            android:id="@+id/tvClickTextShow"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@drawable/ripple_click_rectangle"
+            android:drawableEnd="@drawable/ic_more_icon"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/text_edit_text"
+            android:textColor="@color/colorTextLockBold"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowDateTime" />
+
+        <TextView
+            android:id="@+id/tvTextShow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="13.00dp"
+            android:layout_marginEnd="40dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/tvClickTextShow"
+            app:layout_constraintLeft_toLeftOf="@+id/center"
+            app:layout_constraintRight_toRightOf="@+id/tvClickTextShow"
+            app:layout_constraintTop_toTopOf="@+id/tvClickTextShow" />
+
+        <com.tapbi.spark.controlcenter.views.SwitchButtonIos
+            android:id="@+id/swShowDateTime"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvShowDateTime"
+            app:layout_constraintRight_toRightOf="@+id/tvShowDateTime"
+            app:layout_constraintTop_toTopOf="@+id/tvShowDateTime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

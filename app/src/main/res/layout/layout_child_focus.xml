@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layoutDirection="ltr"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackgroundRadiusNew"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:textDirection="ltr"
+            android:text="@string/for_1_hour"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/im_tick_hour"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="20dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_tick_white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_hour"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_hour" />
+
+        <TextView
+            android:id="@+id/tv_evening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackgroundRadiusNew"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="16dp"
+            android:textDirection="ltr"
+            android:paddingTop="16dp"
+            android:text="@string/until_this_evening"
+            android:textColor="@color/white"
+            android:layout_marginTop="0.5dp"
+            android:textSize="14sp"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toBottomOf="@id/tv_hour"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/im_tick_evening"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="20dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_tick_white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_evening"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_evening" />
+
+
+        <!--        <View-->
+        <!--            android:id="@+id/v_location"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:background="#99000000"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintHeight_percent="0.33" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_location"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:ellipsize="end"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:maxLines="1"-->
+        <!--            android:paddingStart="20dp"-->
+        <!--            android:paddingEnd="40dp"-->
+        <!--            android:text="@string/until_i_leave_this_location"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="14sp"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/tv_name_location"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/v_location" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_name_location"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:ellipsize="end"-->
+        <!--            android:maxLines="1"-->
+        <!--            android:paddingStart="20dp"-->
+        <!--            android:paddingEnd="40dp"-->
+        <!--            android:text="@string/home"-->
+        <!--            android:textColor="#B3FFFFFF"-->
+        <!--            android:textSize="12sp"-->
+        <!--            android:visibility="gone"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/v_location"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tv_location" />-->
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/im_tick_location"-->
+        <!--            android:layout_width="16dp"-->
+        <!--            android:layout_height="16dp"-->
+        <!--            android:layout_marginEnd="20dp"-->
+        <!--            android:padding="2dp"-->
+        <!--            android:src="@drawable/ic_tick_white"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/v_location"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/v_location" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

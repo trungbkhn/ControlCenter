@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_click_rectangle"
+        android:layoutDirection="ltr">
+
+        <View
+            android:id="@+id/view_focus"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="57dp"
+            android:background="@color/background_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/im_focus"
+            android:layout_width="29dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="13dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_do_nit_disturb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_focus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:maxLines="1"
+            android:paddingEnd="16dp"
+            android:text="@string/do_nit_disturb"
+            android:textColor="@color/black"
+            android:textDirection="ltr"
+            android:textSize="@dimen/text_17sp"
+            app:layout_constraintBottom_toBottomOf="@id/im_focus"
+            app:layout_constraintEnd_toStartOf="@id/tv_on_focus"
+            app:layout_constraintStart_toEndOf="@id/im_focus"
+            app:layout_constraintTop_toTopOf="@id/im_focus" />
+
+        <TextView
+            android:id="@+id/tv_on_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="@string/on"
+            android:textColor="@color/color_77777B"
+            android:textSize="@dimen/text_16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/im_more"
+            app:layout_constraintEnd_toStartOf="@+id/im_more"
+            app:layout_constraintTop_toTopOf="@id/im_more" />
+
+        <ImageView
+            android:id="@+id/im_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_15dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="@id/im_focus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/im_focus" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

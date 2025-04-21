@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_appearance" />
+
+        <ImageView
+            android:id="@+id/imBackgroundBlur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imBack"
+            android:layout_width="@dimen/size_icon_back"
+            android:layout_height="@dimen/size_icon_back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:background="@drawable/custom_ripple_image"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:background="@drawable/bg_ripple_blue_radius_16"
+            android:paddingHorizontal="@dimen/padding_8dp"
+            android:paddingVertical="@dimen/padding_4"
+            android:text="@string/text_apply"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/imBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imBack" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpPreview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toTopOf="@id/frame_layout_ads"
+            app:layout_constraintTop_toBottomOf="@id/tvApply" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/bg_text_type_preview"
+            android:fontFamily="@font/sf_pro_text_medium"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="@string/text_cb_notification"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14sp"
+            app:layout_constraintBottom_toTopOf="@id/tabLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="7dp"
+            android:layout_marginBottom="20dp"
+            android:clipToPadding="true"
+            app:layout_constraintBottom_toTopOf="@id/frame_layout_ads"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="17dp"
+            app:tabMinWidth="17dp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp" />
+        <com.google.android.ads.nativetemplates.TemplateView
+            android:id="@+id/frame_layout_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="50dp"
+            android:tag="preview"
+            app:gnt_template_type="@layout/gnt_admob_native_layout_no_media_2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

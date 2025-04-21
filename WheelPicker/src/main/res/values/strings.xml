@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="day_time_picker_format_day" translatable="false"> %02d</string>
+    <string name="Am">AM</string>
+    <string name="Pm">PM</string>
+</resources>

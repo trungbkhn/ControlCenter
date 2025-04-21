@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">BEWERTE DIESE APP</string>
+    <string name="content">Wie sehr liebst du unsere App?</string>
+    <string name="no_email">keine Email</string>
+    <string name="invite_by_email">Einladung per E-Mail</string>
+    <string name="invite_facebook_friends">Facebook-Freunde einladen</string>
+    <string name="invite_by_sms">Via SMS einladen</string>
+    <string name="share_on">Teilen auf</string>
+    <string name="please_intall">Bitte installiere</string>
+    <string name="later">Später</string>
+    <string name="rateNow">Jetzt bewerten</string>
+    <string name="please_rate_5_stars">Bitte bewerten Sie 5 Sterne</string>
+</resources>

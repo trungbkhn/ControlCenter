@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="@dimen/radius_expand"
+    app:cardElevation="@dimen/size_0dp"
+    app:cardUseCompatPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/time_out_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:background="@color/colorBackgroundRadiusNew"
+            app:layout_constraintBottom_toBottomOf="@+id/vPaddingTopScreenTimeout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imgIcScreenTimeout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:src="@drawable/screen_time_out"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvTitleViewTimeout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_9dp"
+            android:fontFamily="@font/sf_pro_text_semi_bold"
+            android:gravity="center"
+            android:text="@string/text_screen_timeout"
+            android:textColor="@color/colorTextNotyWhite"
+            android:textSize="@dimen/text_size_17"
+            app:layout_constraintTop_toBottomOf="@id/imgIcScreenTimeout" />
+
+
+        <View
+            android:id="@+id/vPaddingTopScreenTimeout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_17dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleViewTimeout" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvTimeout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_marginTop="@dimen/size_1dp"
+            android:layout_marginBottom="@dimen/size_1dp"
+            android:overScrollMode="never"
+            android:background="@color/colorBackgroundRadiusNew"
+            app:layout_constraintBottom_toTopOf="@+id/vLineBottomScreenTimeout"
+            app:layout_constraintTop_toBottomOf="@+id/vPaddingTopScreenTimeout" />
+
+
+        <View
+            android:id="@+id/vLineBottomScreenTimeout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_line_bottom_screen_timeout_to_bottom"
+            android:background="@color/colorBackgroundRadiusNew"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+

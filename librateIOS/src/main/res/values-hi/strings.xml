@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">इस ऐप्लिकेशन को रेट करें</string>
+    <string name="content">आप हमारे ऐप से कितना प्यार करते हैं?</string>
+    <string name="no_email">कोई ईमेल नहीं</string>
+    <string name="invite_by_email">ईमेल द्वारा आमंत्रित करें</string>
+    <string name="invite_facebook_friends">फेसबुक दोस्तों को आमंत्रित करें</string>
+    <string name="invite_by_sms">एसएमएस द्वारा आमंत्रित करें</string>
+    <string name="share_on">पर साझा करें</string>
+    <string name="please_intall">कृपया स्थापित करें</string>
+    <string name="later">बाद में</string>
+    <string name="rateNow">अब रेट करें</string>
+    <string name="please_rate_5_stars">कृपया 5 सितारों की दर करें</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/text_detail_splash">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vgHomeMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bannerContainer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.simform.custombottomnavigation.SSCustomBottomNavigation
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="19dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toTopOf="@id/bannerContainer"
+            app:ss_backgroundBottomColor="#EFEFF4"
+            app:ss_iconTextColor="#A8A8A8"
+            app:ss_iconTextSize="12sp"
+            app:ss_selectedIconColor="@color/white"
+            app:ss_shadowColor="@color/transparent"
+            app:ss_waveHeight="6" />
+
+        <FrameLayout
+            android:id="@+id/bannerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight="50dp"
+            android:tag="@string/tag_banner_home"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_min="50dp" />
+
+        <View
+            android:id="@+id/viewGd"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:background="@color/transparent"
+            app:layout_constraintTop_toTopOf="@id/bottomNavigation"
+            app:layout_constraintBottom_toBottomOf="@id/bottomNavigation"/>
+
+        <View
+            android:id="@+id/viewWhile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:outlineProvider="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewGd"
+            app:layout_constraintBottom_toTopOf="@id/bannerContainer"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

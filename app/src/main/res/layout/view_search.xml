@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ImageBackgroundView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_10dp"
+        android:background="@drawable/background_search"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center_vertical"
+        android:hint="@string/search"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/padding_10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/colorTextSearchHint"
+        android:textCursorDrawable="@drawable/cursor_edittext"
+        android:textSize="@dimen/text_size_search" />
+
+    <TextView
+        android:id="@+id/actionCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/cancel"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_search"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</merge>

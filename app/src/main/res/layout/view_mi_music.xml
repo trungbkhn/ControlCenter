@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentMusic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layoutDirection="ltr"
+
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="imgPre,imgPause,imgNext,typeVolumePlay,tvNameAppPlayMusic,tvNamePlay,tvSinger,imgDetailMusic" />
+
+        <ImageView
+            android:id="@+id/imgPre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            android:src="@drawable/ic_mi_music_pre"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/gdCenter"
+            app:layout_constraintRight_toLeftOf="@+id/imgPause"
+            app:layout_constraintTop_toBottomOf="@+id/typeVolumePlay" />
+
+        <ImageView
+            android:id="@+id/imgPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_mi_music_pause"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPre"
+            app:layout_constraintLeft_toRightOf="@+id/imgPre"
+            app:layout_constraintRight_toLeftOf="@+id/imgNext"
+            app:layout_constraintTop_toTopOf="@+id/imgPre" />
+
+        <ImageView
+            android:id="@+id/imgNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            android:src="@drawable/ic_mi_music_next"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPre"
+            app:layout_constraintLeft_toRightOf="@+id/imgPause"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgPre" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomInfoVolumePlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdRightImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startInfoMusicPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.27" />
+
+        <TextView
+            android:id="@+id/typeVolumePlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boder_info_volume"
+            android:drawablePadding="6dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="2dp"
+            android:gravity="center"
+            android:text="@string/text_phone_speak"
+            android:textColor="@color/colorTextControl"
+            android:includeFontPadding="false"
+            android:textSize="14dp"
+            android:drawableStart="@drawable/ic_info_volume"
+            app:layout_constraintBottom_toTopOf="@+id/bottomInfoVolumePlay"
+            app:layout_constraintLeft_toRightOf="@+id/tvNameAppPlayMusic"
+            app:layout_constraintRight_toRightOf="@id/marginRight"
+            app:layout_constraintTop_toTopOf="@+id/marginTop" />
+
+        <TextView
+            android:id="@+id/tvNameAppPlayMusic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:textColor="@color/colorTextControl"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/typeVolumePlay"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="@id/marginLeft"
+            app:layout_constraintRight_toLeftOf="@+id/typeVolumePlay"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:id="@+id/tvNamePlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:textColor="@color/colorTextControl"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvSinger"
+            app:layout_constraintLeft_toRightOf="@+id/startInfoMusicPlay"
+            app:layout_constraintRight_toRightOf="@+id/gdCenter"
+            app:layout_constraintTop_toTopOf="@+id/imgDetailMusic" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:id="@+id/tvSinger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:textColor="@color/colorOverlayHeaderWidget"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgDetailMusic"
+            app:layout_constraintLeft_toLeftOf="@+id/tvNamePlay"
+            app:layout_constraintRight_toRightOf="@+id/gdCenter"
+            app:layout_constraintTop_toBottomOf="@+id/tvNamePlay" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgDetailMusic"
+            style="@style/rounded_corner"
+            android:layout_width="@dimen/size_app_music_micontrol"
+            android:layout_height="@dimen/size_app_music_micontrol"
+            android:padding="3.90dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_radius_icon_mi_music"
+            app:layout_constraintBottom_toBottomOf="@id/marginBottom"
+            app:layout_constraintLeft_toLeftOf="@id/tvNameAppPlayMusic"
+            app:layout_constraintRight_toLeftOf="@+id/gdRightImage"
+            app:layout_constraintTop_toBottomOf="@+id/bottomInfoVolumePlay"
+            app:shapeAppearanceOverlay="@style/rounded_corner" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupNoty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tvDes,tvVerify" />
+
+        <TextView
+            android:id="@+id/tvDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/text_des_permission_notification_view"
+            android:textColor="@color/colorTextControl"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvVerify"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_ripple_gray_radius_16"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_semi_bold"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="6dp"
+            android:text="@string/verify_access"
+            android:textColor="@color/colorTextDayOfMonth"
+            android:textSize="@dimen/textSizeNotyTitle"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

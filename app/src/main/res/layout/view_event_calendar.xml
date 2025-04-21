@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ImageBackgroundView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/colorTitleBlur"
+        android:layout_width="match_parent"
+        android:layout_height="39.00dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:background="@color/colorBackgroundTopWidget"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.widget.IconCalendarView
+        android:id="@+id/iconCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="@id/colorTitleBlur"
+        app:layout_constraintLeft_toLeftOf="@id/colorTitleBlur"
+        app:layout_constraintTop_toTopOf="@id/colorTitleBlur" />
+
+    <TextView
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="@dimen/size_0dp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center_vertical|start"
+        android:text="@string/up_next"
+        android:textColor="@color/colorTextTitleWidget"
+        android:textDirection="ltr"
+        android:textSize="@dimen/textsizeTitleWidget"
+        app:layout_constraintBottom_toBottomOf="@id/colorTitleBlur"
+        app:layout_constraintLeft_toRightOf="@+id/iconCalendar"
+        app:layout_constraintRight_toRightOf="@id/colorTitleBlur"
+        app:layout_constraintTop_toTopOf="@id/colorTitleBlur" />
+
+    <View
+        android:id="@+id/colorContentBlur"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="88.40dp"
+        android:background="@color/colorBackgroundContentWidget"
+        app:layout_constraintEnd_toEndOf="@id/colorTitleBlur"
+        app:layout_constraintStart_toStartOf="@+id/colorTitleBlur"
+        app:layout_constraintTop_toBottomOf="@id/colorTitleBlur" />
+
+    <TextView
+        android:id="@+id/tvPermissionCalendar"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="@dimen/size_0dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textColor="@color/colorTextLockContent"
+        android:textDirection="ltr"
+        android:textSize="@dimen/textsizeContent"
+        app:layout_constraintBottom_toBottomOf="@+id/colorContentBlur"
+        app:layout_constraintLeft_toLeftOf="@+id/colorContentBlur"
+        app:layout_constraintRight_toRightOf="@+id/colorContentBlur"
+        app:layout_constraintTop_toTopOf="@+id/colorContentBlur" />
+
+
+    <View
+        android:id="@+id/color"
+        android:layout_width="2.5dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_15dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="#ffffff"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+        app:layout_constraintStart_toStartOf="@id/colorContentBlur"
+        app:layout_constraintTop_toTopOf="@id/colorContentBlur" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="27.30dp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="@color/colorTextLockBold"
+        android:textDirection="ltr"
+        android:textSize="20.80dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/color"
+        app:layout_constraintRight_toRightOf="@id/colorContentBlur"
+        app:layout_constraintTop_toTopOf="@id/colorContentBlur" />
+
+    <TextView
+        android:id="@+id/tvDes"
+        android:layout_width="0dp"
+        android:layout_height="18.20dp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="@color/colorTextLockContent"
+        android:textDirection="ltr"
+        android:textSize="@dimen/textsizeContent"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/color"
+        app:layout_constraintRight_toRightOf="@id/colorContentBlur"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="18.20dp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="@color/colorTextLockContent"
+        android:textDirection="ltr"
+        android:textSize="@dimen/textsizeContent"
+        app:layout_constraintLeft_toRightOf="@id/color"
+        app:layout_constraintRight_toRightOf="@id/colorContentBlur"
+        app:layout_constraintTop_toBottomOf="@+id/tvDes" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/containerEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvTitle, tvDes, tvTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

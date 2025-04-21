@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.MenuRightLayout
+            android:id="@+id/menuRight"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:alpha="0"
+            android:animateLayoutChanges="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/swipeLayout"
+            app:layout_constraintWidth_percent="0.45">
+
+            <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ImageBackgroundItemView
+                android:id="@+id/bgTvView"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="@dimen/size_0dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvViewNoty"
+                app:layout_constraintEnd_toEndOf="@id/tvViewNoty"
+                app:layout_constraintStart_toStartOf="@id/tvViewNoty"
+                app:layout_constraintTop_toTopOf="@id/tvViewNoty" />
+
+            <View
+                android:id="@+id/bgTvViewColor"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="@dimen/size_0dp"
+                android:background="@color/colorBackgroundContentWidget"
+                app:layout_constraintBottom_toBottomOf="@id/bgTvView"
+                app:layout_constraintEnd_toEndOf="@id/bgTvView"
+                app:layout_constraintStart_toStartOf="@id/bgTvView"
+                app:layout_constraintTop_toTopOf="@id/bgTvView" />
+
+            <TextView
+                android:id="@+id/tvViewNoty"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/view_noty"
+                android:textColor="@color/colorTextNotyOther"
+                android:textSize="@dimen/textSizeNotyMenu"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ImageBackgroundItemView
+                android:id="@+id/bgTvRight"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="@dimen/size_0dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvMenuRight"
+                app:layout_constraintEnd_toEndOf="@id/tvMenuRight"
+                app:layout_constraintStart_toStartOf="@id/tvMenuRight"
+                app:layout_constraintTop_toTopOf="@id/tvMenuRight" />
+
+            <View
+                android:id="@+id/bgTvRightColor"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="@dimen/size_0dp"
+                android:background="@color/colorBackgroundContentWidget"
+                app:layout_constraintBottom_toBottomOf="@id/tvMenuRight"
+                app:layout_constraintEnd_toEndOf="@id/tvMenuRight"
+                app:layout_constraintStart_toStartOf="@id/tvMenuRight"
+                app:layout_constraintTop_toTopOf="@id/tvMenuRight" />
+
+
+            <TextView
+                android:id="@+id/tvMenuRight"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_1dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/text_clear"
+                android:textColor="@color/colorTextNotyOther"
+                android:textSize="@dimen/textSizeNotyMenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvViewNoty" />
+
+        </com.tapbi.spark.controlcenter.feature.controlios14.view.MenuRightLayout>
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.SwipeLayoutNoty
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:isNotyChild="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ImageBackgroundItemView
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewBgExpand"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0dp"
+                android:background="@color/colorBackgroundContentWidget"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/spaceBottomNoty"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewBgColor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/viewBgExpand"
+                app:layout_constraintTop_toTopOf="@id/viewBgExpand" />
+
+            <View
+                android:id="@+id/viewExpand"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_0dp"
+                android:background="?android:attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="@id/spaceBottomNoty"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/size_icon_app_noti"
+                android:layout_height="@dimen/size_icon_app_noti"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/spaceBottomNoty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_text_semi_bold"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/colorTextDayOfMonth"
+                android:textSize="@dimen/textSizeNotyTitle"
+                app:layout_constraintEnd_toStartOf="@id/tvPostTime"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_text_semi_bold"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/colorTextDayOfMonth"
+                android:textSize="@dimen/textSizeNotyTitle"
+                app:layout_constraintEnd_toStartOf="@id/tvPostTime"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvPostTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_11"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="20 phút trước"
+                android:textColor="@color/colorTextTitleWidget"
+                android:textSize="@dimen/text_13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:textColor="@color/color_text_content"
+                android:textSize="@dimen/textSizeNotyContent"
+                app:layout_constraintEnd_toStartOf="@+id/imgImage"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/remoteViewContainer"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/imgImage"-->
+<!--                app:layout_constraintStart_toEndOf="@id/icon"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />-->
+
+
+            <TextView
+                android:id="@+id/tvNumNoty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/padding_4"
+                android:text="tvNumNoty"
+                android:textColor="@color/colorTextTitleWidget"
+                android:textSize="@dimen/textSizeNumNoty"
+                app:layout_constraintStart_toEndOf="@+id/icon"
+                app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierTopSpaceBottomNoty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvNumNoty, tvContent, imgImage" />
+
+            <View
+                android:id="@+id/spaceBottomNoty"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_11"
+                app:layout_constraintTop_toBottomOf="@id/barrierTopSpaceBottomNoty" />
+
+            <ImageView
+                android:id="@+id/imgImage"
+                android:layout_width="@dimen/size_image_noty"
+                android:layout_height="@dimen/size_image_noty"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="@id/tvPostTime"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupNotyShowContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="tvTitle, tvContent" />
+
+        </com.tapbi.spark.controlcenter.feature.controlios14.view.SwipeLayoutNoty>
+
+        <!--        <View-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            android:background="#80FF0000"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="3dp"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

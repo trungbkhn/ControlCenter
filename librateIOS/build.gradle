@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    namespace 'company.librate'
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //https://stackoverflow.com/questions/70188752/incorrect-configuration-please-configure-your-build-for-vectordrawablecompat-wi
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+}

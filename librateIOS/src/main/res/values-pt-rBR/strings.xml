@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">AVALIE ESTE APLICATIVO</string>
+    <string name="content">Quanto você ama nosso aplicativo?</string>
+    <string name="no_email">Sem email</string>
+    <string name="invite_by_email">Convidar por email</string>
+    <string name="invite_facebook_friends">Convide amigos do Facebook</string>
+    <string name="invite_by_sms">Convide por SMS</string>
+    <string name="share_on">Compartilhar no</string>
+    <string name="please_intall">Por favor instale</string>
+    <string name="later">Mais tarde</string>
+    <string name="rateNow">Avalie agora</string>
+    <string name="please_rate_5_stars">Avalie 5 estrelas</string>
+</resources>

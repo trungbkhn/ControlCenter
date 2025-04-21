@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.AirPlaneSettingView
+        android:id="@+id/airplane_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_airplane_ios"
+        android:padding="5dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAirplane"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="8dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="12dp"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_12"
+        android:text="@string/airplane"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/airplane_action"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline16" />
+
+    <TextView
+        android:id="@+id/tvAirplaneConnection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="12dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/connection"
+        android:textColor="#80FFFFFF"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/airplane_action"
+        app:layout_constraintTop_toBottomOf="@id/guideline16" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group5.ScreenRecordActionView
+        android:id="@+id/recordAction"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline66"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline33" />
+
+
+    <TextView
+        android:id="@+id/tvRecord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        android:text="@string/record"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/white"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/recordAction"
+        app:layout_constraintBottom_toBottomOf="@id/guideline50" />
+
+
+    <TextView
+        android:id="@+id/tvRecordConnection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingHorizontal="8dp"
+        android:text="@string/text_off"
+        android:textColor="#80FFFFFF"
+        android:textSize="@dimen/text_size_12"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/recordAction"
+        app:layout_constraintTop_toBottomOf="@id/guideline50" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.SynDataView
+        android:id="@+id/syndata_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_syndata_ios"
+        android:padding="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline66"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline99"/>
+
+
+    <TextView
+        android:id="@+id/tvSynData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="12dp"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        android:text="@string/sync"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline82"
+        app:layout_constraintStart_toEndOf="@id/syndata_action" />
+
+    <TextView
+        android:id="@+id/tvSynDataConnection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="12dp"
+        android:paddingHorizontal="8dp"
+        android:textSize="@dimen/text_size_12"
+        android:text="@string/text_off"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/syndata_action"
+        app:layout_constraintTop_toBottomOf="@id/guideline82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82222" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99999" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

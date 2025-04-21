@@ -1,0 +1,23 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background của SeekBar -->
+    <item android:id="@android:id/background"
+        android:gravity="center"
+        android:height="6dp">
+        <shape>
+            <corners android:radius="100dp" />
+            <solid android:color="#000000" />
+        </shape>
+    </item>
+
+    <!-- Progress chính của SeekBar -->
+    <item android:id="@android:id/progress"
+        android:height="46dp"
+        android:gravity="center">
+        <clip>
+            <shape>
+                <corners android:bottomLeftRadius="23dp" android:topLeftRadius="23dp" />
+                <solid android:color="#9ACBF1" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

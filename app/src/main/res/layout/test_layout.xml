@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.tapbi.spark.controlcenter.ui.custom.RoundedImageView
+        android:id="@+id/icHostpost"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/icon_shape_default"
+        app:cornerRadius_cs="40dp"
+        app:customIsSelect_cs="true"
+        app:layout_constraintEnd_toStartOf="@id/icDataSaver"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <com.tapbi.spark.controlcenter.ui.custom.RoundedImageView
+        android:id="@+id/icDataSaver"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/icon_shape_default"
+        app:cornerRadius_cs="40dp"
+        app:customIsSelect_cs="true"
+        app:layout_constraintEnd_toStartOf="@id/icScreenCast"
+        app:layout_constraintStart_toEndOf="@id/icHostpost"
+        app:layout_constraintTop_toTopOf="@id/icHostpost" />
+
+    <com.tapbi.spark.controlcenter.ui.custom.RoundedImageView
+        android:id="@+id/icScreenCast"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/icon_shape_default"
+        app:cornerRadius_cs="40dp"
+        app:customIsSelect_cs="true"
+        app:layout_constraintEnd_toStartOf="@id/icOpenSystemShade"
+        app:layout_constraintStart_toEndOf="@id/icDataSaver"
+        app:layout_constraintTop_toTopOf="@id/icHostpost" />
+
+    <com.tapbi.spark.controlcenter.ui.custom.RoundedImageView
+        android:id="@+id/icOpenSystemShade"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/icon_shape_default"
+        app:cornerRadius_cs="40dp"
+        app:customIsSelect_cs="true"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icScreenCast"
+        app:layout_constraintTop_toTopOf="@id/icHostpost" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

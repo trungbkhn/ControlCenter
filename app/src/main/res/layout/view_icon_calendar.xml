@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:background="@drawable/background_icon_calender"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:paddingTop="2dp">
+
+    <TextView
+        android:id="@+id/tvDayOfWeek"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center_horizontal|bottom"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/colorTextDayOfWeek"
+        android:textSize="@dimen/textsizeDayOfWeek" />
+
+    <TextView
+        android:id="@+id/tvDayOfMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/colorTextDayOfMonth"
+        android:textSize="@dimen/textsizeDayOfMonth" />
+</LinearLayout>

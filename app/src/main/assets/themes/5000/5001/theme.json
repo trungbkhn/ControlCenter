@@ -1,0 +1,30 @@
+{
+  "id": 5001,
+  "id_category": 5000,
+  "typeBackground": "DEFAULT",
+  "idStoreWallpaper": -1,
+  "background": "background.webp",
+  "backgroundColor": "",
+  "font": "segoeuivf.ttf",
+  "mi_shade": {
+  },
+  "control_center": {
+  },
+  "pixel": {
+  },
+  "oppo": {
+  },
+  "samsung": {
+    "cornerBackgroundControl": 32,
+    "backgroundColorDefaultControl": "#0F929292",
+    "backgroundColorSelectControl": "#FFE5F1",
+    "cornerControl": 0.87,
+    "colorIconControl": "#000000",
+    "colorDotIndicator": "#004463",
+    "colorStrokeDotsIndicator": "#FFFFFF",
+    "colorStrokeBackgroundControl": "#DBD8D6",
+    "colorSeekbar": "#004463"
+  },
+  "control_os": {
+  }
+}

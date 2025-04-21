@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_0dp"
+        android:layout_marginStart="32.50dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:layoutDirection="ltr"
+        android:textColor="@android:color/white"
+        android:textDirection="ltr"
+        android:visibility="visible"
+        app:autoSizeMaxTextSize="15.60dp"
+        app:autoSizeMinTextSize="2.60dp"
+        app:autoSizeStepGranularity="1dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/batteryView" />
+
+    <ImageView
+        android:id="@+id/imgPlane"
+        android:layout_width="wrap_content"
+        android:layout_height="15.60dp"
+        android:layout_marginEnd="5.20dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_air_plane_status"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+        app:layout_constraintEnd_toStartOf="@id/wifiView"
+        app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.status.WaveViewNotyIOS
+        android:id="@+id/waveView"
+        android:layout_width="wrap_content"
+        android:layout_height="15.60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5.20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryView"
+        app:layout_constraintEnd_toStartOf="@+id/wifiView"
+        app:layout_constraintTop_toTopOf="@+id/batteryView" />
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.status.WifiView
+        android:id="@+id/wifiView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5.20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/batteryView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.status.BatteryView
+        android:id="@+id/batteryView"
+        android:layout_width="wrap_content"
+        android:layout_height="15.60dp"
+        android:layout_marginRight="19.50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

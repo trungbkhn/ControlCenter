@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutControl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV50"
+            app:layout_constraintStart_toStartOf="@id/guidelineV7"
+            app:layout_constraintTop_toTopOf="@id/guidelineH8" />
+
+        <TextView
+            android:id="@id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV50"
+            app:layout_constraintStart_toStartOf="@id/guidelineV7"
+            app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.view.control.pixel.view.BrightnessPixel
+            android:id="@+id/viewProcessBrightness"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@id/guidelineH42"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV50"
+            app:layout_constraintStart_toStartOf="@id/guidelineV7"
+            app:layout_constraintTop_toBottomOf="@id/guidelineH29" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.29" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.42" />
+
+        <ImageView
+            android:id="@+id/imEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_edit_pixel"
+            app:layout_constraintBottom_toBottomOf="@id/imgSettings"
+            app:layout_constraintEnd_toStartOf="@id/imgSettings"
+            app:layout_constraintTop_toTopOf="@+id/imgSettings" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvControl1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineH92"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV50"
+            app:layout_constraintStart_toStartOf="@id/guidelineV7"
+            app:layout_constraintTop_toBottomOf="@id/viewProcessBrightness"
+            app:spanCount="2" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvControl2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineH92"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV93"
+            app:layout_constraintStart_toStartOf="@id/guidelineV50"
+            app:layout_constraintTop_toTopOf="@id/viewProcessBrightness"
+            app:spanCount="2" />
+
+
+        <ImageView
+            android:id="@+id/imgSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_settings_pixel"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV93"
+            app:layout_constraintTop_toTopOf="@id/guidelineH8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

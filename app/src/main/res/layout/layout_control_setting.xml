@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.AirPlaneSettingView
+        android:id="@+id/airplane_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_airplane_ios"
+        android:padding="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="@id/data_action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineH50" />
+
+
+    <TextView
+        android:id="@+id/tvAirplane"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_12"
+        android:text="@string/airplane"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/airplane_action"
+        app:layout_constraintBottom_toBottomOf="@id/guideline75"/>
+
+
+    <TextView
+        android:id="@+id/tvAirplaneConnection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_12"
+        android:paddingHorizontal="8dp"
+        android:text="@string/connection"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/airplane_action"
+        app:layout_constraintTop_toBottomOf="@id/guideline75" />
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.DataSettingView
+        android:id="@+id/data_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_data_ios"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="@id/guideline50"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineH50"/>
+
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        android:text="@string/data"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline25"
+        app:layout_constraintStart_toEndOf="@id/data_action" />
+
+
+    <TextView
+        android:id="@+id/tvDataConnection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/connection"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/data_action"
+        app:layout_constraintTop_toBottomOf="@id/guideline25" />
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.WifiSettingView
+        android:id="@+id/wifi_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/ic_wifi_ios"
+        android:padding="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineH50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        android:text="@string/wifi"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guideline50"
+        app:layout_constraintStart_toEndOf="@id/wifi_action"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline25" />
+
+    <TextView
+        android:id="@+id/tvWifiConnection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/connection"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/guideline50"
+        app:layout_constraintStart_toEndOf="@id/wifi_action"
+        app:layout_constraintTop_toBottomOf="@id/guideline25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.BluetoothSettingView
+        android:id="@+id/bluetooth_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_bluetoolh_ios"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/wifi_action"
+        app:layout_constraintTop_toBottomOf="@id/guidelineH50" />
+
+
+    <TextView
+        android:id="@+id/tvBluetooth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="8dp"
+        android:singleLine="true"
+        android:text="@string/bluetooth"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guideline50"
+        app:layout_constraintStart_toEndOf="@id/bluetooth_action"
+        app:layout_constraintBottom_toBottomOf="@id/guideline75" />
+
+
+    <TextView
+        android:id="@+id/tvBluetoothConnection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingHorizontal="8dp"
+        android:text="@string/connection"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/guideline50"
+        app:layout_constraintStart_toEndOf="@id/bluetooth_action"
+        app:layout_constraintTop_toBottomOf="@id/guideline75" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

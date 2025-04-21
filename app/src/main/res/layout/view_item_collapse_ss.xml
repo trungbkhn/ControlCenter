@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutItemCollapse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.view.control.samsung.view.RoundedStrokeView
+            android:id="@+id/mcvIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layoutDirection="ltr"
+            app:layout_constraintDimensionRatio="99:46"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.tapbi.spark.controlcenter.feature.controlcenter.view.control.samsung.view.RoundedStrokeView>
+
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:id="@+id/tvNameAction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            app:colorDefaultText="@color/colorTextDayOfMonth"
+            app:layout_constraintLeft_toLeftOf="@+id/mcvIcon"
+            app:layout_constraintRight_toRightOf="@+id/mcvIcon"
+            app:layout_constraintTop_toBottomOf="@+id/mcvIcon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,39 @@
+[
+  {
+    "id": 2001,
+    "idCategory": 2000,
+    "preview": "thumb.webp",
+    "name": "Basic"
+  },
+  {
+    "id": 6004,
+    "idCategory": 6000,
+    "preview": "thumb.webp",
+    "name": "Elegant"
+  },
+  {
+    "id": 2002,
+    "idCategory": 2000,
+    "preview": "thumb.webp",
+    "name": "Cute"
+  },
+  {
+    "id": 6008,
+    "idCategory": 6000,
+    "preview": "thumb.webp",
+    "name": "Anime"
+  },
+  {
+    "id": 1002,
+    "idCategory": 1000,
+    "preview": "thumb.webp",
+    "name": "Pet"
+  },
+  {
+    "id": 5002,
+    "idCategory": 5000,
+    "preview": "thumb.webp",
+    "name": "Minimal"
+  }
+
+]

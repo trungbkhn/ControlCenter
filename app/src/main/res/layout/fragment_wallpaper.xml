@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFF4"
+        android:layoutDirection="ltr">
+
+        <TextView
+            android:id="@+id/tvBackground"
+            android:paddingStart="15dp"
+            android:textSize="14dp"
+            android:textAllCaps="true"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/sf_pro_text_bold"
+            app:layout_constraintTop_toBottomOf="@id/viewHeader"
+            android:textColor="#823C3C43"
+            android:text="@string/background"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/flAds"
+            app:layout_constraintTop_toBottomOf="@id/tvBackground"
+            app:spanCount="3" />
+
+
+        <include
+            android:id="@+id/viewHeader"
+            layout="@layout/view_header" />
+
+
+            <com.google.android.ads.nativetemplates.TemplateViewMultiAds
+                android:id="@+id/flAds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:minHeight="90dp"
+                android:tag="@string/tag_native_store_wallpaper"
+                app:gnt_template_type="@layout/gnt_admob_native_layout_no_media_2"
+                />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

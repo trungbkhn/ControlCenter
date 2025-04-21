@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_detail_splash">
+
+        <TextView
+            android:id="@+id/tvMyCustomization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/sfpro_display_regular"
+            android:paddingHorizontal="16dp"
+            android:text="@string/my_customization"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAppear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="16dp"
+            android:text="@string/title_choose_type_noty"
+            app:layout_constraintTop_toBottomOf="@id/tvMyCustomization" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="@id/ryMyCustomization"
+            app:layout_constraintBottom_toBottomOf="@id/ryMyCustomization"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ryMyCustomization"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/white"
+            android:paddingHorizontal="10dp"
+            android:visibility="invisible"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAppear"
+            app:spanCount="2" />
+
+        <TextView
+            android:id="@+id/tvNoControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:drawablePadding="30dp"
+            android:gravity="top|center"
+            android:text="@string/start_customizing_the_control_center_to_save_here"
+            app:drawableTopCompat="@drawable/icon_no_data_my_customization"
+            app:layout_constraintBottom_toBottomOf="@id/ryMyCustomization"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ryMyCustomization"
+            app:layout_constraintVertical_bias="0.3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_description">Pinapayagan ng serbisyong ito na gamitin ang pribadong panel ng setting sa pamamagitan ng pag -swipe mula sa tuktok na gilid ng screen. Ang data na nakolekta mula sa serbisyong ito ay hindi nai -save, nakolekta o ginamit sa anumang paraan. Ang mga gamit ay nakabalangkas sa ibaba. Ang serbisyong ito ay hindi nagpapadala ng iyong data sa mga 3rd party sa Internet.
+    \n\nPahintulot:
+    \n\n\- Subaybayan ang iyong mga aksyon: Kumuha ng puna mula sa system kapag ang tuktok na gilid
+    ng screen ay naantig upang maisaaktibo ang panel ng mga setting.
+    \n\n\- Kumuha ng Impormasyon sa Window: Kinakailangan upang awtomatikong pindutin ang ilang mga setting pagkatapos itakda ng gumagamit ang mga ito upang paganahin at huwag paganahin ang mga ito sa ibinigay na interface ng application.</string>
+    <!--screen time out-->
+    <string name="screen_timeout">Screen\nTimeout</string>
+    <string name="text_screen_timeout">Oras ng screen</string>
+    <string name="timeout_15s">15 segundo</string>
+    <string name="timeout_30s">30 segundo</string>
+    <string name="timeout_1m">1 minuto</string>
+    <string name="timeout_2m">2 minuto</string>
+    <string name="timeout_5m">5 minuto</string>
+    <string name="timeout_10m">10 minuto</string>
+    <string name="timeout_30m">30 minuto</string>
+
+    <!--audio expanded setting-->
+    <string name="audio_system">Sistema</string>
+    <string name="audio_music">Musika</string>
+    <string name="audio_ringtone">Ringtone</string>
+    <string name="no_sim">Walang sim</string>
+
+    <string name="text_add_organize_control">Magdagdag at mag -ayos ng mga karagdagang kontrol upang lumitaw sa %s. Ang maximum ay 11 mga kontrol.</string>
+    <string name="maximum_11_control">Ang maximum ay 11 mga kontrol</string>
+    <string name="waiting">Naghihintay ...</string>
+    <string name="wifi">Wifi</string>
+    <string name="data">Data</string>
+    <string name="airplane">Eroplano</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="sync">I -sync</string>
+    <string name="location">Lokasyon</string>
+
+    <string name="setting">Setting</string>
+
+    <string name="select_background">Piliin ang background</string>
+    <string name="feedback">Feedback</string>
+    <string name="share_app">Ibahagi ang app</string>
+    <string name="privacy_policy">Patakaran sa Pagkapribado</string>
+    <string name="please_rate_5_stars_to_support_the_developer">I -rate ang Controller Quicky</string>
+    <string name="color">Kulay</string>
+
+
+    <string name="position">Posisyon</string>
+    <string name="top">Tuktok</string>
+    <string name="left">Kaliwa</string>
+    <string name="right">Tama</string>
+    <string name="bottom">Ilalim</string>
+    <string name="drag_edge">I -drag ang hawakan ng screen ng gilid upang baguhin ang posisyon</string>
+    <string name="advanced_options">Mga advanced na pagpipilian</string>
+    <string name="size">Laki</string>
+    <string name="color_control_center">COLUL CONTROL CENTER</string>
+    <string name="color_notification">Abiso sa Kulay</string>
+
+    <string name="support">Suporta</string>
+    <string name="handle_settings">Hawakan ang mga setting</string>
+
+    <string name="more_controls">Higit pang mga kontrol</string>
+    <string name="include">Isama</string>
+    <string name="include_control">Kasama ang mga kontrol</string>
+
+    <string name="no_event_tomorrow_widget">Wala kang mga kaganapan \n scheduled para bukas</string>
+    <string name="no_event_today_widget">Walang mga kaganapan</string>
+    <string name="acces_permission_calendar">Mag -click upang ma -access ang kalendaryo ng pahintulot</string>
+    <string name="permission_recent">Mag -click upang maisaaktibo</string>
+    <string name="api_nho_hon_hai_lam">Ang pagpapaandar na ito ay para lamang sa Android 5.0 pataas</string>
+    <string name="vibrator">Vibrator</string>
+
+    <string name="default_background">Default</string>
+    <string name="transparent_background">Transparent</string>
+    <string name="current_wallpaper_background">Kasalukuyang wallpaper</string>
+    <string name="screen_blur_background">Screen Blur sa Likod</string>
+    <string name="background">Background</string>
+    <string name="permission">Pahintulot</string>
+    <string name="mess_request_permission">Kailangan mong payagan ang ilang mga pahintulot sa ibang pagkakataon upang ang application ay maaaring gumana</string>
+    <string name="more_noty">Higit pang mga abiso</string>
+    <string name="view_noty">Tingnan</string>
+    <string name="view_manager">Tagapamahala</string>
+    <string name="clear_all_noty">Tanggalin ang pangkat</string>
+    <string name="text_clear">Malinaw</string>
+    <string name="delete_noty">Tanggalin</string>
+    <string name="hide_group">Tago</string>
+    <string name="recording">Pagre -record ..</string>
+    <string name="stop_record">Huminto</string>
+    <string name="stopping">Huminto ...</string>
+    <string name="click_to_stop_record_screen">Mag -click upang ihinto ang record screen</string>
+    <string name="processing">Pagproseso ...</string>
+    <string name="mess_stop_recording_video">Pag -record ng video screen. Ang Open Control Center ay titigil sa record. Nais mo bang ihinto? Maaari mong ihinto ang video sa \ "Notification Center \" o Buksan \ "Control Center \"</string>
+    <string name="mess_permisstion_write_setting">Ang app na ito ay nangangailangan ng pahintulot na ito upang baguhin ang setting</string>
+
+    <string name="app_suggestions_lowercase">Mga mungkahi ng app</string>
+    <string name="app_suggestions">Mga mungkahi ng app</string>
+
+    <string name="access_permission_calendar">I -access ang Kalendaryo ng Pahintulot</string>
+    <string name="access_permission_app_recent">Mag -click upang maisaaktibo ang mungkahi ng app</string>
+
+    <string name="show_more">Ipakita pa</string>
+    <string name="show_less">Mas kaunti ang ipakita</string>
+    <string name="up_next">SUSUNOD</string>
+    <string name="search">Maghanap</string>
+    <string name="cancel">Kanselahin</string>
+    <string name="notification_center">Sentro ng abiso</string>
+    <string name="style">Istilo</string>
+    <string name="enable_notification">Paganahin ang sentro ng abiso</string>
+    <string name="enable_control_center">Paganahin ang Control Center</string>
+    <string name="ok">Ok</string>
+    <string name="save">Matagumpay na nai-save</string>
+    <string name="please_waiting_load_config">Mangyaring maghintay sa pag -load ng pagsasaayos ...</string>
+    <string name="detail_splash">Pahintulot</string>
+    <string name="detail_pre">Payagan ang pahintulot</string>
+
+    <!--Permission-->
+    <string name="noty_access">Pag -access sa Abiso</string>
+    <string name="detail_noti_access">I -access ang iyong abiso</string>
+    <string name="accessibility">Pag -access</string>
+    <string name="detail_accessibility">Payagan ang pagpapakita ng abiso</string>
+    <string name="appear_on_top">Lumitaw sa itaas</string>
+    <string name="detail_appear_on_top">Nagpapakita ng mga bagay sa tuktok ng iba pang mga app</string>
+
+    <string name="text_skip">Laktawan</string>
+    <string name="text_detail_splash">Kailangan ang iyong pahintulot upang gumana</string>
+
+    <string name="text_allow">Payagan</string>
+    <string name="text_noti">Slide upang i -unlock</string>
+    <string name="demo">Demo</string>
+
+    <string name="running">Tumatakbo</string>
+    <string name="text_enable">Paganahin</string>
+
+    <string name="title_choose_type_noty">Hitsura</string>
+
+    <string name="text_cb_notification">Mga abiso</string>
+    <string name="text_cb_control">Mga kontrol</string>
+
+    <!-- Menu -->
+    <string name="menu_customize_control">Ipasadya ang kontrol</string>
+    <string name="menu_layout">Layout</string>
+    <string name="menu_color">Kulay</string>
+    <string name="menu_color_noty">Kulay Noty</string>
+    <string name="menu_color_control">Mga Kontrol ng Kulay</string>
+    <string name="menu_edge_trigger">Mga Trigger ng Edge</string>
+    <string name="choose_music_player">Pumili ng Music Player</string>
+    <string name="menu_rate">I -rate ang app</string>
+
+
+    <!--Control center-->
+    <string name="text_control_center">Control Center</string>
+    <string name="text_phone_speak">Telepono ng Telepono</string>
+    <string name="text_headset">Headset</string>
+    <string name="text_on">Sa</string>
+    <string name="text_off">Off</string>
+
+    <string name="text_sound">Tunog</string>
+    <string name="text_vibrate">Vibrate</string>
+    <string name="text_silent">Tahimik</string>
+    <string name="text_snoozed">Snoozed</string>
+    <string name="text_snoozed_for">Snoozed para sa</string>
+    <string name="text_undo">PAWALANG-BISA</string>
+    <string name="text_15_minutes">15 minuto</string>
+    <string name="text_30_minutes">30 minuto</string>
+    <string name="text_1_house">1 oras</string>
+    <string name="text_1_day">1 araw</string>
+
+    <string name="text_light">Ilaw</string>
+    <string name="text_dark">Madilim</string>
+
+    <string name="text_vibrate_on_tap">Vibrate sa gripo</string>
+    <string name="text_swipe__up_to_open">Mag-swipe pataas para buksan</string>
+
+
+    <string name="text_show_edge">Ipakita ang mga nag -trigger ng gilid ng notification</string>
+
+    <string name="text_detail_custom_shape">Hugis ng mga pasadyang icon</string>
+    <string name="text_icons_shape">Hugis ng mga icon</string>
+    <string name="text_custom_text">Pasadyang "Control Center" na teksto</string>
+    <string name="text_date_time">Ipakita ang oras at petsa</string>
+    <string name="text_edit_text">I -edit ang teksto</string>
+    <string name="text_enable_section">Paganahin ang mga seksyon ng abiso</string>
+    <string name="text_detail_enable_section">Sa tahimik na mga abiso</string>
+    <string name="text_close">Malapit</string>
+    <string name="text_cancel">Kanselahin</string>
+
+    <string name="text_done">Tapos na</string>
+    <string name="text_off_noty">Patayin ang abiso</string>
+    <string name="text_available">Magagamit na mga toggles</string>
+    <string name="text_add_toggle">Nagdagdag ng mga toggles</string>
+    <string name="text_alert">Alerto</string>
+    <string name="text_slide">Tahimik</string>
+    <string name="text_detail_add_toggle">Idinagdag ang mga toggles upang muling ayusin ang mga ito</string>
+    <string name="text_detail_waning">Nakakakuha ng iyong pansin sa tunog o panginginig ng boses.</string>
+    <string name="text_detail_alert">Tumutulong sa iyo na tumuon nang walang tunog o panginginig ng boses.</string>
+    <string name="text_apply">Mag -apply</string>
+    <string name="text_custom_text_show">Pasadyang palabas sa teksto</string>
+    <string name="text_no_older_notification">Walang mas matandang abiso</string>
+
+
+    <string name="txt_ads_ledkeyboard">LED keyboard - RGB keyboard</string>
+    <string name="text_detail_when_permission_denied">Mangyaring payagan ang pag -access sa abiso</string>
+    <string name="text_detail_when_permission_writer_denied">Mangyaring payagan ang pagsulat ng panlabas na imbakan</string>
+
+
+    <string name="You_need_to_enable_permissions_to_use_this_feature">Kailangan mong paganahin ang mga pahintulot na gamitin ang tampok na ito</string>
+    <string name="go_to_setting">Pumunta sa setting</string>
+    <string name="go_back">Bumalik ka</string>
+    <string name="data_mobile">Data Mobile</string>
+    <string name="flash_light">Flash light</string>
+    <string name="sound">Tunog</string>
+    <string name="airplane_mode">Mode ng eroplano</string>
+    <string name="do_not_disturb">Huwag abalahin</string>
+    <string name="auto_rotate">Kusang pag-ikot</string>
+    <string name="host_post">Host post</string>
+    <string name="screen_cast">Screen cast</string>
+    <string name="open_system">Bukas na sistema</string>
+    <string name="clock">Orasan</string>
+    <string name="camera">Camera</string>
+    <string name="keyBroad_picker">Tagapili ng keyboard</string>
+    <string name="battery">Baterya</string>
+    <string name="night_light">Ilaw sa gabi</string>
+    <string name="dark_theme">Madilim na tema</string>
+    <string name="screen_shot">Screen shot</string>
+    <string name="screen_recoding">Screen recoding</string>
+    <string name="screen_real_time_background">Gumamit para sa tampok na Wallpaper ng Real Time</string>
+    <string name="screen_time">Oras ng palabas</string>
+    <string name="screen_lock">Screen lock</string>
+    <string name="dark_mode">Madilim na mode</string>
+    <string name="nearby_share">Malapit na bahagi</string>
+
+    <string name="night_mode">Night Mode</string>
+    <string name="time_screen">Time screen</string>
+    <string name="focus_mode">Focus Mode</string>
+    <string name="kids_home">Mga bata sa bahay</string>
+    <string name="power_mode">Power Mode</string>
+    <string name="smart_view">Smart view</string>
+    <string name="secure_folder">Secure folder</string>
+    <string name="auto_wallpaper">Auto wallpaper</string>
+
+    <string name="just_now">&#160; ngayon lang</string>
+    <string name="a_minute_ago">&#160; isang minuto ang nakakaraan</string>
+    <string name="minutes_ago">&#160; minuto ang nakakaraan</string>
+    <string name="an_hour_ago">&#160; isang oras na ang nakakaraan</string>
+    <string name="hours_ago">&#160; oras na ang nakakaraan</string>
+    <string name="yesterday">&#160; kahapon</string>
+    <string name="days_ago">&#160; araw na ang nakakaraan</string>
+    <string name="calculator">Calculator</string>
+    <string name="yes">Oo</string>
+    <string name="no">HINDI</string>
+    <string name="do_you_want_to_save">Nais mo bang makatipid?</string>
+    <string name="application_not_found">Hindi natagpuan ang application</string>
+    <string name="no_flash">Walang flash!</string>
+    <string name="setup">Pag -setup</string>
+    <string name="dialog_setup_noty_des_1">Mangyaring hanapin ang</string>
+    <string name="dialog_setup_noty_des_2">Tile sa iyong lilim ng system (sa 1st o 2nd page) pagkatapos ay i -click ito sa isang beses.</string>
+    <string name="store_wallpaper">Mag-imbak ng wallpaper</string>
+    <string name="notes">Mga Tala</string>
+    <string name="low_power_mode">Mababang mode ng kuryente</string>
+    <string name="music_control">Kontrol ng musika</string>
+    <string name="deny">Tanggihan</string>
+
+    <string name="key_low_power_mode">Pag -save ng Power</string>
+    <string name="key_air_plane_mode">eroplano</string>
+    <string name="key_air_plane_mode_2">Flight Mode</string>
+    <string name="key_data_mobile_mode">mobile data</string>
+    <string name="key_wifi">Wi-fi</string>
+    <string name="key_location">Lokasyon</string>
+    <string name="key_hotspot">Hotspot</string>
+    <string name="key_hotspot_2">Hotspot</string>
+    <string name="key_dark_mode">madilim</string>
+    <string name="conflict_navigation_mode_swipe_gestures_system">Ang mode na ito ay sasalungat sa mode ng pag -navigate ng system ng swipe gesture</string>
+    <string name="can_not_do_this_action_when_ari_plane_mode_enabled">Ang gawaing ito ay hindi maaaring isagawa kapag ang mode ng eroplano ay nasa</string>
+    <string name="You_need_to_enable_permissions_display_popup_window">Kailangan mong paganahin ang mga pahintulot na ipakita ang window ng pop-up</string>
+    <string name="key_without_dark_mode">pin</string>
+    <string name="auto_open_system_noty">Awtomatikong buksan ang system para sa susunod</string>
+    <string name="key_without_low_power_mode" />
+    <string name="key_without_mobile_mode" />
+    <string name="key_wifi_2">Internet</string>
+    <string name="key_wifi_done">Tapos na</string>
+    <string name="key_low_power_mode_2">baterya</string>
+    <string name="key_low_power_mode_3">Power Mode</string>
+    <string name="key_battery_done">Mag -apply</string>
+    <string name="key_data_mobile">mobile</string>
+
+    //dev_phase4
+    <string name="add_focus">Magdagdag ng pokus</string>
+    <string name="do_nit_disturb">Distorbo ang nit</string>
+    <string name="on">Sa</string>
+    <string name="people">Mga tao</string>
+    <string name="apps">Mga app</string>
+    <string name="allowed_notifications"> Pinapayagan na mga abiso</string>
+    <string name="turn_on_automatically"> Awtomatikong i -on</string>
+    <string name="delete_focus">Tanggalin ang pokus</string>
+    <string name="add_schedule_or_automation">Magdagdag ng iskedyul o automation</string>
+    <string name="no_people"> Walang tao</string>
+    <string name="no_app">Walang app</string>
+    <string name="allowed_app"> Pinapayagan na apps</string>
+    <string name="allow_none">Payagan ang Wala</string>
+    <string name="allow"> Payagan</string>
+    <string name="allowed_people">Pinapayagan ang mga tao</string>
+    <string name="everyone">Bawat isa</string>
+    <string name="no_one">Walang sinuman</string>
+    <string name="favorite">Paborito</string>
+    <string name="all_contact"> Lahat ng contact</string>
+    <string name="also_allow">Payagan din</string>
+    <string name="new_automation">Bagong automation</string>
+    <string name="time">Oras</string>
+    <string name="ex_from_12_30_pm_to_2_30_pm"> Hal. “Mula 12:30 PM hanggang 2:30 PM“</string>
+    <string name="app"> App</string>
+    <string name="ex_when_i_arrive_at_work">Hal. “Pagdating ko sa trabaho“</string>
+    <string name="ex_when_i_open_books">Hal. “Kapag nagbukas ako ng mga libro“</string>
+    <string name="done">Tapos na</string>
+    <string name="search_or_enter_address"> Maghanap o magpasok ng address</string>
+    <string name="current_location">Kasalukuyang lokasyon</string>
+    <string name="choose_time"> Pumili ng oras</string>
+    <string name="from">Mula sa</string>
+
+    <string name="to">Sa</string>
+    <string name="Repeat">Ulitin</string>
+    <string name="month"> Lunes</string>
+    <string name="tu">Martes</string>
+    <string name="we">Miyerkules</string>
+    <string name="th">Huwebes</string>
+    <string name="fr">Biyernes</string>
+    <string name="sa">Sabado</string>
+    <string name="su">Linggo</string>
+    <string name="every_day"> Araw-araw</string>
+    <string name="every"> Bawat</string>
+    <string name="no_repeact">Walang ulitin</string>
+    <string name="do_you_want_to_delete_this_focus">Nais mo bang tanggalin ang pokus na ito?</string>
+    <string name="error_internet">Suriin muli ang internet</string>
+    <string name="error_no_found">Walang nahanap na lokasyon ng pagtutugma</string>
+    <string name="you_need_turn_on_location"> Kailangan mong i -on ang lokasyon</string>
+    <string name="what_do_you_want_to_focus_on">Ano ang gusto mong ituon?</string>
+    <string name="choose_a_focus_you_want_to_add">Pumili ng isang pokus na nais mong idagdag?</string>
+    <string name="text_detail_when_permission_read_contact">Mangyaring Pahintulutan Basahin ang Makipag -ugnay</string>
+    <string name="text_detail_when_permission_location">Mangyaring payagan ang lokasyon</string>
+    <string name="Allow_incoming_calls_from_only_the_contacts">Payagan ang mga papasok na tawag mula lamang sa mga contact na idinagdag mo sa pokus.</string>
+    <string name="Allow_incoming_calls_from_your_contacts">Payagan ang mga papasok na tawag mula sa iyong mga contact.</string>
+    <string name="Allow_incoming_calls_from_everyone">Payagan ang mga papasok na tawag mula sa lahat.</string>
+    <string name="allow_incoming_calls_from_only_the_contacts_you_added_to_the_focus_and_your_favorites"> Payagan ang mga papasok na tawag mula lamang sa mga contact na idinagdag mo sa pokus at iyong mga paborito.</string>
+    <string name="remove_allow">Alisin(</string>
+    <string name="new_focus"> Bagong Pokus</string>
+    <string name="name_your_focus"> Pangalanan ang iyong pokus</string>
+    <string name="name">Pangalan</string>
+    <string name="a_focus_with_this_name_already_exists"> Ang isang pokus na may pangalang ito ay mayroon na.</string>
+    <string name="next">Susunod</string>
+    <string name="contact">Makipag -ugnay</string>
+    <string name="edit_focus">I -edit ang Pokus</string>
+    <string name="for_1_hour">Para sa 1 oras</string>
+    <string name="until_this_evening">Hanggang ngayong gabi</string>
+    <string name="until_i_leave_this_location"> Hanggang sa iwan ko ang lokasyong ito</string>
+    <string name="home">Home</string>
+    <string name="focus"> Pokus</string>
+    <string name="name_empty">Ang pangalan ay hindi dapat walang laman</string>
+    <string name="you_need_to_choose_the_game_Application"> Kailangan mong piliin ang application ng laro at oras</string>
+    <string name="you_need_to_choose_the_location"> Kailangan mong piliin ang lokasyon at oras</string>
+    <string name="game">Laro</string>
+    <string name="while_at_this_location">Habang nasa lokasyong ito</string>
+    <string name="While_using"> Habang gumagamit</string>
+    <string name="location_already_exists"> Ang lokasyon ay mayroon na</string>
+
+    <string name="some_required_permission_is_disable"> Ang ilang kinakailangang pahintulot ay hindi pinagana. Mangyaring paganahin ang mga ito para sa paggamit ng app nang normal</string>
+    <string name="wait_until_job_done"> Mangyaring maghintay hanggang matapos ang trabaho</string>
+    <string name="notifications"> Mga abiso</string>
+    <string name="edit">I -edit</string>
+    <string name="hold_and_drag_to_rearrange_tiles">Hawakan at i -drag upang muling ayusin ang mga tile</string>
+    <string name="hold_and_drag_to_add_tiles">Hawakan at i -drag upang magdagdag ng mga tile</string>
+    <string name="on_until">"On hanggang"</string>
+    <string name="pm">PM</string>
+    <string name="am">Am</string>
+    <string name="until_tomorrow_morning">Hanggang bukas ng umaga</string>
+    <string name="on_until_you_leave_this_location">Hanggang sa iwan mo ang lokasyong ito</string>
+    <string name="reset">I -reset</string>
+
+
+    <string name="Sleep"> Matulog ka na</string>
+    <string name="reading"> Pagbabasa</string>
+    <string name="Mindfulness"> Pag -iisip</string>
+    <string name="work"> Trabaho</string>
+    <string name="gaming"> Paglalaro</string>
+    <string name="driving"> Pagmamaneho</string>
+    <string name="personal">Personal</string>
+    <string name="custom">Pasadya</string>
+    <string name="time_error"> Ang oras ng pagsisimula ay dapat na naiiba mula sa oras ng pagtatapos. Pakisubukang muli</string>
+
+    <string name="Monday">Lunes</string>
+    <string name="Tuesday">Martes</string>
+    <string name="Wednesday">Miyerkules</string>
+    <string name="Thursday">Huwebes</string>
+    <string name="Friday">Biyernes</string>
+    <string name="Saturday">Sabado</string>
+    <string name="Sunday">Linggo</string>
+    <string name="the_minimum_controls">Ang minimum ay %1$d na mga kontrol</string>
+    <string name="the_maximum_controls">Ang maximum ay %1$d na kontrol</string>
+    <string name="app_already_available">Magagamit na ang app</string>
+
+
+    <string name="turn_on">Buksan</string>
+    <string name="allow_permission_location">Kailangan mong payagan ang mga pahintulot sa lokasyon</string>
+    <string name="key_without_low_power_mode_2" />
+    <string name="install">I -install</string>
+    <string name="usage_data_access">Pag -access ng data ng paggamit</string>
+    <string name="allow_access">Payagan ang pag -access</string>
+    <string name="this_application_uses_usage_data_access_permission_to_detect_an_application_is_opened_or_closed">Ang application na ito ay gumagamit ng pahintulot sa pag -access ng data ng paggamit upang makita ang isang application ay binuksan o sarado</string>
+
+    <string name="auto_start">Auto Start</string>
+    <string name="application_needs_your_permission_to_enable_autostart_setting_to_work_correctly_and_more_stability">Upang paganahin ang setting ng autostart upang gumana nang tama at higit na katatagan</string>
+    <string name="set">itakda</string>
+    <string name="no_data">Walang data</string>
+    <string name="a_note_on_privacy">Isang tala sa privacy</string>
+    <string name="content_a_note_privacy">Hindi namin kinokolekta ang anumang personal na impormasyon sa pamamagitan ng mga serbisyo sa pag -access.
+    \n\- Kailangan namin ng pahintulot sa pag -access upang iguhit ang home screen at status bar ng telepono.
+    \n\- Hindi namin babasahin ang sensitibong data ng iyong screen o anumang nilalaman.
+    \n\- Para gumana nang maayos ang app na ito, kailangan namin ang pahintulot sa pag -access. Kinakailangan ang mga serbisyo sa pag-access upang makatanggap ng isang tugon mula sa system kapag ang tuktok ng screen ay naantig upang ma-trigger ang lilim at makuha ang nilalaman ng window: kinakailangan para sa awtomatikong pag-click ng ilang mga setting pagkatapos pipiliin ng gumagamit na nais nilang i-toggle ang mga ito sa ibinigay na app interface.</string>
+    <string name="agree">Sumang-ayon</string>
+    <string name="could_not_find_play_store_on_this_device">Hindi mahanap ang PlayStore sa device na ito</string>
+
+    <string name="audio_alarm">Alarma</string>
+    <string name="text_des_top_trigger">Para sa Top Trigger, hindi mo maaaring ipasadya ang toggle</string>
+    <string name="text_enabled">Pinagana</string>
+    <string name="text_length">Haba</string>
+    <string name="des_dialog_no_sim">Aparato walang sim, maaari kang pumunta sa setting sa pag -setup</string>
+    <string name="text_vibrate_on_long_click">Mag -vibrate sa mahabang pag -click control</string>
+    <string name="text_auto_hide_noty_panel_system">AUTO HIGE NOTIFICE PANEL SYSTEM</string>
+    <string name="text_no_notification">Walang abiso</string>
+    <string name="text_des_permission_notification_view">Tumanggi ang system na ipakita sa amin ang mga abiso!</string>
+    <string name="restart">I -restart</string>
+    <string name="verify_access">I -verify ang pag -access</string>
+
+    <string name="text_title_appearance">Pumili ng isang hitsura na gusto mo at magsimula</string>
+    <string name="text_start">Magsimula</string>
+    <string name="text_current">%s (kasalukuyang)</string>
+    <string name="text_activate_home">Isaaktibo ang %s upang paganahin ang higit pang mga tampok!</string>
+    <string name="text_allow_permisson_to_use_functions">Mangyaring bigyan ng pahintulot na gamitin ang mga pag -andar</string>
+    <string name="text_continue">Magpatuloy</string>
+    <string name="text_not_running">Hindi tumatakbo</string>
+
+    <string name="text_error_try_again">Oh hindi! May naganap na error sa panahon ng pagproseso, pakisubukang muli sa ibang pagkakataon.</string>
+    <string name="connection">Connection</string>
+
+
+
+    <string name="my_customization">Aking Pag-customize</string>
+    <string name="preview">I-preview</string>
+    <string name="apply_this_control_center_to_use">I-apply ang control center na ito upang magamit</string>
+    <string name="choose_style">Pumili ng istilo</string>
+    <string name="choose_the_style_you_want_then_click_to_edit_to_custom_more">Piliin ang istilong gusto mo, pagkatapos ay i-click upang i-edit at i-customize pa</string>
+    <string name="edit_theme">I-edit ang tema</string>
+    <string name="controls">Mga Kontrol</string>
+    <string name="gallery">Gallery</string>
+    <string name="fonts">Mga Font</string>
+    <string name="themes">Mga Tema</string>
+    <string name="select_themes">Pumili ng Mga Tema</string>
+    <string name="customize">I-customize</string>
+    <string name="corners">KANTO</string>
+    <string name="icon_shape">HUGIS NG ICON</string>
+    <string name="color_up">KULAY</string>
+    <string name="position_up">POSISYON</string>
+    <string name="choose_fonts">PUMILI NG MGA FONT</string>
+    <string name="font_preview">Aa</string>
+    <string name="mobile_data">Mobile Data</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="flashlight">Flashlight</string>
+    <string name="battery_saver">Pag-save ng Baterya</string>
+    <string name="record">I-record</string>
+    <string name="hostpost">Hotspot</string>
+    <string name="data_saver">Pag-save ng Data</string>
+    <string name="open_system_shade">Buksan ang system shade</string>
+    <string name="display">Display</string>
+    <string name="general">Pangkalahatan</string>
+    <string name="this_control_interface_is_in_use_and_cannot_be_deleted">Ang control interface na ito ay kasalukuyang ginagamit at hindi maaaring tanggalin.</string>
+    <string name="auto_rotate_2">Auto Rotate</string>
+    <string name="start_customizing_the_control_center_to_save_here">Simulan ang pagpapasadya ng control center upang mai-save dito</string>
+    <string name="this_control_interface_is_in_use">Ang control interface na ito ay ginagamit.</string>
+
+    <string name="using">Gamit</string>
+    <string name="unknown">(hindi kilala)</string>
+    <string name="lock_rotation">I-lock ang rotasyon</string>
+
+    <string name="do_you_want_to_delete_this_theme">Gusto mo bang tanggalin ang tema na ito?</string>
+    <string name="delete_theme">Tanggalin ang Tema</string>
+    <string name="You_need_to_enable_permissions">Kailangan mong paganahin ang mga pahintulot ng %s para magamit ang feature na ito</string>
+    <string name="calendar">Kalendaryo</string>
+    <string name="nearby_device">Malapit na Mga Device</string>
+    <string name="micro">Mikropono</string>
+    <string name="data_saver_not_support">Data Saveria ei tueta!</string>
+
+    <string name="languages">Mga Wika</string>
+    <string name="next_onboard">Susunod</string>
+    <string name="content_onboard_1">Isang solusyon para sa madaliang pamamahala ng device</string>
+    <string name="titile_onboard_1">Smart Control</string>
+    <string name="content_onboard_2">Nagbibigay ng mabilisang access sa maraming pangunahing tampok at kapaki-pakinabang na pagpapabuti</string>
+    <string name="titile_onboard_2">Mabilis na Access</string>
+    <string name="content_onboard_3">Tuklasin ang mga maiinit at trending na tema, tuloy-tuloy na ina-update</string>
+    <string name="titile_onboard_3">Koleksyon ng Tema</string>
+    <string name="content_onboard_4">I-customize ang laki at posisyon ayon sa pangangailangan</string>
+    <string name="titile_onboard_4">I-customize</string>
+    <string name="start">Simulan</string>
+    <string name="you_can_only_select_a_maximum_of_3_themes">Maaari ka lamang pumili ng hanggang 3 tema.</string>
+    <string name="activate_s">I-activate ang %s</string>
+    <string name="which_style_do_you_like">Aling istilo ang gusto mo?</string>
+    <string name="step_1">Hakbang 1\nAccessibility</string>
+    <string name="step_2">Hakbang 2\nIpakita sa ibabaw</string>
+    <string name="step_3">Hakbang 3\nAbiso</string>
+    <string name="enable_in_your_installed_apps_in_accessibility_settings">I-enable ang %s sa iyong Mga Naka-install na App sa Accessibility settings</string>
+    <string name="enable_s_in_appear_on_top_settings">I-enable ang %s sa Appear on top settings</string>
+    <string name="enable_in_notification_access">I-enable ang %s sa Notification access</string>
+    <string name="_1_turn_on_">1, I-on ang %s</string>
+    <string name="click_the_button_to_active_">Pindutin ang button upang i-activate ang %s</string>
+    <string name="_2_swipe_to_open_the_">2, Mag-swipe upang buksan ang %s</string>
+    <string name="swipe_down_from_the_top_to_open_the_">Mag-swipe pababa mula sa itaas upang buksan ang %s</string>
+    <string name="_3_customize_your_">3, I-customize ang iyong %s</string>
+    <string name="click_the_button_to_customize">Pindutin ang "+" button upang i-customize</string>
+    <string name="speakerphone">Loudspeaker</string>
+    <string name="headphones">Headset</string>
+
+
+</resources>

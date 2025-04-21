@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_focus_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"
+        android:background="@color/color_F2F2F6"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/custom_ripple_image"
+            android:padding="9dp"
+            android:src="@drawable/icon_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="@string/time"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_ripple_back_settings"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:padding="8dp"
+            android:text="@string/done"
+            android:clickable="true"
+            android:textColor="@color/color_007AFF"
+            android:textSize="17sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/tv_choose_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/choose_time"
+            android:textAllCaps="true"
+            android:textColor="@color/color_737379"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/im_back" />
+
+        <View
+            android:id="@+id/view_choose_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_background_choose_time"
+            app:layout_constraintBottom_toBottomOf="@id/tv_to"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_time" />
+
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/from"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/view_choose_time"
+            app:layout_constraintTop_toTopOf="@id/view_choose_time" />
+
+        <View
+            android:id="@+id/view_from"
+            android:layout_width="0dp"
+            android:layout_height="0.3dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/color_C6C6C8"
+            app:layout_constraintEnd_toEndOf="@id/view_choose_time"
+            app:layout_constraintStart_toStartOf="@id/view_choose_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_from" />
+
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingBottom="25dp"
+            android:text="@string/to"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_choose_time"
+            app:layout_constraintStart_toStartOf="@id/view_choose_time"
+            app:layout_constraintTop_toBottomOf="@id/view_from" />
+
+        <TextView
+            android:id="@+id/tv_time_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/custom_backgound_ripple_time"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:paddingStart="16dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="5dp"
+            android:text="9:00 AM"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/view_choose_time"
+
+            app:layout_constraintTop_toTopOf="@id/view_choose_time" />
+
+        <TextView
+            android:id="@+id/tv_time_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/custom_backgound_ripple_time"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:paddingStart="16dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="5dp"
+            android:text="5:00 PM"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/view_choose_time"
+
+            app:layout_constraintTop_toTopOf="@id/view_from" />
+
+
+        <TextView
+            android:id="@+id/tv_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/Repeat"
+            android:textAllCaps="true"
+            android:textColor="@color/color_737379"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_choose_time" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_background_choose_time"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/view_choose_time"
+            app:layout_constraintStart_toStartOf="@id/view_choose_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_repeat" />
+
+        <TextView
+            android:id="@+id/tv_sum_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/color_737379"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/rv_day"
+            app:layout_constraintTop_toBottomOf="@id/rv_day" />
+
+
+        <include
+            android:id="@+id/dl_time_from"
+            layout="@layout/custom_wheel_picker_item"
+            android:layout_width="206dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/tv_time_from"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_from" />
+
+        <include
+            android:id="@+id/dl_time_to"
+            layout="@layout/custom_wheel_picker_item"
+            android:layout_width="206dp"
+            android:layout_height="210dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/tv_time_to"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_to" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

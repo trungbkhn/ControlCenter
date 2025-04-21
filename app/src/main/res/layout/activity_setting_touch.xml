@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:layoutDirection="ltr"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/custom_ripple_image"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_text_semi_bold"
+            android:gravity="center"
+            android:text="@string/menu_edge_trigger"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="@dimen/text_size_search"
+            app:layout_constraintBottom_toBottomOf="@+id/icBack"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/icBack" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/text_detail_splash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:background="#EFEFF4"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/flAds"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icBack">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.legacy.widget.Space
+                    android:id="@+id/spaceTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvActivate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:drawablePadding="12dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingHorizontal="@dimen/margin_horizontal_fragment_edge"
+                    android:paddingVertical="6dp"
+                    android:text="@string/text_activate_home"
+                    android:textSize="@dimen/text_14sp"
+                    app:drawableLeftCompat="@drawable/ic_info"
+                    app:layout_constraintTop_toBottomOf="@id/spaceTop" />
+
+                <TextView
+                    android:id="@+id/tvPositionType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_horizontal_fragment_edge"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    android:gravity="left"
+                    android:text="@string/position"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_3C3C43"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvActivate" />
+
+                <com.tapbi.spark.controlcenter.views.TabLayoutEdge
+                    android:id="@+id/tlEdge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_horizontal_fragment_edge"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:background="@drawable/background_tab_layout_edge"
+                    app:layout_constraintTop_toBottomOf="@id/tvPositionType" />
+
+                <TextView
+                    android:id="@+id/tvDesTopEdge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_horizontal_fragment_edge"
+                    android:layout_marginTop="12dp"
+                    android:drawablePadding="12dp"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/text_des_top_trigger"
+                    android:textSize="@dimen/text_14sp"
+                    app:drawableLeftCompat="@drawable/ic_info"
+                    app:layout_constraintTop_toBottomOf="@id/tlEdge" />
+
+                <LinearLayout
+                    android:id="@+id/lnControl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_horizontal_fragment_edge"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="@dimen/margin_24dp"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/background_custom_edge"
+                    android:orientation="vertical"
+                    android:paddingVertical="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDesTopEdge"
+                    app:layout_constraintVertical_bias="0">
+
+                    <LinearLayout
+                        android:id="@+id/lnEnabled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="14dp">
+
+                        <TextView
+                            android:id="@+id/tvEnabled"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/text_enabled"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_custom_edge" />
+
+                        <com.tapbi.spark.controlcenter.views.SwitchButtonIos
+                            android:id="@+id/swEnabled"
+                            android:layout_width="51dp"
+                            android:layout_height="31dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvColorNoty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="14dp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/menu_color_noty"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_custom_edge"
+                        app:drawableRightCompat="@drawable/ic_select_color" />
+
+                    <TextView
+                        android:id="@+id/tvColorControl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="14dp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/menu_color_control"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_custom_edge"
+                        app:drawableRightCompat="@drawable/ic_select_color" />
+
+                    <LinearLayout
+                        android:id="@+id/lnLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="14dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvLength"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/text_length"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_custom_edge" />
+
+                        <SeekBar
+                            android:id="@+id/seekBarLength"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4dp"
+                            android:background="@null"
+                            android:max="100"
+                            android:maxHeight="4dp"
+                            android:minHeight="4dp"
+                            android:progressDrawable="@drawable/sb_progress_drawable"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/thumb_seekbar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="14dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/size"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_custom_edge" />
+
+                        <SeekBar
+                            android:id="@+id/seekBarSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4dp"
+                            android:background="@null"
+                            android:max="100"
+                            android:maxHeight="4dp"
+                            android:minHeight="4dp"
+                            android:progressDrawable="@drawable/sb_progress_drawable"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/thumb_seekbar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnPosition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="14dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPosition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/position"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_custom_edge" />
+
+                        <SeekBar
+                            android:id="@+id/seekBarPosition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4dp"
+                            android:background="@null"
+                            android:max="100"
+                            android:maxHeight="4dp"
+                            android:minHeight="4dp"
+                            android:progressDrawable="@drawable/sb_progress_drawable"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/thumb_seekbar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnVibrate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="14dp">
+
+                        <TextView
+                            android:id="@+id/tvVibrate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="@string/text_vibrate_on_tap"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_custom_edge" />
+
+                        <com.tapbi.spark.controlcenter.views.SwitchButtonIos
+                            android:id="@+id/swVibrate"
+                            android:layout_width="51dp"
+                            android:layout_height="31dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+            <com.google.android.ads.nativetemplates.TemplateViewMultiAds
+                android:id="@+id/flAds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="90dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:tag="@string/tag_native_setting_touch"
+                app:gnt_template_type="@layout/gnt_admob_native_layout_no_media_2"
+                 />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

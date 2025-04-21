@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880997883324",
+    "project_id": "controlcenter-5dcb3",
+    "storage_bucket": "controlcenter-5dcb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880997883324:android:edebd82f45f052f1a05fb9",
+        "android_client_info": {
+          "package_name": "com.tapbi.spark.controlcenter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN4iGTvRDYdMzweXyC5sJ7MHg6kte5VnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

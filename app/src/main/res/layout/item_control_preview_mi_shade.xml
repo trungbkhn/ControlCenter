@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginVertical="6dp">
+
+        <com.tapbi.spark.controlcenter.ui.custom.RoundedImageView
+            android:id="@+id/imControl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingHorizontal="6dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewAutoRun
+            android:id="@+id/tvControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            app:colorDefaultText="@color/colorTextDayOfMonth"
+            android:gravity="center"
+            android:paddingHorizontal="2dp"
+            android:singleLine="true"
+            android:text="@string/delete_noty"
+            app:layout_constraintTop_toBottomOf="@id/imControl" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

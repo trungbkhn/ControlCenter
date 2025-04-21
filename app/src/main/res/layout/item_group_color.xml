@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutGroupColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_ripple_round_40"
+            android:padding="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/icColor1"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="@color/gnt_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/icColor2"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="#154BED"
+                app:layout_constraintBottom_toBottomOf="@id/icColor1"
+                app:layout_constraintStart_toEndOf="@id/icColor1"
+                app:layout_constraintTop_toTopOf="@+id/icColor1" />
+            <ImageView
+                android:id="@+id/icColor3"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="#2FE410"
+                app:layout_constraintBottom_toBottomOf="@id/icColor1"
+                app:layout_constraintStart_toEndOf="@id/icColor2"
+                app:layout_constraintTop_toTopOf="@id/icColor1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/viewBorder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:layout_marginTop="-4dp"
+            android:layout_marginBottom="-4dp"
+            android:layout_marginStart="-4dp"
+            android:layout_marginEnd="-4dp"
+            android:background="@drawable/ic_shape_border_group_color"
+            app:layout_constraintTop_toTopOf="@id/layoutGroupColor"
+            app:layout_constraintStart_toStartOf="@id/layoutGroupColor"
+            app:layout_constraintBottom_toBottomOf="@id/layoutGroupColor"
+            app:layout_constraintEnd_toEndOf="@id/layoutGroupColor"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

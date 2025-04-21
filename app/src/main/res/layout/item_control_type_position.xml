@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_efeff4">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tvTitle4,icTickTop,tvTickTop,icTickBottom,tvTickBottom" />
+
+        <TextView
+            android:id="@+id/tvTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/position_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icTickTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle4"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/tvTickTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="@string/top"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/icTickTop"
+            app:layout_constraintStart_toEndOf="@id/icTickTop"
+            app:layout_constraintTop_toTopOf="@id/icTickTop" />
+
+        <ImageView
+            android:id="@+id/icTickBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="124dp"
+            android:src="@drawable/ic_unslelect"
+            app:layout_constraintBottom_toBottomOf="@+id/icTickTop"
+            app:layout_constraintStart_toEndOf="@id/icTickTop"
+            app:layout_constraintTop_toTopOf="@+id/icTickTop" />
+
+        <TextView
+            android:id="@+id/tvTickBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="@string/bottom"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/icTickBottom"
+            app:layout_constraintStart_toEndOf="@id/icTickBottom"
+            app:layout_constraintTop_toTopOf="@id/icTickBottom" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:text="@string/text_control_center"
+            android:textColor="@color/colorTextNotyWhite"
+            android:textSize="11.3dp"
+            app:layout_constraintEnd_toStartOf="@id/icSetting"
+            app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintTop_toTopOf="@+id/glh10" />
+
+        <ImageView
+            android:id="@+id/icSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_preview_settings"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toStartOf="@id/imgEditControl"
+            app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+        <ImageView
+            android:id="@+id/imgEditControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_preview_edit"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic4g"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/bg_preview_expand_control_center"
+            app:layout_constraintBottom_toTopOf="@id/glh27"
+            app:layout_constraintEnd_toStartOf="@id/center"
+            app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/glh18"
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage_6" />
+
+        <ImageView
+            android:id="@+id/ic4gIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_preview_4g"
+            app:layout_constraintBottom_toBottomOf="@id/ic4g"
+            app:layout_constraintStart_toStartOf="@id/ic4g"
+            app:layout_constraintTop_toTopOf="@id/ic4g"
+            app:layout_constraintWidth_percent="0.156" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tv4gInTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/mobile_data"
+            android:textColor="@color/white"
+            android:textSize="5.6dp"
+            app:layout_constraintBottom_toTopOf="@id/tv4gInBottom"
+            app:layout_constraintEnd_toEndOf="@id/ic4g"
+            app:layout_constraintStart_toEndOf="@id/ic4gIn"
+            app:layout_constraintTop_toTopOf="@id/ic4gIn" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tv4gInBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/text_on"
+            android:textColor="@color/_99ffffff"
+            android:textSize="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/ic4gIn"
+            app:layout_constraintEnd_toEndOf="@id/ic4g"
+            app:layout_constraintStart_toEndOf="@id/ic4gIn"
+            app:layout_constraintTop_toBottomOf="@id/tv4gInTop" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icWifi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/bg_preview_expand_control_center"
+            app:layout_constraintBottom_toTopOf="@id/glh27"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toEndOf="@id/center"
+            app:layout_constraintTop_toTopOf="@id/glh18"
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage_6" />
+
+        <ImageView
+            android:id="@+id/icWifiIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_preview_wifi"
+            app:layout_constraintBottom_toBottomOf="@id/icWifi"
+            app:layout_constraintStart_toStartOf="@id/icWifi"
+            app:layout_constraintTop_toTopOf="@id/icWifi" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tvWifiInTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/wi_fi"
+            android:textColor="@color/white"
+            android:textSize="5.6dp"
+            app:layout_constraintBottom_toTopOf="@id/tvWifiInBottom"
+            app:layout_constraintEnd_toEndOf="@id/icWifi"
+            app:layout_constraintStart_toEndOf="@id/icWifiIn"
+            app:layout_constraintTop_toTopOf="@id/icWifiIn" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tvWifiInBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/text_on"
+            android:textColor="@color/_99ffffff"
+            android:textSize="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/icWifiIn"
+            app:layout_constraintEnd_toEndOf="@id/icWifi"
+            app:layout_constraintStart_toEndOf="@id/icWifiIn"
+            app:layout_constraintTop_toBottomOf="@id/tvWifiInTop" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icBluetooth"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/bg_preview_expand_control_center"
+            app:layout_constraintBottom_toTopOf="@id/glh37"
+            app:layout_constraintEnd_toStartOf="@id/center"
+            app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintTop_toTopOf="@id/glh28"
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage_6" />
+
+        <ImageView
+            android:id="@+id/icBluetoothIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="9dp"
+            android:layout_marginStart="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_preview_blue_tooth"
+            app:layout_constraintBottom_toBottomOf="@id/icBluetooth"
+            app:layout_constraintStart_toStartOf="@id/icBluetooth"
+            app:layout_constraintTop_toTopOf="@id/icBluetooth" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tvBluetoothInTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/bluetooth"
+            android:textColor="@color/white"
+            android:textSize="5.6dp"
+            app:layout_constraintBottom_toTopOf="@id/tvBluetoothInBottom"
+            app:layout_constraintEnd_toEndOf="@id/icBluetooth"
+            app:layout_constraintStart_toEndOf="@id/icBluetoothIn"
+            app:layout_constraintTop_toTopOf="@id/icBluetoothIn" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tvBluetoothInBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/text_on"
+            android:textColor="@color/_99ffffff"
+            android:textSize="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/icBluetoothIn"
+            app:layout_constraintEnd_toEndOf="@id/icBluetooth"
+            app:layout_constraintStart_toEndOf="@id/icBluetoothIn"
+            app:layout_constraintTop_toBottomOf="@id/tvBluetoothInTop" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icFlashlight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/bg_preview_expand_control_center"
+            app:layout_constraintBottom_toTopOf="@id/glh37"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toEndOf="@id/center"
+            app:layout_constraintTop_toTopOf="@id/glh28"
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage_6" />
+
+        <ImageView
+            android:id="@+id/icFlashlightIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_preview_flashlight"
+            app:layout_constraintBottom_toBottomOf="@id/icFlashlight"
+            app:layout_constraintStart_toStartOf="@id/icFlashlight"
+            app:layout_constraintTop_toTopOf="@id/icFlashlight" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tvFlashlightInTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/flashlight"
+            android:textColor="@color/white"
+            android:textSize="5.6dp"
+            app:layout_constraintBottom_toTopOf="@id/tvFlashlightInBottom"
+            app:layout_constraintEnd_toEndOf="@id/icFlashlight"
+            app:layout_constraintStart_toEndOf="@id/icFlashlightIn"
+            app:layout_constraintTop_toTopOf="@id/icFlashlightIn" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tvFlashlightInBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/text_on"
+            android:textColor="@color/_99ffffff"
+            android:textSize="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/icFlashlightIn"
+            app:layout_constraintEnd_toEndOf="@id/icFlashlight"
+            app:layout_constraintStart_toEndOf="@id/icFlashlightIn"
+            app:layout_constraintTop_toBottomOf="@id/tvFlashlightInTop" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="6dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toTopOf="@id/glh39"
+            app:spanCount="4" />
+
+
+        <com.tapbi.spark.controlcenter.ui.custom.RoundedImageView
+            android:id="@+id/icA"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/icon_shape_default"
+            app:cornerRadius_cs="40dp"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="@id/glv22"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/rvControl" />
+
+
+        <View
+            android:id="@+id/viewBrightnessLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_brightness_left"
+            app:layout_constraintBottom_toBottomOf="@id/icA"
+            app:layout_constraintEnd_toStartOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/glv3"
+            app:layout_constraintTop_toTopOf="@id/icA" />
+
+        <ImageView
+            android:id="@+id/icBr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_mi_brightness_black"
+            app:layout_constraintBottom_toBottomOf="@id/viewBrightnessLeft"
+            app:layout_constraintStart_toStartOf="@id/viewBrightnessLeft"
+            app:layout_constraintTop_toTopOf="@id/viewBrightnessLeft" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/background_round_9"
+            app:layout_constraintEnd_toStartOf="@id/right"
+            app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@id/icBr" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.18" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.27" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.37" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.39" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.22" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

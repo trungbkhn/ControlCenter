@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">CALIFICA ESTA APLICACIÓN</string>
+    <string name="content">¿Cuánto amas nuestra aplicación?</string>
+    <string name="no_email">sin correo electrónico</string>
+    <string name="invite_by_email">Invitar por correo electrónico</string>
+    <string name="invite_facebook_friends">Invitar a amigas de facebook</string>
+    <string name="invite_by_sms">Invitar por SMS</string>
+    <string name="share_on">Compartir en</string>
+    <string name="please_intall">Por favor instalar</string>
+    <string name="later">Mas tarde</string>
+    <string name="rateNow">Califica ahora</string>
+    <string name="please_rate_5_stars">Por favor califique 5 estrellas</string>
+</resources>

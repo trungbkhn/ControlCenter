@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.AirPlaneSettingView
+            android:id="@+id/airplane_action"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_mi_airplane"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineH46"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV46"
+            app:layout_constraintStart_toStartOf="@id/guidelineV7"
+            app:layout_constraintTop_toTopOf="@id/guidelineH7" />
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.DataSettingView
+            android:id="@+id/data_action"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_mi_mobile_data"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineH46"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV92"
+            app:layout_constraintStart_toStartOf="@id/guidelineV53"
+            app:layout_constraintTop_toTopOf="@id/guidelineH7" />
+
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.WifiSettingView
+            android:id="@+id/wifi_action"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_mi_wifi"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineH92"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineV46"
+            app:layout_constraintStart_toStartOf="@id/guidelineV7"
+            app:layout_constraintTop_toTopOf="@id/guidelineH53" />
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group3.SilentImageView
+            android:id="@+id/silentAction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/wifi_action"
+            app:layout_constraintStart_toStartOf="@id/guidelineV53"
+            app:layout_constraintEnd_toStartOf="@id/bluetooth_action"
+            app:layout_constraintBottom_toTopOf="@id/locationAction"
+            />
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group1.BluetoothSettingView
+            android:id="@+id/bluetooth_action"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@drawable/ic_mi_bluetooth"
+            app:layout_constraintTop_toTopOf="@id/silentAction"
+            app:layout_constraintStart_toEndOf="@id/silentAction"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV92"
+            app:layout_constraintBottom_toBottomOf="@id/silentAction"
+            />
+        <ImageView
+            android:id="@+id/locationAction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/location_on"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/silentAction"
+            app:layout_constraintTop_toBottomOf="@id/silentAction"
+            app:layout_constraintBottom_toBottomOf="@id/wifi_action"
+            app:layout_constraintEnd_toEndOf="@id/silentAction"
+            />
+        <ImageView
+            android:id="@+id/syncAction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/sync_off"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/locationAction"
+            app:layout_constraintStart_toStartOf="@id/bluetooth_action"
+            app:layout_constraintEnd_toEndOf="@id/guidelineV92"
+            app:layout_constraintBottom_toBottomOf="@id/wifi_action"/>
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.538" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.538" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.462" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.462" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.076" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.076" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.924" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineH92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.924" />
+
+        <View
+            android:id="@+id/viewOverlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="@id/locationAction"
+            app:layout_constraintTop_toTopOf="@id/silentAction"
+            app:layout_constraintBottom_toBottomOf="@id/syncAction"
+            app:layout_constraintEnd_toEndOf="@id/bluetooth_action"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

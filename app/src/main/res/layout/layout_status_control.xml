@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:animateLayoutChanges="true"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/vStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPlane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2.60dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_air_plane_status"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvSignalsInvisible2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvSignalsInvisible2" />
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.status.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/vStatus"
+        app:layout_constraintTop_toTopOf="@id/vStatus" />
+
+    <TextView
+        android:id="@+id/tvSignalsInvisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textSize="15.60sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/waveView" />
+
+    <TextView
+        android:id="@+id/tvSignalsInvisible2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.90dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textSize="15.60sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSignalsInvisible" />
+
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.status.WifiView
+        android:id="@+id/wifiView"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginStart="2.60dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvSignalsInvisible"
+        app:layout_constraintLeft_toRightOf="@id/waveView"
+        app:layout_constraintTop_toTopOf="@id/tvSignalsInvisible" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.status.BatteryView
+        android:id="@+id/batteryView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="@id/tvSignalsInvisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSignalsInvisible" />
+
+
+    <ImageView
+        android:id="@+id/imgLockRotate"
+        android:layout_width="13dp"
+        android:layout_height="13.00dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_rotate_ios"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryView"
+        app:layout_constraintEnd_toStartOf="@id/batteryView"
+        app:layout_constraintTop_toTopOf="@+id/batteryView" />
+
+    <ImageView
+        android:id="@+id/imgBluetooth"
+        android:layout_width="13dp"
+        android:layout_height="13.00dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_bluetoolh_ios"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryView"
+        app:layout_constraintEnd_toStartOf="@id/imgLockRotate"
+        app:layout_constraintTop_toTopOf="@+id/batteryView" />
+
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="13dp"
+        android:layout_height="13.00dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/location"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryView"
+        app:layout_constraintEnd_toStartOf="@id/imgBluetooth"
+        app:layout_constraintTop_toTopOf="@+id/batteryView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

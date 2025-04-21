@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:background="@drawable/custom_background_dialog_rate"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_name_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/sf_pro_text_semi_bold"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="4dp"
+        android:textColor="#212121"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="4dp"
+        android:text="@string/content"
+        android:textColor="#212121"
+        android:textSize="16dp" />
+
+    <company.librate.MaterialRatingBar
+        android:id="@+id/materialRatingBar"
+        style="@style/Widget.MaterialRatingBar.RatingBar"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:rating="4.5"
+        app:mrb_progressTint="#007AFF"
+        app:mrb_secondaryProgressTint="#736F6F" />
+
+
+    <company.librate.view.RotationRatingBar
+        android:id="@+id/simpleRatingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:clearRatingEnabled="true"
+        app:starPadding="16"
+        app:touchable="true" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="#5C3C3C43" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center|right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_not_now"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="8dp"
+            android:text="@string/later"
+            android:textAllCaps="false"
+            android:textColor="#007AFF"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#5C3C3C43" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_right"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="8dp"
+            android:text="@string/rateNow"
+            android:textAllCaps="false"
+            android:textColor="#007AFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

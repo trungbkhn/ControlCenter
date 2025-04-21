@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="206dp"
+        android:layout_height="210dp"
+        android:layoutDirection="ltr"
+        android:background="#00FFFFFF"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardCornerRadius="20dp">
+
+        <FrameLayout
+            android:background="#00000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.github.mmin18.widget.RealtimeBlurView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:realtimeBlurRadius="80dp"
+                app:realtimeDownsampleFactor="2"
+                app:realtimeOverlayColor="#bfFFFFFF" />
+
+
+            <sh.tyy.wheelpicker.CustomTimeToPicker
+                android:id="@+id/custom_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:padding="17dp" />
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ItemViewTitleNoty xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:paddingTop="@dimen/padding_19"
+        android:paddingBottom="@dimen/padding_10dp">
+
+        <TextView
+            android:id="@+id/tvClearAllNotyInvisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding_10dp"
+            android:paddingEnd="@dimen/padding_10dp"
+            android:text="@string/text_clear"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvNotificaionCenter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="1"
+            android:text="@string/notification_center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_28"
+            app:layout_constraintEnd_toStartOf="@id/cvDelete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="@dimen/radius_15"
+            app:cardElevation="@dimen/size_0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvNotificaionCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvNotificaionCenter">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rlDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ImageBackgroundItemView
+                    android:id="@+id/bgClear"
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="@dimen/size_0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="@dimen/size_0dp"
+                    android:layout_height="@dimen/size_0dp"
+                    android:background="@color/colorBackgroundContentWidget"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvClearAllNoty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_30"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingStart="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_10dp"
+                    android:text="@string/text_clear"
+                    android:textColor="@color/color_3F3F3F"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgClearAllNoty"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:src="@drawable/ic_clean_item_child_noty"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </com.tapbi.spark.controlcenter.feature.controlios14.view.noty.ItemViewTitleNoty>
+</layout>

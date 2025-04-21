@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">このアプリを評価します</string>
+    <string name="content">私たちのアプリはどれくらい好きですか？</string>
+    <string name="no_email">メールはありません</string>
+    <string name="invite_by_email">メールで招待します</string>
+    <string name="invite_facebook_friends">Facebookの友達を招待します</string>
+    <string name="invite_by_sms">SMSによる招待</string>
+    <string name="share_on">共有します</string>
+    <string name="please_intall">インストールしてください</string>
+    <string name="later">後で</string>
+    <string name="rateNow">今すぐ評価してください</string>
+    <string name="please_rate_5_stars">5つ星を評価してください</string>
+</resources>

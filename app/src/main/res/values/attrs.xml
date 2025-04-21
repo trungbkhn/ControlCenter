@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ClickAnimationValue" format="float" />
+
+    <declare-styleable name="BrightnessMi">
+        <attr name="orientationView" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MaskItemNotyViewChild">
+        <attr name="radiusBoder" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ViewActionHorizontal">
+        <attr name="colorSelect" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingViewVolume">
+        <attr name="isHorizontal" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedCornerImageView">
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="cornerColor" format="color" />
+        <attr name="cornerLeftDisable" format="boolean" />
+        <attr name="cornerTopDisable" format="boolean" />
+        <attr name="cornerRightDisable" format="boolean" />
+        <attr name="cornerBottomDisable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="buttonColor" format="color" />
+        <attr name="isPermission" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomRoundedCornerView">
+        <attr name="customBackgroundColor" format="color" />
+        <attr name="customCornerRadius" format="dimension" />
+        <attr name="customSrc" format="reference" />
+        <attr name="customIsSelect" format="boolean" />
+        <attr name="cusTomScaleType" format="enum">
+            <enum name="fitCenter" value="0" />
+            <enum name="centerCrop" value="1" />
+            <enum name="centerInside" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="RoundedImageView">
+        <attr name="cornerRadius_cs" format="dimension"/>
+        <attr name="customIsSelect_cs" format="boolean" />
+        <attr name="image_src" format="reference"  />
+        <attr name="type_cs" format="enum">
+            <enum name="miControl" value="0" />
+            <enum name="miShade" value="1" />
+            <enum name="iosControl" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SwipeLayout">
+
+        <attr name="leftItemColors" format="reference" />
+        <attr name="leftItemIcons" format="reference" />
+        <attr name="rightItemColors" format="reference" />
+        <attr name="leftTextColors" format="reference" />
+        <attr name="leftIconColors" format="reference" />
+        <attr name="rightIconColors" format="reference" />
+        <attr name="rightTextColors" format="reference" />
+        <attr name="rightItemIcons" format="reference" />
+        <attr name="swipeItemWidth" format="dimension" />
+        <attr name="iconSize" format="dimension" />
+        <attr name="foregroundLayout" format="reference" />
+        <attr name="leftStrings" format="reference" />
+        <attr name="rightStrings" format="reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textTopMargin" format="dimension" />
+        <attr name="customFont" format="string" />
+        <attr name="canFullSwipeFromRight" format="boolean" />
+        <attr name="autoHideSwipe" format="boolean" />
+        <attr name="onlyOneSwipe" format="boolean" />
+
+    </declare-styleable>
+
+    <attr name="dotsColor" format="color" />
+    <attr name="selectedDotColor" format="color" />
+    <attr name="dotsStrokeColor" format="color" />
+    <attr name="dotsSize" format="dimension" />
+    <attr name="dotsWidthFactor" format="float" />
+    <attr name="dotsSpacing" format="dimension" />
+    <attr name="dotsCornerRadius" format="dimension" />
+    <attr name="dotsStrokeWidth" format="dimension" />
+    <attr name="stiffness" format="float" />
+    <attr name="dampingRatio" format="float" />
+    <attr name="progressMode" format="boolean" />
+    <attr name="dotsClickable" format="boolean" />
+
+    <declare-styleable name="DotsIndicator">
+        <attr name="dotsColor" />
+        <attr name="selectedDotColor" />
+        <attr name="dotsSize" />
+        <attr name="dotsWidthFactor" />
+        <attr name="dotsSpacing" />
+        <attr name="dotsCornerRadius" />
+        <attr name="progressMode" />
+        <attr name="dotsClickable" />
+    </declare-styleable>
+
+    <declare-styleable name="SpringDotsIndicator">
+        <attr name="dotsColor" />
+        <attr name="dotsSize" />
+        <attr name="dotsSpacing" />
+        <attr name="dotsCornerRadius" />
+        <attr name="dotsStrokeWidth" />
+        <attr name="dotsStrokeColor" />
+        <attr name="stiffness" />
+        <attr name="dampingRatio" />
+        <attr name="dotsClickable" />
+    </declare-styleable>
+
+    <declare-styleable name="WormDotsIndicator">
+        <attr name="dotsColor" />
+        <attr name="dotsSize" />
+        <attr name="dotsSpacing" />
+        <attr name="dotsCornerRadius" />
+        <attr name="dotsStrokeWidth" />
+        <attr name="dotsStrokeColor" />
+        <attr name="dotsClickable" />
+    </declare-styleable>
+    <declare-styleable name="TextViewAutoRunRobotoRegular">
+        <attr name="colorDefaultText" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayoutNoty">
+        <attr name="isNotyChild" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPermissionNotification">
+        <attr name="isControlCenter" format="boolean" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">Đánh giá ứng dụng</string>
+    <string name="content">Vui lòng đánh giá ứng dụng của chúng tôi</string>
+    <string name="no_email">không email</string>
+    <string name="invite_by_email">Mời qua email</string>
+    <string name="invite_facebook_friends">Mời bạn bè trên facebook</string>
+    <string name="invite_by_sms">Mời qua tin nhắn</string>
+    <string name="share_on">Chia sẻ bằng</string>
+    <string name="please_intall">Vui lòng cài đặt</string>
+    <string name="later">Đánh giá sau</string>
+    <string name="rateNow">Đánh giá ngay</string>
+    <string name="please_rate_5_stars">Vui lòng đánh giá 5 sao</string>
+</resources>

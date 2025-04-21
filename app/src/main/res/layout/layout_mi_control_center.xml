@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutControl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_mi_setting"
+                app:layout_constraintBottom_toBottomOf="@+id/imgEdit"
+                app:layout_constraintRight_toLeftOf="@+id/imgEdit"
+                app:layout_constraintTop_toTopOf="@+id/imgEdit" />
+
+            <ImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_mi_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/titleScreen"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toRightOf="@+id/titleScreen"
+                app:layout_constraintRight_toRightOf="@+id/right"
+                app:layout_constraintTop_toTopOf="@+id/titleScreen" />
+
+
+            <ImageView
+                android:id="@+id/imgScroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_scroll"
+                app:layout_constraintLeft_toLeftOf="@+id/imgAutoBrightness"
+                app:layout_constraintRight_toRightOf="@id/flProcessBrightness"
+                app:layout_constraintTop_toBottomOf="@+id/flProcessBrightness" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/topTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottomTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/TopRecyclerExpand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottomSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.45" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rccExpand"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomSetting"
+                app:layout_constraintLeft_toLeftOf="@id/left"
+                app:layout_constraintRight_toRightOf="@id/right"
+                app:layout_constraintTop_toBottomOf="@+id/TopRecyclerExpand" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rccCollapse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/left"
+                app:layout_constraintRight_toRightOf="@id/right"
+                app:layout_constraintTop_toBottomOf="@+id/gdCenter"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/titleScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+
+                android:text="@string/text_control_center"
+                android:textColor="@color/colorTextNotyWhite"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomTitle"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toLeftOf="@+id/left"
+                app:layout_constraintRight_toLeftOf="@+id/imgSetting"
+                app:layout_constraintTop_toTopOf="@+id/topTitle" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/colorTextNotyWhite"
+                android:textSize="46sp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomTitle"
+                app:layout_constraintLeft_toRightOf="@id/left"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1" />
+
+            <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewRobotoRegular
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:textColor="@color/color_date"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvTime"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+                app:layout_constraintLeft_toRightOf="@+id/tvTime"
+                app:layout_constraintRight_toLeftOf="@+id/imgSetting" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/flProcessBrightness"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparent"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="@dimen/size_0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgAutoBrightness"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/imgAutoBrightness"
+                app:layout_constraintRight_toRightOf="@id/right"
+                app:layout_constraintTop_toTopOf="@+id/imgAutoBrightness"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.tapbi.spark.controlcenter.feature.controlcenter.view.control.micenter.view.BrightnessMi
+                    android:id="@+id/imgProcessBrightness"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/imgBrightness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_img_icon_brigness" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.tapbi.spark.controlcenter.feature.controlcenter.view.control.micenter.view.MiMusicView
+                android:id="@+id/imgMusic"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/gdCenter"
+                app:layout_constraintLeft_toLeftOf="@+id/left"
+                app:layout_constraintRight_toRightOf="@+id/right"
+                app:layout_constraintTop_toBottomOf="@+id/bottomSetting" />
+
+            <com.tapbi.spark.controlcenter.ui.custom.RoundedImageView
+                android:id="@+id/imgAutoBrightness"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:overScrollMode="never"
+                android:scaleType="center"
+                app:image_src="@drawable/ic_menu_autu_brightness"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toLeftOf="@id/left"
+                app:layout_constraintTop_toTopOf="@+id/rccCollapse" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ViewStub
+            android:id="@+id/viewSubLayoutChangeAction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/layout_stub_change_action_controlcenter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

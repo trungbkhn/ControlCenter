@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">قيم هذا التطبيق</string>
+    <string name="content">كم تحب تطبيقنا؟</string>
+    <string name="no_email">لا البريد الإلكتروني</string>
+    <string name="invite_by_email">ادعو بواسطة البريد الإلكتروني</string>
+    <string name="invite_facebook_friends">دعوة أصدقاء Facebook</string>
+    <string name="invite_by_sms">دعوة عن طريق الرسائل القصيرة</string>
+    <string name="share_on">مشاركه فى</string>
+    <string name="please_intall">رجاءا حمل</string>
+    <string name="later">لاحقاً</string>
+    <string name="rateNow">قيم الآن</string>
+    <string name="please_rate_5_stars">يرجى تقييم 5 نجوم</string>
+</resources>

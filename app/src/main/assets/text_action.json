@@ -1,0 +1,856 @@
+[
+  {
+    "languageCode": "vi",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "tối",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "tiết kiệm pin",
+        "action2": "battery",
+        "action3": "power mode",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "máy bay",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "dữ liệu di động",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "vị trí",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "cập di động",
+        "action2": "phát sóng cá nhân",
+        "action3": "điểm phát sóng",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "en",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "dark",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "power saving",
+        "action2": "battery",
+        "action3": "power mode",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "plane",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "mobile data",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "location",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "hotspot",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "es",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "Oscuro",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "Ahorro de energía",
+        "action2": "Batería",
+        "action3": "Modo de poder",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "Avión",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "Datos móviles",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "Ubicación",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "hotspot",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "ru",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "темно",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "энергосбережение",
+        "action2": "батареи",
+        "action3": "Режим питания",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "самолет",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "Мобильные данные",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "место расположения",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "горячая точка",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "ko",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "어두운",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "전력 절약",
+        "action2": "배터리",
+        "action3": "전원 모드",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "비행기",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "모바일 데이터",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "위치",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "핫스팟",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "ja",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "暗い",
+        "action2": "ダークモード",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "省エネ",
+        "action2": "バッテリーセーバー ",
+        "action3": "パワーモード",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "飛行機",
+        "action2": "Flight mode",
+        "action3": "機内モード",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "モバイルデータ",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "位置",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "ホットスポット",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "tr",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "Karanlık",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "Güç tasarrufu",
+        "action2": "Pil",
+        "action3": "Güç modu",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "Uçak",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "Mobil veri",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "Yer",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "Sıcak nokta",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "de",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "dunkel",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "Engergiesparmodus",
+        "action2": "Batterie",
+        "action3": "Power-Modus",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "Flugzeug",
+        "action2": "Flight mode",
+        "action3": "Flugmodus",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "Mobile Daten",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "WLAN",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "Lage",
+        "action2": "Standort",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "Hotspot",
+        "action2": "Hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "ar",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "مظلم",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "حفظ الطاقة",
+        "action2": "بطارية",
+        "action3": "وضع الطاقة",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "طائرة",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "بيانات الهاتف المحمول",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "موقع",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "نقطة ساخنة",
+        "action2": "نقطة ساخنة",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "fr",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "Foncé",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "Economie d'énergie",
+        "action2": "Batterie",
+        "action3": "Mode de puissance",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "Avion",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "Données mobiles",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "Emplacement",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "Point chaud",
+        "action2": "Point chaud",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "pt",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "escuro",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "economia de energia",
+        "action2": "bateria",
+        "action3": "modo de energia",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "avião",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "Dados móveis",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "localização",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "ponto de acesso",
+        "action2": "ponto de acesso",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "hi",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "अँधेरा",
+        "action2": "डार्क मोड बंद",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "बिजली की बचत",
+        "action2": "बैटरी",
+        "action3": "शक्ति मोड",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "हवाई जहाज मोड",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "मोबाइल सामग्री",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "वाई-फाई",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "जगह",
+        "action2": "स्थान",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "हॉटस्पॉट",
+        "action2": "हॉटस्पॉट बंद",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "in",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "Gelap",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "Penghematan energi",
+        "action2": "Baterai",
+        "action3": "Mode daya",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "Pesawat terbang",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "Data seluler",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "location",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "hotspot",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  },
+  {
+    "languageCode": "fil",
+    "textActionClickList": [
+      {
+        "evenTypeClickNoty": "Dark Mode",
+        "action": "madilim",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Battery",
+        "action": "Pag -save ng Power",
+        "action2": "baterya",
+        "action3": "power mode",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Airplane mode",
+        "action": "eroplano",
+        "action2": "Flight mode",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Data mobile",
+        "action": "mobile data",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Wifi",
+        "action": "wi-fi",
+        "action2": "internet",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Location",
+        "action": "Lokasyon",
+        "action2": "",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      },
+      {
+        "evenTypeClickNoty": "Host post",
+        "action": "hotspot",
+        "action2": "hotspot",
+        "action3": "",
+        "withoutKey": "",
+        "withoutKey2": ""
+      }
+    ]
+  }
+]

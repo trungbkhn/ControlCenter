@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/vBgSelect"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="@dimen/size_0dp"
+                android:layout_marginStart="-8dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="-8dp"
+                android:layout_marginBottom="-8dp"
+                android:background="@drawable/bg_border_white_radius_18"
+                app:layout_constraintBottom_toBottomOf="@id/imThumb"
+                app:layout_constraintEnd_toEndOf="@id/imThumb"
+                app:layout_constraintStart_toStartOf="@id/imThumb"
+                app:layout_constraintTop_toTopOf="@id/imThumb" />
+
+            <ImageView
+                android:id="@+id/imThumb"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="@dimen/size_0dp"
+                android:layout_margin="@dimen/padding_8dp"
+                android:src="@drawable/preview_ios_control_appearance"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="354:786"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

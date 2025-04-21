@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group4.CustomSeekbarVerticalView
+        android:id="@+id/seekBarVolume"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group4.CustomSeekbarHorizontalView
+        android:id="@+id/seekBarVolumeHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iconVolume"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_volume_black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineH87"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarVolume"
+        app:layout_constraintStart_toStartOf="@+id/seekBarVolume"
+        app:layout_constraintWidth_percent="0.456" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.879" />
+
+    <ImageView
+        android:id="@+id/iconVolumeHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_marginStart="30dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_volume_black"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarVolumeHorizontal"
+        app:layout_constraintStart_toStartOf="@+id/seekBarVolumeHorizontal"
+        app:layout_constraintTop_toTopOf="@id/seekBarVolumeHorizontal" />
+</androidx.constraintlayout.widget.ConstraintLayout>

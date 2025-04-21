@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgGoToNotificationAccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="16dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_preview_settings"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+            app:layout_constraintEnd_toEndOf="@+id/right"
+            app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+        <ImageView
+            android:id="@+id/imgEditControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:elevation="16dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_preview_edit"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+            app:layout_constraintEnd_toStartOf="@+id/imgGoToNotificationAccess"
+            app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+        <ImageView
+            android:id="@+id/wifiView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:elevation="16dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_preview_wifi"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+            app:layout_constraintEnd_toStartOf="@id/batteryView"
+            app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+        <ImageView
+            android:id="@+id/batteryView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="16dp"
+            android:outlineProvider="none"
+            android:src="@drawable/ic_preview_pin"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+            app:layout_constraintEnd_toEndOf="@+id/right"
+            app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+        <ImageView
+            android:id="@+id/imBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_mi" />
+
+
+        <View
+            android:id="@+id/viewControl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/bg_view_mi_shade_preview"
+            app:layout_constraintBottom_toBottomOf="@id/rvControl"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toTopOf="@id/rvControl" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvControl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/right"
+            app:layout_constraintStart_toStartOf="@id/left"
+            app:layout_constraintTop_toTopOf="@id/glh14"
+            app:spanCount="4" />
+
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="4dp"
+            android:layout_marginBottom="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_indidator"
+            app:layout_constraintBottom_toBottomOf="@id/viewControl"
+            app:layout_constraintEnd_toEndOf="@id/rvControl"
+            app:layout_constraintStart_toStartOf="@id/rvControl" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_bottom"
+            app:layout_constraintDimensionRatio="359:176"
+            app:layout_constraintEnd_toStartOf="@id/right"
+            app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@+id/rvControl" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="08:53"
+            android:textColor="@color/colorTextNotyWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvDate"
+            app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintVertical_bias="1" />
+
+        <com.tapbi.spark.controlcenter.ui.custom.SyncFontTextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:elevation="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:outlineProvider="none"
+            android:textColor="@color/colorTextNotyWhite"
+            android:textSize="5sp"
+            app:layout_constraintBottom_toTopOf="@id/glh14"
+            app:layout_constraintStart_toStartOf="@id/tvTime" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.57" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

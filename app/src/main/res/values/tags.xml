@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tag_native_preview_my_theme" translatable="false">preview_my_theme</string>
+    <string name="tag_native_choose_style" translatable="false">choose_style</string>
+    <string name="tag_native_language" translatable="false">language</string>
+    <string name="tag_native_store_wallpaper" translatable="false">store_wallpaper</string>
+    <string name="tag_native_setting_touch" translatable="false">setting_touch</string>
+    <string name="tag_native_onboard_1" translatable="false">onboard_1</string>
+    <string name="tag_native_onboard_2" translatable="false">onboard_2</string>
+    <string name="tag_native_onboard_full" translatable="false">onboard_full</string>
+    <string name="tag_native_favorite_theme" translatable="false">favorite_theme</string>
+    <string name="tag_native_request_permission" translatable="false">request_permission</string>
+    <string name="tag_native_user_manual_control" translatable="false">user_manual_control</string>
+
+    <string name="tag_banner_home" translatable="false">home</string>
+    <string name="tag_banner_customize_theme" translatable="false">customize_theme</string>
+
+    <string name="tag_inter_home" translatable="false">home</string>
+    <string name="tag_inter_edge_triggers" translatable="false">edge_triggers</string>
+    <string name="tag_inter_language" translatable="false">language</string>
+    <string name="tag_inter_customize_theme" translatable="false">customize_theme</string>
+    <string name="tag_inter_preview_theme" translatable="false">preview_theme</string>
+</resources>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_detail_splash"
+            android:fontFamily="@font/sfpro_display_regular"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="21dp"
+            android:paddingBottom="8dp"
+            android:text="@string/setting"
+            android:textColor="@color/black"
+            android:textDirection="ltr"
+            android:textSize="32sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:animateLayoutChanges="true"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/tvSettings">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="47dp">
+
+                <View
+                    android:id="@+id/viewTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0dp"
+                    android:background="@color/text_detail_splash"
+                    app:layout_constraintBottom_toTopOf="@+id/textSetting"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textEnable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center_vertical"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/text_enable"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_line"
+                    android:textDirection="ltr"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <CheckBox
+                    android:id="@+id/cbEnableNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:button="@drawable/checkbox_custom"
+                    android:paddingVertical="13dp"
+                    android:paddingStart="12dp"
+                    android:text="@string/text_cb_notification"
+                    android:textColor="@color/black"
+                    android:textDirection="ltr"
+                    android:textSize="17sp"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/cbEnableControls"
+                    app:layout_constraintTop_toBottomOf="@+id/textEnable" />
+
+                <CheckBox
+                    android:id="@+id/cbEnableControls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:button="@drawable/checkbox_custom"
+                    android:paddingVertical="13dp"
+                    android:paddingStart="12dp"
+                    android:text="@string/text_cb_control"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toRightOf="@+id/cbEnableNotification"
+                    app:layout_constraintRight_toRightOf="@+id/textEnable"
+                    app:layout_constraintTop_toTopOf="@+id/cbEnableNotification" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupCheckEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="textEnable,cbEnableNotification,cbEnableControls" />
+
+
+                <TextView
+                    android:id="@+id/textSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/general"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_line"
+                    android:textDirection="ltr"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/cbEnableControls" />
+
+
+                <View
+                    android:id="@+id/viewSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0dp"
+                    android:background="@color/text_detail_splash"
+                    android:textDirection="ltr"
+                    app:layout_constraintBottom_toTopOf="@+id/textSupport"
+                    app:layout_constraintTop_toBottomOf="@id/textSetting" />
+
+
+                <TextView
+                    android:id="@+id/tvMenuEdge"
+                    style="@style/TextViewItemHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_edge_trigger"
+                    app:drawableLeftCompat="@drawable/ic_menu_edge"
+                    app:drawableRightCompat="@drawable/ic_more"
+                    app:layout_constraintTop_toBottomOf="@id/textSetting" />
+
+                <View
+                    android:id="@+id/vLineMenuEdge"
+                    style="@style/LineItemHome"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMenuEdge" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupMenuEdge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="vLineMenuEdge, tvMenuEdge" />
+
+                <TextView
+                    android:id="@+id/tvLanguage"
+                    style="@style/TextViewItemHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/languages"
+                    app:drawableLeftCompat="@drawable/ic_language"
+                    app:drawableRightCompat="@drawable/ic_more"
+                    app:layout_constraintTop_toBottomOf="@id/vLineMenuEdge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCurrentLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    android:text="English"
+                    android:textColor="@color/_9D9D9D"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvLanguage"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvLanguage" />
+
+                <View
+                    android:id="@+id/vLineLanguage"
+                    style="@style/LineItemHome"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
+
+
+
+
+
+                <TextView
+                    android:id="@+id/textSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/support"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_line"
+                    android:textDirection="ltr"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
+
+
+                <View
+                    android:id="@+id/viewSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0dp"
+                    android:background="@color/text_detail_splash"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvMenuPrivacyPolicy"
+                    app:layout_constraintTop_toBottomOf="@id/textSupport" />
+
+
+                <TextView
+                    android:id="@+id/tvMenuFeedback"
+                    style="@style/TextViewItemHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback"
+                    app:drawableLeftCompat="@drawable/ic_menu_feedback"
+                    app:drawableRightCompat="@drawable/ic_more"
+                    app:layout_constraintTop_toBottomOf="@+id/textSupport" />
+
+                <View
+                    android:id="@+id/vLineMenuFeedback"
+                    style="@style/LineItemHome"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMenuFeedback" />
+
+                <TextView
+                    android:id="@+id/tvMenuShareApp"
+                    style="@style/TextViewItemHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_app"
+                    app:drawableLeftCompat="@drawable/ic_menu_share_app"
+                    app:drawableRightCompat="@drawable/ic_more"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMenuFeedback" />
+
+                <View
+                    android:id="@+id/vLineMenuShareApp"
+                    style="@style/LineItemHome"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMenuShareApp" />
+
+                <TextView
+                    android:id="@+id/tvMenuRate"
+                    style="@style/TextViewItemHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_rate"
+                    app:drawableLeftCompat="@drawable/ic_menu_rate"
+                    app:drawableRightCompat="@drawable/ic_more"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMenuShareApp" />
+
+
+                <View
+                    android:id="@+id/vLineMenuRateApp"
+                    style="@style/LineItemHome"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMenuRate" />
+
+                <TextView
+                    android:id="@+id/tvMenuPrivacyPolicy"
+                    style="@style/TextViewItemHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_policy"
+                    app:drawableLeftCompat="@drawable/ic_menu_privacy_policy"
+                    app:drawableRightCompat="@drawable/ic_more"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMenuRate" />
+
+
+                <View
+                    android:id="@+id/lineTopSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/background_line"
+                    app:layout_constraintTop_toTopOf="@+id/tvMenuEdge" />
+
+                <View
+                    android:id="@+id/lineBottomSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/background_line"
+                    app:layout_constraintBottom_toBottomOf="@id/viewSettings" />
+
+
+                <View
+                    android:id="@+id/lineTopSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/background_line"
+                    app:layout_constraintTop_toTopOf="@+id/viewSupport" />
+
+                <View
+                    android:id="@+id/lineBottomSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/background_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewSupport" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,179 @@
+apply plugin: 'com.android.application'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+    namespace 'com.tapbi.spark.controlcenter'
+    defaultConfig {
+        applicationId "com.tapbi.spark.controlcenter"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 29
+        renderscriptSupportModeEnabled true
+        flavorDimensions "default"
+        generatedDensities = []
+    }
+    //https://www.androidbreakdown.com/2016/12/javalangillegalstateexception-this-app.html
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        product {
+            dimension "default"
+        }
+        dev {
+            dimension "default"
+            applicationId = 'com.tapbi.spark.controlcenter'
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+        disable 'RequiredSize'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    /*Core*/
+    implementation libraries.androidAppCopmpat
+    /*Database ( if use Room) */
+    implementation libraries.room
+    implementation libraries.roomKtx
+    implementation libraries.roomRxjava
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-location:21.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.8.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.8.1'
+    implementation 'androidx.activity:activity:1.9.0'
+    annotationProcessor libraries.roomAP
+    annotationProcessor libraries.roomKpt
+    kapt libraries.roomAP
+    /*UI*/
+    implementation libraries.androidxNavigation
+    implementation libraries.androidUICommon
+    implementation libraries.materialDesign
+    implementation libraries.hilt
+    kapt libraries.hiltKpt
+    implementation libraries.glide
+    annotationProcessor libraries.glideAP
+
+    /*ktx*/
+    implementation libraries.ktxCore
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+
+    /*Firebase*/
+    implementation platform("com.google.firebase:firebase-bom:$versions.firebaseVersion")
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-config-ktx'
+
+    implementation project(path: ':librateIOS')
+    implementation project(':liboverscroll')
+    implementation project(':WheelPicker')
+    implementation project(':custombottomnavigation')
+    implementation project(':library-blur')
+
+
+    /*Other*/
+    implementation libraries.rxJava
+    implementation libraries.retrofitWithLogger
+    implementation libraries.retrofitRXjavaAdapter
+    implementation libraries.timberLog
+    implementation libraries.eventBus
+    implementation libraries.gson
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+
+
+    /*Test*/
+    androidTestImplementation testLib
+
+    implementation libraries.lifeCycleKtx
+
+//    implementation 'me.everything:overscroll-decor-android:1.1.0'
+
+//    Work
+//    implementation 'androidx.work:work-runtime:2.7.1'
+    implementation "com.google.guava:guava:31.0.1-android"
+
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+//    ColorPicker
+    implementation 'com.github.QuadFlask:colorpicker:0.0.15'
+//    compile(name:'[arrFileName]', ext:'aar')
+
+//    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+    implementation "com.orhanobut:hawk:2.0.1"
+
+    //lottie
+    implementation 'com.airbnb.android:lottie:6.1.0'
+
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.github.trungsteven:ControlAdsTrue:1.5.29'
+    implementation 'com.applovin:applovin-sdk:12.6.0'
+    implementation 'com.google.android.gms:play-services-ads:23.2.0'
+
+
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.18'
+
+    //blur glide
+
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+    //sdk facebook
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+
+
+
+}
+repositories {
+    mavenCentral()
+}
+

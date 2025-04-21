@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutParentMiNoti"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentChild"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.PermissionNotificationView
+            android:id="@+id/permissionNotiView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:layout_constraintLeft_toLeftOf="@id/left"
+            app:layout_constraintRight_toRightOf="@id/right"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime"
+            app:isControlCenter="false" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupNoty"
+            app:constraint_referenced_ids="rccNoty, btnClearNoty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rccNoty"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/left"
+            app:layout_constraintRight_toRightOf="@id/right"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+        <ImageView
+
+            android:id="@+id/imgGoToNotificationAccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_intent_notification_access"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+            app:layout_constraintRight_toRightOf="@+id/right" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="@color/colorTextNotyWhite"
+            android:textSize="46sp"
+            app:layout_constraintLeft_toRightOf="@id/left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewRobotoRegular
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:textColor="@color/color_date"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvTime"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+            app:layout_constraintLeft_toRightOf="@+id/tvTime"
+            app:layout_constraintRight_toLeftOf="@+id/imgGoToNotificationAccess" />
+
+        <ImageView
+            android:id="@+id/btnClearNoty"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_oval_while_ripple_setting"
+            android:elevation="1dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_clear_noty_night"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/rccNoty"
+            app:layout_constraintRight_toRightOf="@+id/rccNoty" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</merge>

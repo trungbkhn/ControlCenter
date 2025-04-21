@@ -1,0 +1,31 @@
+{
+  "id": 2001,
+  "id_category": 2000,
+  "typeBackground": "DEFAULT",
+  "idStoreWallpaper": -1,
+  "background": "background.webp",
+  "backgroundColor": "",
+  "font": "poppins_regular.ttf",
+  "mi_shade": {},
+  "control_center": {
+    "colorIconSettings": "#FFFFFF",
+    "backgroundColorSelectControl1": "#03924D",
+    "backgroundColorSelectControl2": "#2073F8",
+    "backgroundColorSelectControl3": "#EF8023",
+    "backgroundColorDefaultControl": "#33F2F2F2",
+    "textColorSelectControl": "#FFFFFF",
+    "textColorDefaultControl": "#FFFFFF",
+    "iconColorSelectControl": "#FFFFFF",
+    "iconColorDefaultControl": "#FFFFFF",
+    "colorTextStatusControl": "#FFFFFF",
+    "iconControl": "icon_shade_1.webp",
+    "cornerBackgroundControl": 0.5,
+    "iconColorBrightness": "#000000",
+    "colorProgressBrightness": "#FFFFFF",
+    "backgroundColorBrightness": "#A79FA2"
+  },
+  "pixel": {},
+  "oppo": {},
+  "samsung": {},
+  "control_os": {}
+}

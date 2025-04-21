@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tapbi.spark.controlcenter.feature.controlcenter.view.noty.view.itemnoty.ChildSwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/child_swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    app:canFullSwipeFromRight="true"
+    app:foregroundLayout="@layout/layout_child_swipe_item"
+    app:iconSize="@dimen/icon_size"
+    app:rightIconColors="@array/rightDrawableColors"
+    app:rightItemColors="@array/rightColors"
+    app:rightItemIcons="@array/rightDrawables"
+    app:rightTextColors="@array/rightTextColors"
+    app:swipeItemWidth="@dimen/swipe_item_width"
+    app:textSize="@dimen/text_size" />

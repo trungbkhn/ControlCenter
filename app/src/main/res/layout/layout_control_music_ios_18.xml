@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr">
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="previousAction,playPauseAction,nextAction,cvPlayerIcon" />
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group2.MusicControlView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group2.MusicControlView
+            android:id="@+id/cvPlayerIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/glh2"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/glv2"
+            app:layout_constraintStart_toStartOf="@id/glv1"
+            app:layout_constraintTop_toTopOf="@id/glh1" />
+
+
+        <ImageView
+            android:id="@+id/imgHeadphone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_headphone"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/glh1"
+            app:layout_constraintEnd_toEndOf="@id/glv3"
+            app:layout_constraintStart_toStartOf="@id/glv4"/>
+
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group2.MusicControlView
+            android:id="@+id/previousAction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_pre"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/glh4"
+            app:layout_constraintBottom_toBottomOf="@id/glh3"
+            app:layout_constraintStart_toStartOf="@id/glv1"
+            app:layout_constraintEnd_toStartOf="@id/playPauseAction"/>
+
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group2.MusicControlView
+            android:id="@+id/playPauseAction"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/play"
+            android:paddingVertical="5dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@id/previousAction"
+            app:layout_constraintEnd_toStartOf="@id/nextAction"
+            app:layout_constraintTop_toTopOf="@id/glh4"
+            app:layout_constraintBottom_toBottomOf="@id/glh3"/>
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.group2.MusicControlView
+            android:id="@+id/nextAction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_next"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@id/playPauseAction"
+            app:layout_constraintEnd_toEndOf="@id/glv3"
+            app:layout_constraintTop_toTopOf="@id/glh4"
+            app:layout_constraintBottom_toBottomOf="@id/glh3"/>
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:freezesText="true"
+            android:gravity="start|bottom"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/audio_music"
+            android:textColor="@color/colorTextControl"
+            android:textSize="@dimen/text_13"
+            app:layout_constraintStart_toStartOf="@id/glv1"
+            app:layout_constraintEnd_toEndOf="@id/glv3"
+            app:layout_constraintTop_toTopOf="@id/glh2"
+            app:layout_constraintBottom_toTopOf="@id/tvArtist"
+        />
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:freezesText="true"
+            android:gravity="start|bottom"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/colorTextControl"
+            android:textSize="@dimen/size_11"
+            app:layout_constraintStart_toStartOf="@id/glv1"
+            app:layout_constraintEnd_toEndOf="@id/glv3"
+            app:layout_constraintBottom_toBottomOf="@id/glh4"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            />
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0857" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.428" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.942" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glh4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.735" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0857" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.428" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.914" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.647" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

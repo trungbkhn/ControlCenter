@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/vHeaderMusicExpand"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0dp"
+        android:background="@drawable/background_boder_radius_gray_top"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/glHori33Percent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvThumb"
+        android:layout_width="@dimen/size_64dp"
+        android:layout_height="@dimen/size_64dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/vHeaderMusicExpand"
+        app:layout_constraintStart_toStartOf="@id/vHeaderMusicExpand"
+        app:layout_constraintTop_toTopOf="@id/vHeaderMusicExpand">
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.control.base.SquareImageView
+            android:id="@+id/thumbExpand"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/titleExpand"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:freezesText="true"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/colorTextControl"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/artistExpand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cvThumb"
+        app:layout_constraintTop_toBottomOf="@+id/vHeaderMusicExpand" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:freezesText="true"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextControl"
+        android:textSize="17sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/vHeaderMusicExpand"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vHeaderMusicExpand" />
+
+    <TextView
+        android:id="@+id/artistExpand"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:freezesText="true"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/colorTextControl"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/vHeaderMusicExpand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cvThumb"
+        app:layout_constraintTop_toBottomOf="@+id/titleExpand" />
+
+
+    <View
+        android:id="@+id/vBgBottomMusicExpand"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/background_boder_radius_gray_bot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glHori33Percent"
+        app:layout_constraintVertical_bias="0.59000003" />
+
+
+    <ImageView
+        android:id="@+id/playExpand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="@id/vBgBottomMusicExpand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vBgBottomMusicExpand"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <ImageView
+        android:id="@+id/preExpand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pre_expand"
+        app:layout_constraintBottom_toBottomOf="@id/playExpand"
+        app:layout_constraintEnd_toStartOf="@id/playExpand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/playExpand" />
+
+    <ImageView
+        android:id="@+id/nextExpand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next_expand"
+        app:layout_constraintBottom_toBottomOf="@id/playExpand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playExpand"
+        app:layout_constraintTop_toTopOf="@id/playExpand" />
+
+
+    <ImageView
+        android:id="@+id/volumeMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/ic_volume_min_expand"
+        app:layout_constraintBottom_toBottomOf="@id/seekbarVolumeExpand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/seekbarVolumeExpand" />
+
+    <SeekBar
+        android:id="@+id/seekbarVolumeExpand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="2dp"
+        android:minHeight="2dp"
+        android:progressDrawable="@drawable/progress_seekbar_volume_expand"
+        android:thumb="@drawable/thumb_seekbar_volume_expand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/volumeMax"
+        app:layout_constraintStart_toEndOf="@id/volumeMin"
+        app:layout_constraintTop_toTopOf="@id/glHori33Percent"
+        app:layout_constraintVertical_bias="0.87" />
+
+    <ImageView
+        android:id="@+id/volumeMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingTop="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/ic_volume_max_expand"
+        app:layout_constraintBottom_toBottomOf="@id/seekbarVolumeExpand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/seekbarVolumeExpand" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHori33Percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+
+</merge>

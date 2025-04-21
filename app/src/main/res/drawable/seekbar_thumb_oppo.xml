@@ -1,0 +1,22 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Hình tròn nền cho thumb -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="46dp" />
+            <solid android:color="#9ACBF1" />
+            <corners android:bottomRightRadius="100dp"
+                android:topRightRadius="100dp" android:radius="100dp"/>
+            <padding
+                android:bottom="7dp"
+                android:left="7dp"
+                android:right="7dp"
+                android:top="7dp" />
+
+        </shape>
+    </item>
+
+    <!-- Thumb chính -->
+    <item android:drawable="@drawable/thum_seekbar_oppo">
+
+    </item>
+</layer-list>

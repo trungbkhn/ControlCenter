@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutChangeAction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_tv_done"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="4dp"
+            android:text="@string/text_done"
+            android:textColor="@color/black_background_80"
+            app:layout_constraintBottom_toTopOf="@+id/rccActionSave"
+            app:layout_constraintRight_toRightOf="@id/a"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewBgBlack"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_back_boder_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineCenter" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rccActionSave"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="86dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/lineCenter"
+            app:layout_constraintLeft_toLeftOf="@+id/leftAction"
+            app:layout_constraintRight_toRightOf="@id/rightAction"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rccAllAction"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/leftAction"
+            app:layout_constraintRight_toRightOf="@id/rightAction"
+            app:layout_constraintTop_toBottomOf="@+id/textAdd" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewRobotoRegular
+            android:id="@+id/textAddGoogle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingEnd="6dp"
+            android:text="@string/text_add_toggle"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDone"
+            app:layout_constraintEnd_toStartOf="@id/tvDone"
+            app:layout_constraintStart_toStartOf="@id/leftAction"
+            app:layout_constraintTop_toTopOf="@+id/tvDone" />
+
+        <TextView
+            android:id="@+id/textAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_available"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/leftAction"
+            app:layout_constraintTop_toBottomOf="@+id/imgStateView" />
+
+        <com.tapbi.spark.controlcenter.feature.controlcenter.textview.TextViewRobotoRegular
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="@string/text_detail_add_toggle"
+            android:textColor="@color/colorBackgroundContentWidget"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/leftAction"
+            app:layout_constraintRight_toRightOf="@id/rightAction"
+            app:layout_constraintTop_toBottomOf="@+id/textAddGoogle" />
+
+        <ImageView
+            android:id="@+id/imgStateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/ic_expaned_noty"
+            app:layout_constraintLeft_toLeftOf="@+id/viewBgBlack"
+            app:layout_constraintRight_toRightOf="@+id/viewBgBlack"
+            app:layout_constraintTop_toTopOf="@+id/viewBgBlack" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

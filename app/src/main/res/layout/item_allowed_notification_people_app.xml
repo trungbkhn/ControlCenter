@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layoutDirection="ltr">
+
+        <View
+            android:id="@+id/view_allowed"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/custom_background_choose_time"
+            app:layout_constraintBottom_toBottomOf="@id/tv_apps"
+            app:layout_constraintTop_toTopOf="@id/tv_people" />
+
+        <TextView
+            android:id="@+id/tv_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="left"
+            android:maxLength="15"
+            android:paddingStart="20dp"
+            android:paddingTop="28dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="28dp"
+            android:text="@string/people"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/view_allowed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_app"
+            android:layout_width="0dp"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_C6C6C8"
+            app:layout_constraintLeft_toLeftOf="@id/view_allowed"
+            app:layout_constraintRight_toRightOf="@id/view_allowed"
+            app:layout_constraintTop_toBottomOf="@id/tv_people" />
+
+
+        <TextView
+            android:id="@+id/tv_apps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingStart="20dp"
+            android:paddingTop="28dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="28dp"
+            android:text="@string/apps"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/view_allowed"
+            app:layout_constraintTop_toBottomOf="@id/view_app" />
+
+        <ImageView
+            android:id="@+id/im_right_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/icon_next_people"
+            app:layout_constraintBottom_toBottomOf="@id/tv_people"
+            app:layout_constraintRight_toRightOf="@id/view_allowed"
+            app:layout_constraintTop_toTopOf="@id/tv_people" />
+
+        <ImageView
+            android:id="@+id/im_right_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/icon_next_people"
+            app:layout_constraintBottom_toBottomOf="@id/tv_apps"
+            app:layout_constraintRight_toRightOf="@id/view_allowed"
+            app:layout_constraintTop_toTopOf="@id/tv_apps" />
+
+        <TextView
+            android:id="@+id/tv_no_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/no_people"
+            android:textColor="@color/color_737379"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tv_people"
+            app:layout_constraintLeft_toLeftOf="@id/barrier3"
+            app:layout_constraintRight_toLeftOf="@id/im_right_people"
+            app:layout_constraintTop_toTopOf="@id/tv_people" />
+
+        <TextView
+            android:id="@+id/tv_no_app"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/no_app"
+            android:textColor="@color/color_737379"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tv_apps"
+            app:layout_constraintLeft_toLeftOf="@id/barrier3"
+            app:layout_constraintRight_toLeftOf="@id/im_right_app"
+            app:layout_constraintTop_toTopOf="@id/tv_apps" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="tv_people, tv_apps" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_people"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@id/tv_people"
+            app:layout_constraintLeft_toRightOf="@id/barrier3"
+            app:layout_constraintRight_toLeftOf="@id/im_right_people"
+            app:layout_constraintTop_toTopOf="@id/tv_people" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_app"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@id/tv_apps"
+            app:layout_constraintLeft_toRightOf="@id/barrier3"
+            app:layout_constraintRight_toLeftOf="@id/im_right_app"
+            app:layout_constraintTop_toTopOf="@id/tv_apps" />
+
+        <View
+            android:id="@+id/view_allowed_people"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/custom_ripple_people"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/view_app"
+            app:layout_constraintEnd_toEndOf="@id/view_allowed"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/view_allowed"
+            app:layout_constraintTop_toTopOf="@id/view_allowed"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <View
+            android:id="@+id/view_allowed_app"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/custom_ripple_app"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/view_allowed"
+            app:layout_constraintEnd_toEndOf="@id/view_allowed"
+            app:layout_constraintStart_toStartOf="@id/view_allowed"
+            app:layout_constraintTop_toTopOf="@id/view_app" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

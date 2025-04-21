@@ -1,0 +1,534 @@
+<resources>
+
+
+    <string name="type_control_center" translatable="false">Control Center </string>
+    <string name="type_mi_control" translatable="false">Control Center</string>
+    <string name="type_mi_shade" translatable="false">Notification Shade</string>
+
+    <!--service-->
+    <string name="accessibility_service_description">This service allows to use the private settings panel by swiping down from the top edge of the screen. The data collected from this service is not saved, collected or used in any way. The uses are outlined below. This service does not send your data to 3rd parties over the internet.
+    \n\nPermission:
+    \n\n- Track your actions: Get feedback from the system when the top edge of the screen is touched to activate the settings panel.
+    \n\n- Get window info: Necessary to automatically hit some settings after the user set them to enable and disable them in the application\'s provided interface.</string>
+
+    <!--screen time out-->
+    <string name="screen_timeout">Screen\nTimeout</string>
+    <string name="text_screen_timeout">Screen timeout</string>
+    <string name="timeout_15s">15 seconds</string>
+    <string name="timeout_30s">30 seconds</string>
+    <string name="timeout_1m">1 minute</string>
+    <string name="timeout_2m">2 minute</string>
+    <string name="timeout_5m">5 minute</string>
+    <string name="timeout_10m">10 minute</string>
+    <string name="timeout_30m">30 minute</string>
+
+    <!--audio expanded setting-->
+    <string name="audio_system">System</string>
+    <string name="audio_music">Music</string>
+    <string name="audio_ringtone">Ringtone</string>
+    <string name="no_sim">No Sim</string>
+
+    <string name="text_add_organize_control">Add and organize additional controls to appear in %s. The maximum is 11 controls.</string>
+    <string name="maximum_11_control">The maximum is 11 controls</string>
+    <string name="waiting">Waiting…</string>
+    <string name="wifi">Wifi</string>
+    <string name="data">Data</string>
+    <string name="airplane">Airplane</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="sync">Sync</string>
+    <string name="location">Location</string>
+
+    <string name="setting">Setting</string>
+
+    <string name="select_background">Select Background</string>
+    <string name="feedback">Feedback</string>
+    <string name="share_app">Share App</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="please_rate_5_stars_to_support_the_developer">Rate Controller Quicky</string>
+    <string name="color">Color</string>
+
+
+    <string name="position">Position</string>
+    <string name="top">Top</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="bottom">Bottom</string>
+    <string name="drag_edge">Drag Edge screen handle to change the position</string>
+    <string name="advanced_options">Advanced options</string>
+    <string name="size">Size</string>
+    <string name="color_control_center">Color Control Center</string>
+    <string name="color_notification">Color Notification</string>
+
+    <string name="support">Support</string>
+    <string name="handle_settings">Handle Settings</string>
+
+    <string name="more_controls">MORE CONTROLS</string>
+    <string name="include">INCLUDE</string>
+    <string name="include_control">INCLUDED CONTROLS</string>
+
+    <string name="no_event_tomorrow_widget">You have no events\nscheduled for tomorrow</string>
+    <string name="no_event_today_widget">No events</string>
+    <string name="acces_permission_calendar">Click to access permission Calendar</string>
+    <string name="permission_recent">Click to activate</string>
+    <string name="api_nho_hon_hai_lam">This function is only for android 5.0 and above</string>
+    <string name="vibrator">Vibrator</string>
+
+    <string name="default_background">Default</string>
+    <string name="transparent_background">Transparent</string>
+    <string name="current_wallpaper_background">Current Wallpaper</string>
+    <string name="screen_blur_background">Screen Blur Behind</string>
+    <string name="background">Background</string>
+    <string name="permission">Permission</string>
+    <string name="mess_request_permission">You need to allow some permissions later so that the application can work</string>
+    <string name="more_noty">More notifications</string>
+    <string name="view_noty">View</string>
+    <string name="view_manager">Manager</string>
+    <string name="clear_all_noty">Delete Group</string>
+    <string name="text_clear">Clear</string>
+    <string name="delete_noty">Delete</string>
+    <string name="hide_group">Hide</string>
+    <string name="recording">Recording..</string>
+    <string name="stop_record">STOP</string>
+    <string name="stopping">STOPPING…</string>
+    <string name="click_to_stop_record_screen">Click to stop record screen</string>
+    <string name="processing">Processing…</string>
+    <string name="mess_stop_recording_video">Recording video screen. Open control center will stop record. Do you want to stop?You can stop video in \"Notification Center\" or open \"Control Center\"</string>
+    <string name="mess_permisstion_write_setting">This app need this permission to change setting</string>
+
+    <string name="app_suggestions_lowercase">App suggestions</string>
+    <string name="app_suggestions">APP SUGGESTIONS</string>
+
+    <string name="access_permission_calendar">Access permission calendar</string>
+    <string name="access_permission_app_recent">Click to activate app suggest</string>
+
+    <string name="show_more">Show More</string>
+    <string name="show_less">Show less</string>
+    <string name="up_next">UP NEXT</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+    <string name="notification_center">Notification Center</string>
+    <string name="style">STYLE</string>
+    <string name="enable_notification">Enable Notification Center</string>
+    <string name="enable_control_center">Enable Control Center</string>
+    <string name="ok">OK</string>
+    <string name="save">Save successfully </string>
+    <string name="please_waiting_load_config">Please wait to loading configuration…</string>
+    <string name="detail_splash">Permission</string>
+    <string name="detail_pre">ALLOW PERMISSION</string>
+
+    <!--Permission-->
+    <string name="noty_access">Notification access</string>
+    <string name="detail_noti_access">Access your notification</string>
+    <string name="accessibility">Accessibility</string>
+    <string name="detail_accessibility">Allow notification display</string>
+    <string name="appear_on_top">Appear on top</string>
+    <string name="detail_appear_on_top">Shows things on top of other apps</string>
+
+    <string name="text_skip">Skip</string>
+    <string name="text_detail_splash">NEEDS YOUR PERMISSION TO WORK</string>
+
+    <string name="text_allow">Allow</string>
+    <string name="text_noti">Slide to unlock</string>
+    <string name="demo">Demo</string>
+
+    <string name="running">Running</string>
+    <string name="text_enable">Enable</string>
+
+    <string name="title_choose_type_noty">APPEARANCE</string>
+
+    <string name="text_cb_notification">Notifications</string>
+    <string name="text_cb_control">Controls</string>
+
+    <!-- Menu -->
+    <string name="menu_customize_control">Customize Control</string>
+    <string name="menu_layout">Layout</string>
+    <string name="menu_color">Color</string>
+    <string name="menu_color_noty">Color Noti</string>
+    <string name="menu_color_control">Color Controls</string>
+    <string name="menu_edge_trigger">Edge Triggers</string>
+    <string name="choose_music_player">Choose Music Player</string>
+    <string name="menu_rate">Rate App</string>
+
+
+    <!--Control center-->
+    <string name="text_control_center">Control Center</string>
+    <string name="text_phone_speak">Phone speaker</string>
+    <string name="text_headset">Headset</string>
+    <string name="text_on">On</string>
+    <string name="text_off">Off</string>
+
+    <string name="text_sound">Sound</string>
+    <string name="text_vibrate">Vibrate</string>
+    <string name="text_silent">Silent</string>
+    <string name="text_snoozed">Snoozed</string>
+    <string name="text_snoozed_for">Snoozed for</string>
+    <string name="text_undo">UNDO</string>
+    <string name="text_15_minutes">15 minutes</string>
+    <string name="text_30_minutes">30 minutes</string>
+    <string name="text_1_house">1 hours</string>
+    <string name="text_1_day">1 day</string>
+
+    <string name="text_light">Light</string>
+    <string name="text_dark">Dark</string>
+
+    <string name="text_vibrate_on_tap">Vibrate On Tap</string>
+    <string name="text_swipe__up_to_open">Swipe up to open</string>
+
+
+    <string name="text_show_edge">Show Notification edge triggers</string>
+
+    <string name="text_detail_custom_shape">Custom icons shape </string>
+    <string name="text_icons_shape">Icons Shape </string>
+    <string name="text_custom_text">CUSTOM “Control Center” TEXT</string>
+    <string name="text_date_time">Show Time And Date</string>
+    <string name="text_edit_text">Edit Text</string>
+    <string name="text_enable_section">Enable notification sections</string>
+    <string name="text_detail_enable_section">With Silent notifications</string>
+    <string name="text_close">Close</string>
+    <string name="text_cancel">Cancel</string>
+
+    <string name="text_done">Done</string>
+    <string name="text_off_noty">Turn off notification</string>
+    <string name="text_available">Available toggles</string>
+    <string name="text_add_toggle">Added toggles</string>
+    <string name="text_alert">Alerting</string>
+    <string name="text_slide">Silent</string>
+    <string name="text_detail_add_toggle">Drag added toggles to rearrange them</string>
+    <string name="text_detail_waning">Gets your attentionwith sound or vibration.</string>
+    <string name="text_detail_alert">Helps you focus without sound or vibration.</string>
+    <string name="text_apply">Apply</string>
+    <string name="text_custom_text_show">Custom text show</string>
+    <string name="text_title_setting" translatable="false">Inoty &amp; Icontrol </string>
+    <string name="text_no_older_notification">No Older Notification</string>
+
+
+    <string name="txt_ads_ledkeyboard">LED Keyboard - RGB Keyboard</string>
+    <string name="text_detail_when_permission_denied">Please allow Notification access</string>
+    <string name="text_detail_when_permission_writer_denied">Please allow WRITE EXTERNAL STORAGE</string>
+
+
+    <string name="You_need_to_enable_permissions_to_use_this_feature">You need to enable permissions to use this feature</string>
+    <string name="You_need_to_enable_permissions">You need to enable %s permissions to use this feature</string>
+    <string name="go_to_setting">Go to setting</string>
+    <string name="go_back">Go back</string>
+    <string name="data_mobile">Data mobile</string>
+    <string name="flash_light">Flash light</string>
+    <string name="sound">Sound</string>
+    <string name="airplane_mode">Airplane mode</string>
+    <string name="do_not_disturb">Do not disturb</string>
+    <string name="auto_rotate">Auto-rotate</string>
+    <string name="host_post">Host post</string>
+    <string name="screen_cast">Screen Cast</string>
+    <string name="open_system">Open System</string>
+    <string name="clock">Clock</string>
+    <string name="camera">Camera</string>
+    <string name="keyBroad_picker">KeyBroad Picker</string>
+    <string name="battery">Battery</string>
+    <string name="night_light">Night Light</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="screen_shot">Screen Shot</string>
+    <string name="screen_recoding">Screen Recoding</string>
+    <string name="screen_real_time_background">Use for real time wallpaper feature</string>
+    <string name="screen_time">Screen time</string>
+    <string name="screen_lock">Screen lock</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="nearby_share">Nearby Share</string>
+
+    <string name="night_mode">Night Mode</string>
+    <string name="time_screen">Time screen</string>
+    <string name="focus_mode">Focus mode</string>
+    <string name="kids_home">Kids Home</string>
+    <string name="power_mode">Power Mode</string>
+    <string name="smart_view">Smart View</string>
+    <string name="secure_folder">Secure Folder</string>
+    <string name="auto_wallpaper">Auto Wallpaper</string>
+
+    <string name="just_now">&#160;just now</string>
+    <string name="a_minute_ago">&#160;a minute ago</string>
+    <string name="minutes_ago">&#160;minutes ago</string>
+    <string name="an_hour_ago">&#160;an hour ago</string>
+    <string name="hours_ago">&#160;hours ago</string>
+    <string name="yesterday">&#160;yesterday</string>
+    <string name="days_ago">&#160;days ago</string>
+    <string name="calculator">Calculator</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="do_you_want_to_save">Do you want to save?</string>
+    <string name="application_not_found">Application not found</string>
+    <string name="no_flash">no flash!</string>
+    <string name="setup">Setup</string>
+    <string name="dialog_setup_noty_des_1">Please find the</string>
+    <string name="dialog_setup_noty_des_2">tile in your system shade (on 1st or 2nd page) then click it one time.</string>
+    <string name="store_wallpaper">Store Wallpaper</string>
+    <string name="notes">Notes</string>
+    <string name="low_power_mode">Low Power Mode</string>
+    <string name="music_control">Music Control</string>
+    <string name="deny">Deny</string>
+
+    <string name="key_low_power_mode">power saving</string>
+    <string name="key_air_plane_mode">plane</string>
+    <string name="key_air_plane_mode_2">Flight mode</string>
+    <string name="key_data_mobile_mode">mobile data</string>
+    <string name="key_wifi">wi-fi</string>
+    <string name="key_location">location</string>
+    <string name="key_hotspot">hotspot</string>
+    <string name="key_hotspot_2">hotspot</string>
+    <string name="key_dark_mode">dark</string>
+    <string name="conflict_navigation_mode_swipe_gestures_system">This mode will conflict with the swipe gesture system navigation mode</string>
+    <string name="can_not_do_this_action_when_ari_plane_mode_enabled">This task cannot be performed when airplane mode is on</string>
+    <string name="You_need_to_enable_permissions_display_popup_window">You need to enable permissions Display pop-up window</string>
+    <string name="key_without_dark_mode">pin</string>
+    <string name="auto_open_system_noty">Automatically open the system for next time</string>
+    <string name="key_without_low_power_mode" />
+    <string name="key_without_mobile_mode" />
+    <string name="key_wifi_2">internet</string>
+    <string name="key_wifi_done">done</string>
+    <string name="key_low_power_mode_2">battery</string>
+    <string name="key_low_power_mode_3">power mode</string>
+    <string name="key_battery_done">apply</string>
+    <string name="key_data_mobile">mobile</string>
+    <string name="key_data_mobile_2">mobile_toggle</string>
+
+    //dev_phase4
+    <string name="menu_focus" translatable="false">Focus</string>
+    <string name="add_focus">Add Focus</string>
+    <string name="do_nit_disturb">Do nit disturb</string>
+    <string name="on">On</string>
+    <string name="people">People </string>
+    <string name="apps">Apps </string>
+    <string name="allowed_notifications"> ALLOWED NOTIFICATIONS </string>
+    <string name="turn_on_automatically"> TURN ON AUTOMATICALLY </string>
+    <string name="delete_focus">Delete Focus </string>
+
+    <string name="add_schedule_or_automation">Add Schedule or Automation </string>
+    <string name="no_people"> No people </string>
+    <string name="no_app">No app</string>
+    <string name="no_data">No data</string>
+    <string name="allowed_app"> Allowed Apps</string>
+    <string name="allow_none">Allow none</string>
+    <string name="allow"> Allow</string>
+    <string name="allowed_people">Allowed People</string>
+    <string name="everyone">Every One</string>
+    <string name="no_one">No one</string>
+    <string name="favorite">Favorite</string>
+    <string name="all_contact"> All contact</string>
+    <string name="also_allow">Also Allow</string>
+    <string name="new_automation">New Automation</string>
+    <string name="time">Time</string>
+    <string name="ex_from_12_30_pm_to_2_30_pm"> Ex. “From 12:30 PM to 2:30 PM”</string>
+    <string name="app"> App</string>
+    <string name="ex_when_i_arrive_at_work">Ex. “When I arrive at Work”</string>
+    <string name="ex_when_i_open_books">Ex. “ When I open Books”</string>
+    <string name="done">Done </string>
+    <string name="search_or_enter_address"> Search or Enter Address</string>
+    <string name="current_location">Current Location</string>
+    <string name="choose_time"> Choose time</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="Repeat">Repeat</string>
+    <string name="month"> Monday</string>
+    <string name="tu">Tuesday</string>
+    <string name="we">Wednesday</string>
+    <string name="th">Thursday</string>
+    <string name="fr">Friday</string>
+    <string name="sa">Saturday</string>
+    <string name="su">Sunday</string>
+    <string name="every_day"> Every day </string>
+    <string name="every"> Every </string>
+    <string name="no_repeact">No repeat</string>
+    <string name="do_you_want_to_delete_this_focus">Do you want to delete this Focus?</string>
+
+    <string name="error_internet">Check internet again </string>
+    <string name="error_no_found">No matching location found</string>
+    <string name="you_need_turn_on_location"> You need turn on location</string>
+    <string name="what_do_you_want_to_focus_on">What do you want to focus on?</string>
+    <string name="choose_a_focus_you_want_to_add">Choose a Focus you want to add?</string>
+    <string name="text_detail_when_permission_read_contact">Please allow READ CONTACT</string>
+    <string name="text_detail_when_permission_location">Please allow LOCATION</string>
+    <string name="Allow_incoming_calls_from_only_the_contacts">Allow incoming calls from only the contacts you added to the Focus. </string>
+    <string name="Allow_incoming_calls_from_your_contacts">Allow incoming calls from your contacts. </string>
+    <string name="Allow_incoming_calls_from_everyone">Allow incoming calls from everyone.</string>
+    <string name="allow_incoming_calls_from_only_the_contacts_you_added_to_the_focus_and_your_favorites"> Allow incoming calls from only the contacts you added to the Focus and your favorites.</string>
+    <string name="remove_allow">Remove Allowed(</string>
+    <string name="new_focus"> New Focus </string>
+    <string name="name_your_focus"> Name Your Focus </string>
+    <string name="name">Name </string>
+    <string name="a_focus_with_this_name_already_exists"> A Focus with this name already exists.</string>
+    <string name="next">Next </string>
+    <string name="contact">Contact </string>
+    <string name="edit_focus">Edit Focus </string>
+    <string name="for_1_hour">For 1 hour </string>
+    <string name="until_this_evening">Until this evening </string>
+    <string name="until_i_leave_this_location"> Until I leave this location </string>
+    <string name="home">Home </string>
+    <string name="focus"> Focus</string>
+    <string name="name_empty">Name must not empty</string>
+    <string name="you_need_to_choose_the_game_Application"> You need to choose the game Application and time</string>
+    <string name="you_need_to_choose_the_location"> You need to choose the location and time</string>
+    <string name="game">Game </string>
+    <string name="while_at_this_location">While at this location </string>
+    <string name="While_using"> While using</string>
+    <string name="location_already_exists"> Location already exists</string>
+
+    <string name="some_required_permission_is_disable"> Some required permission is disabled. Please enable them for using the app normally</string>
+    <string name="wait_until_job_done"> Please wait until the job is done</string>
+    <string name="notifications"> Notifications </string>
+    <string name="edit">Edit </string>
+    <string name="hold_and_drag_to_rearrange_tiles">hold and drag to rearrange tiles</string>
+    <string name="hold_and_drag_to_add_tiles">hold and drag to add tiles</string>
+    <string name="on_until">"On Until"</string>
+    <string name="pm">PM</string>
+    <string name="am">AM</string>
+    <string name="until_tomorrow_morning">Until tomorrow morning</string>
+    <string name="on_until_you_leave_this_location">On Until You Leave This Location</string>
+    <string name="reset">Reset</string>
+
+
+    <string name="Sleep"> Sleep </string>
+    <string name="reading"> Reading </string>
+    <string name="Mindfulness"> Mindfulness </string>
+    <string name="work"> Work </string>
+    <string name="gaming"> Gaming </string>
+    <string name="driving"> Driving </string>
+    <string name="personal">Personal</string>
+    <string name="custom">Custom</string>
+    <string name="time_error"> The start time must be different from the end time. Please try again </string>
+
+    <string name="Monday"> Mon</string>
+    <string name="Tuesday">Tue</string>
+    <string name="Wednesday">Wed</string>
+    <string name="Thursday">Thur</string>
+    <string name="Friday">Fri</string>
+    <string name="Saturday">Sat</string>
+    <string name="Sunday">Sun</string>
+    <string name="the_minimum_controls">The minimum is %1$d controls</string>
+    <string name="the_maximum_controls">The maximum is %1$d controls</string>
+    <string name="app_already_available">App already available</string>
+
+
+    <string name="turn_on">Turn on</string>
+    <string name="allow_permission_location">You need to allow location permissions</string>
+    <string name="key_without_low_power_mode_2" />
+    <string name="install">Install</string>
+    <string name="usage_data_access">Usage data access</string>
+    <string name="allow_access">Allow access</string>
+    <string name="this_application_uses_usage_data_access_permission_to_detect_an_application_is_opened_or_closed">This application uses USAGE DATA ACCESS permission to detect an application is opened or closed</string>
+    <string name="auto_start">Auto Start</string>
+    <string name="application_needs_your_permission_to_enable_autostart_setting_to_work_correctly_and_more_stability">To enable autostart setting to work correctly and more stability</string>
+    <string name="set">set</string>
+    <string name="a_note_on_privacy">A note on privacy</string>
+    <string name="content_a_note_privacy">We do not collect any personal information through accessibility services.
+        \n- We need Accessibility Permission to draw over phone\'s home screen and status bar.
+    \n- We will not read your screen\'s sensitive data or any content.
+    \n- For this app to function properly, we need the Accessibility Permission. Accessibility services are required to receive a response from the system when the top of the screen is touched to trigger the shade and to retrieve window content: Required for automatic clicking of some settings after the user chooses they want to toggle them in the app-provided interface.</string>
+    <string name="agree">Agree</string>
+    <string name="could_not_find_play_store_on_this_device">Could n\'t find PlayStore on this device</string>
+
+
+    <string name="audio_alarm">Alarm</string>
+    <string name="text_des_top_trigger">For top trigger, you can not customize the toggle</string>
+    <string name="text_enabled">Enabled</string>
+    <string name="text_length">Length</string>
+    <string name="des_dialog_no_sim">Device no sim, you can go to setting to setup</string>
+    <string name="text_vibrate_on_long_click">Vibrate on long click control</string>
+    <string name="text_auto_hide_noty_panel_system">Auto hide notification panel system</string>
+    <string name="text_no_notification">No notification</string>
+    <string name="text_des_permission_notification_view">The system refuses to show us notifications!</string>
+    <string name="restart">Restart</string>
+    <string name="verify_access">Verify access</string>
+    <string name="text_title_appearance">Pick a appearance you like and get started</string>
+    <string name="text_start">Start</string>
+    <string name="text_current">%s (current)</string>
+    <string name="text_activate_home">Activate %s to enable more features!</string>
+    <string name="text_allow_permisson_to_use_functions">Please grant permission to use the functions</string>
+    <string name="text_continue">Continue</string>
+    <string name="text_not_running">Not running</string>
+
+    <string name="text_error_try_again">Oh no! An error has occurred during processing, please try again later.</string>
+    <string name="connection">Connection</string>
+    <string name="my_customization">My Customization</string>
+    <string name="preview">Preview</string>
+    <string name="apply_this_control_center_to_use">Apply this control center to use</string>
+    <string name="choose_style">Choose style</string>
+    <string name="choose_the_style_you_want_then_click_to_edit_to_custom_more">Choose the style you want then click to edit to custom more</string>
+    <string name="edit_theme">Edit theme</string>
+    <string name="controls">Controls</string>
+    <string name="gallery">Gallery</string>
+    <string name="fonts">Fonts</string>
+    <string name="themes">Themes</string>
+    <string name="select_themes">Select Themes</string>
+    <string name="customize">Customize</string>
+    <string name="corners">CORNERS</string>
+    <string name="icon_shape">ICON SHAPE</string>
+    <string name="color_up">COLOR</string>
+    <string name="position_up">POSITION</string>
+    <string name="choose_fonts">CHOOSE FONTS</string>
+    <string name="font_preview">Aa</string>
+    <string name="mobile_data">Mobile Data</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="flashlight">Flashlight</string>
+    <string name="battery_saver">Battery Saver</string>
+    <string name="record">Record</string>
+    <string name="hostpost">Hostpost</string>
+    <string name="data_saver">Data Saver</string>
+    <string name="open_system_shade">Open system shade</string>
+    <string name="display">Display</string>
+    <string name="general">General</string>
+    <string name="this_control_interface_is_in_use_and_cannot_be_deleted">This control interface is in use and cannot be deleted.</string>
+    <string name="this_control_interface_is_in_use">This control interface is in use.</string>
+    <string name="auto_rotate_2">Auto Rotate</string>
+    <string name="using">Using</string>
+    <string name="start_customizing_the_control_center_to_save_here">Start customizing the control center to save here</string>
+    <string name="unknown">(unknown)</string>
+    <string name="lock_rotation">Lock Rotation</string>
+    <string name="do_you_want_to_delete_this_theme">Do you want to delete this Theme?</string>
+    <string name="delete_theme">Delete Theme </string>
+    <string name="calendar">Calendar</string>
+    <string name="nearby_device">Nearby Devices</string>
+    <string name="micro">Microphone</string>
+    <string name="data_saver_not_support">Data Saver not support!</string>
+    <string name="english" translatable="false">English </string>
+    <string name="arabic" translatable="false">عربي</string>
+    <string name="german" translatable="false">Deutsch</string>
+    <string name="spain" translatable="false">Español</string>
+    <string name="philippine" translatable="false">Filipino</string>
+    <string name="france" translatable="false">Français</string>
+    <string name="hindi" translatable="false">हिंदी</string>
+    <string name="indonesia" translatable="false">Bahasa Indo</string>
+    <string name="japanese" translatable="false">日本語</string>
+    <string name="korean" translatable="false">한국인</string>
+    <string name="portuguese" translatable="false">Português</string>
+    <string name="russia" translatable="false">Русский</string>
+    <string name="turkish" translatable="false">Türkçe</string>
+    <string name="vietnamese" translatable="false">Tiếng Việt</string>
+    <string name="languages">Languages</string>
+    <string name="next_onboard">Next</string>
+    <string name="content_onboard_1">An all-in-one solution for effortless device management</string>
+    <string name="titile_onboard_1">Smart control</string>
+    <string name="content_onboard_2">Providing quick access to several key features and useful enhancements</string>
+    <string name="titile_onboard_2">Quick Access</string>
+    <string name="content_onboard_3">Explore hot, trending themes, continuously updated</string>
+    <string name="titile_onboard_3">Theme collection</string>
+    <string name="content_onboard_4">Customize the size and position freely as needed</string>
+    <string name="titile_onboard_4">Customize</string>
+    <string name="start">Start</string>
+    <string name="you_can_only_select_a_maximum_of_3_themes">You can only select a maximum of 3 themes.</string>
+    <string name="activate_s">Activate %s</string>
+    <string name="step_1">Step 1\nAccessibility</string>
+    <string name="step_2">Step 2\nAppear on top</string>
+    <string name="step_3">Step 3\nNotification</string>
+    <string name="enable_in_your_installed_apps_in_accessibility_settings">Enable %s in your Installed apps in accessibility settings</string>
+    <string name="enable_s_in_appear_on_top_settings">Enable %s in Appear on top settings</string>
+    <string name="enable_in_notification_access">Enable %s in Notification access</string>
+    <string name="which_style_do_you_like">Which style do you like?</string>
+    <string name="_1_turn_on_">1, Turn on %s</string>
+    <string name="click_the_button_to_active_">Click the button to active %s</string>
+    <string name="_2_swipe_to_open_the_">2, Swipe to open the %s</string>
+    <string name="swipe_down_from_the_top_to_open_the_">Swipe down from the top to open the %s</string>
+    <string name="_3_customize_your_">3, Customize your %s</string>
+    <string name="click_the_button_to_customize">Click the \"+\" button to customize</string>
+    <string name="speakerphone">Speakerphone</string>
+    <string name="headphones">Headphones</string>
+
+
+</resources>

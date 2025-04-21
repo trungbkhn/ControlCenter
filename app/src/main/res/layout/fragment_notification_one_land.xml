@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/size_20dp"
+       >
+
+
+
+        <com.tapbi.spark.controlcenter.feature.mishade.view.NoScrollRecycler
+            android:id="@+id/rccTop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:clipChildren="false"
+            android:scrollbars="none"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tapbi.spark.controlcenter.feature.mishade.view.NoScrollRecycler
+            android:id="@+id/rccBot"
+            android:layout_width="match_parent"
+            android:clipChildren="false"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <com.tapbi.spark.controlcenter.feature.mishade.view.NoScrollRecycler
+            android:id="@+id/rccCenter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:clipChildren="false"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+</layout>

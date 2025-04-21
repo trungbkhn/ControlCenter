@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="rightColors">
+        <item>@color/transparent</item>
+        <item>@color/transparent</item>
+        <item>@color/transparent</item>
+    </integer-array>
+
+
+    <integer-array name="rightTextColors">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+    </integer-array>
+
+    <integer-array name="rightDrawables">
+        <item>@drawable/ic_rcc_noti_setting</item>
+        <item>@drawable/ic_rcc_noti</item>
+    </integer-array>
+
+    <integer-array name="rightDrawableColors">
+        <item>@color/transparent</item>
+        <item>@color/transparent</item>
+    </integer-array>
+
+
+</resources>

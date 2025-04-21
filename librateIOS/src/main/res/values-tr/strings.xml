@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">Lütfen yükle</string>
+    <string name="please_intall">Lütfen yükle</string>
+    <string name="share_on">Paylaş</string>
+    <string name="invite_by_sms">SMS ile davet et</string>
+    <string name="invite_facebook_friends">facebook arkadaşlarını davet et</string>
+    <string name="invite_by_email">E-posta ile davet et</string>
+    <string name="no_email">Email yok</string>
+    <string name="content">Uygulamamızı ne kadar seviyorsun?</string>
+    <string name="later">Sonra</string>
+    <string name="rateNow">Şimdi oyla</string>
+    <string name="please_rate_5_stars">Lütfen 5 yıldız verin</string>
+</resources>

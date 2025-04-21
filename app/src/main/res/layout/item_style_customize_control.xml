@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr">
+
+
+        <View
+            android:id="@+id/layoutTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/text_detail_splash"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="@string/style"
+            android:textColor="@color/color_3C3C43"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutTextStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/style1"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/thumb_control_ios17_style_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/style2"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextStyle" />
+
+        <ImageView
+            android:id="@+id/style2"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/thumb_control_ios17_style_bot"
+            app:layout_constraintLeft_toRightOf="@+id/style1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/style1" />
+
+
+        <RadioButton
+            android:id="@+id/cbStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:buttonTint="@color/text_splash"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@+id/style1"
+            app:layout_constraintRight_toRightOf="@+id/style1"
+            app:layout_constraintTop_toBottomOf="@+id/textDetailStyle" />
+
+        <RadioButton
+            android:id="@+id/cbStyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:buttonTint="@color/text_splash"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/cbStyle1"
+            app:layout_constraintLeft_toLeftOf="@+id/style2"
+            app:layout_constraintRight_toRightOf="@+id/style2"
+            app:layout_constraintTop_toTopOf="@+id/cbStyle1" />
+
+
+        <TextView
+            android:id="@+id/textDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="@string/top"
+            android:textColor="@color/colorTextDayOfMonth"
+            app:layout_constraintLeft_toLeftOf="@+id/style1"
+            app:layout_constraintRight_toRightOf="@+id/style1"
+            app:layout_constraintTop_toBottomOf="@+id/style1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="@string/bottom"
+            android:textColor="@color/colorTextDayOfMonth"
+            app:layout_constraintLeft_toLeftOf="@+id/style2"
+            app:layout_constraintRight_toRightOf="@+id/style2"
+            app:layout_constraintTop_toBottomOf="@+id/style2" />
+
+
+        <View
+            android:id="@+id/viewClick1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutTextInclude"
+            app:layout_constraintLeft_toLeftOf="@+id/style1"
+            app:layout_constraintRight_toRightOf="@+id/style1"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextStyle" />
+
+        <View
+            android:id="@+id/viewClick2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutTextInclude"
+            app:layout_constraintLeft_toLeftOf="@+id/style2"
+            app:layout_constraintRight_toRightOf="@+id/style2"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextStyle" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTextStyle" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintBottom_toTopOf="@+id/layoutTextInclude"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <View
+            android:id="@+id/layoutTextInclude"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/text_detail_splash"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbStyle1" />
+
+
+        <TextView
+            android:id="@+id/textInclude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="@string/include_control"
+            android:textColor="@color/color_3C3C43"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutTextInclude"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layoutTextInclude" />
+
+        <View
+            android:id="@+id/lineRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background_line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

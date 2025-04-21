@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">이 앱을 평가 해주세요</string>
+    <string name="content">우리 앱을 얼마나 좋아하십니까?</string>
+    <string name="no_email">이메일이 없습니다</string>
+    <string name="invite_by_email">이메일로 초대하십시오</string>
+    <string name="invite_facebook_friends">Facebook 친구를 초대하십시오</string>
+    <string name="invite_by_sms">SMS에 의해 초대하십시오</string>
+    <string name="share_on">공유</string>
+    <string name="please_intall">설치하십시오</string>
+    <string name="later">나중에</string>
+    <string name="rateNow">지금 평가</string>
+    <string name="please_rate_5_stars">별 5 개를 평가하십시오</string>
+</resources>

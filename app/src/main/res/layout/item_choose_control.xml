@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_margin="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iconControl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            app:contentPadding="16dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circle"
+            android:background="#1CFFFFFF"
+            app:srcCompat="@drawable/ic_screen_time_out_ios" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/sf_pro_text_medium"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="#61FFFFFF"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@id/iconControl"
+            app:layout_constraintStart_toStartOf="@id/iconControl"
+            app:layout_constraintTop_toBottomOf="@id/iconControl" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

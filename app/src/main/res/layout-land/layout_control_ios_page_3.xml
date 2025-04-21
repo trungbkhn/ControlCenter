@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/page3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="10dp">
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.ViewActionHorizontal
+            android:id="@+id/actionAirplane"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tag="Airplane mode"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glv5"
+            app:layout_constraintBottom_toTopOf="@id/actionWifi"/>
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.ViewActionHorizontal
+            android:id="@+id/actionWifi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tag="Wifi"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionAirplane"
+            app:layout_constraintEnd_toEndOf="@id/glv5"
+            app:layout_constraintBottom_toTopOf="@id/actionData"/>
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.ViewActionHorizontal
+            android:id="@+id/actionData"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tag="Data mobile"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="3dp"
+            app:colorSelect="@color/color_select_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionWifi"
+            app:layout_constraintEnd_toEndOf="@id/glv5"
+            app:layout_constraintBottom_toTopOf="@id/actionBlueTooth"/>
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.ViewActionHorizontal
+            android:id="@+id/actionBlueTooth"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tag="Bluetooth"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionData"
+            app:layout_constraintEnd_toEndOf="@id/glv5"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.ViewActionHorizontal
+            android:id="@+id/actionSilent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:colorSelect="@color/color_select_green"
+            android:tag="Silent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintStart_toStartOf="@id/glv5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/actionAirplane"
+            app:layout_constraintBottom_toBottomOf="@id/actionAirplane"/>
+
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.ViewActionHorizontal
+            android:id="@+id/actionLocation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:colorSelect="@color/color_select_red"
+            android:tag="Location"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintStart_toStartOf="@id/glv5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/actionWifi"
+            app:layout_constraintBottom_toBottomOf="@id/actionWifi"/>
+        <com.tapbi.spark.controlcenter.feature.controlios14.view.ViewActionHorizontal
+            android:id="@+id/actionSync"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:colorSelect="@color/color_select_green"
+            android:tag="Sync"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintStart_toStartOf="@id/glv5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/actionData"
+            app:layout_constraintBottom_toBottomOf="@id/actionData"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

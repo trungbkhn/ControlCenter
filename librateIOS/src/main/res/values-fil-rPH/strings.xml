@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_dialog">I -rate ang app na ito</string>
+    <string name="content">Gaano mo kamahal ang aming app?</string>
+    <string name="no_email">Walang email</string>
+    <string name="invite_by_email">Anyayahan sa pamamagitan ng email</string>
+    <string name="invite_facebook_friends">Anyayahan ang mga kaibigan sa Facebook</string>
+    <string name="invite_by_sms">Anyayahan ng SMS</string>
+    <string name="share_on">Ibahagi sa</string>
+    <string name="please_intall">Mangyaring i -install</string>
+    <string name="later">Kalaunan</string>
+    <string name="rateNow">I -rate</string>
+    <string name="please_rate_5_stars">Mangyaring i -rate ang 5 bituin</string>
+</resources>

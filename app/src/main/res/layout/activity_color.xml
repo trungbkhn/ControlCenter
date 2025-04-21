@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/nested"
+
+        android:background="@color/text_detail_splash"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/bgDefault"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_click_rectangle"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/default_background"
+                android:textColor="@color/colorTextLockBold"
+                android:textDirection="ltr"
+                app:layout_constraintTop_toBottomOf="@+id/textSelectBackground" />
+
+            <ImageView
+                android:padding="4dp"
+                android:src="@drawable/checkbox_check_background"
+                android:id="@+id/imgCheckDefault"
+                app:layout_constraintTop_toTopOf="@id/bgDefault"
+                app:layout_constraintBottom_toBottomOf="@id/bgDefault"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+
+            <TextView
+                android:id="@+id/bgTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_click_rectangle"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/transparent_background"
+                android:textColor="@color/colorTextLockBold"
+                android:textDirection="ltr"
+                app:layout_constraintTop_toBottomOf="@+id/bgDefault" />
+
+            <ImageView
+                android:id="@+id/imgCheckTransparent"
+                android:padding="4dp"
+                android:src="@drawable/checkbox_check_background"
+                app:layout_constraintTop_toTopOf="@id/bgTransparent"
+                app:layout_constraintBottom_toBottomOf="@id/bgTransparent"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/bgCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="4dp"
+                android:src="@drawable/checkbox_check_background"
+                android:background="@drawable/ripple_click_rectangle"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/current_wallpaper_background"
+                android:textColor="@color/colorTextLockBold"
+                android:textDirection="ltr"
+                app:layout_constraintTop_toBottomOf="@+id/bgTransparent" />
+
+            <ImageView
+                android:id="@+id/imgCheckBgCurrent"
+                app:layout_constraintTop_toTopOf="@id/bgCurrent"
+                app:layout_constraintBottom_toBottomOf="@id/bgCurrent"
+                android:layout_marginEnd="12dp"
+                android:padding="4dp"
+                android:src="@drawable/checkbox_check_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/bgScreenBlur"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center_vertical"
+                android:background="@drawable/ripple_click_rectangle"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/screen_blur_background"
+                android:textColor="@color/colorTextLockBold"
+                android:textDirection="ltr"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/bgCurrent" />
+
+            <ImageView
+                android:id="@+id/imgCheckScreenBlur"
+                android:padding="4dp"
+                android:src="@drawable/checkbox_check_background"
+                app:layout_constraintTop_toTopOf="@id/bgScreenBlur"
+                app:layout_constraintBottom_toBottomOf="@id/bgScreenBlur"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+
+            <TextView
+                android:id="@+id/tvStoreWallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/ripple_click_rectangle"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="@string/store_wallpaper"
+                android:textColor="@color/colorTextLockBold"
+                android:textDirection="ltr"
+                android:visibility="visible"
+                android:drawableEnd="@drawable/ic_more_icon"
+                app:layout_constraintTop_toBottomOf="@+id/bgScreenBlur" />
+
+            <ImageView
+                android:id="@+id/imgCheckStoreWallpaper"
+                android:padding="4dp"
+                android:src="@drawable/checkbox_check_background"
+                app:layout_constraintTop_toTopOf="@id/tvStoreWallpaper"
+                app:layout_constraintBottom_toBottomOf="@id/tvStoreWallpaper"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+
+            <TextView
+                android:id="@+id/textSelectBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:paddingBottom="12dp"
+                android:paddingTop="16dp"
+                android:text="@string/select_background"
+                android:textAllCaps="true"
+                android:textColor="@color/color_3C3C43"
+                android:textDirection="ltr"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/background_line"
+                app:layout_constraintBottom_toBottomOf="@+id/bgDefault"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/background_line"
+                app:layout_constraintBottom_toBottomOf="@+id/bgTransparent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/background_line"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/bgCurrent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/background_line"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/bgScreenBlur"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background_line"
+                app:layout_constraintBottom_toBottomOf="@+id/tvStoreWallpaper"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>
