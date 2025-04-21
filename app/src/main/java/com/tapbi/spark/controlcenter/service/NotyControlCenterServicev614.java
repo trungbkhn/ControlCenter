@@ -2379,13 +2379,17 @@ public class NotyControlCenterServicev614 extends AccessibilityService {
         // Thiết lập chiều rộng và chiều cao cho cửa sổ
         setWidthParams(paramsManager, WindowManager.LayoutParams.MATCH_PARENT, 0);
 
-        // Cập nhật System UI visibility để đảm bảo thanh điều hướng và thanh trạng thái không bị ẩn
-        rootView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
-                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | // Đảm bảo không ẩn thanh điều hướng
-                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // Ẩn thanh điều hướng khi vuốt
-        );
+        // Kiểm tra rootView trước khi gọi setSystemUiVisibility
+        if (rootView != null) {
+            rootView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                            View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            );
+        } else {
+            Timber.e("rootView is null when setting SystemUiVisibility");
+        }
 
         try {
             windowManager.updateViewLayout(rootView, paramsManager);
@@ -2395,7 +2399,7 @@ public class NotyControlCenterServicev614 extends AccessibilityService {
 
         // Đảm bảo cài đặt các flag trong paramsManager
         paramsManager.flags = flagManager;
-        if (rootView.getParent() != null) {
+        if (rootView != null && rootView.getParent() != null) {
             try {
                 windowManager.updateViewLayout(rootView, paramsManager);
             } catch (Exception e) {
