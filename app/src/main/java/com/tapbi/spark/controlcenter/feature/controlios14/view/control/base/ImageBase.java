@@ -24,6 +24,10 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.tapbi.spark.controlcenter.common.Constant;
 import com.tapbi.spark.controlcenter.data.repository.ThemesRepository;
 import com.tapbi.spark.controlcenter.feature.controlios14.model.controlios.ControlSettingIosModel;
@@ -271,32 +275,31 @@ public abstract class ImageBase extends ImageView {
 
             if (backgroundImageViewItem != null && !backgroundImageViewItem.isEmpty() &&
                     !backgroundImageViewItem.equals(Constant.SHAPE_DEFAULT)) {
-                String assetPath = "iconShade/" + backgroundImageViewItem;
+                String assetPath = "file:///android_asset/iconShade/" + backgroundImageViewItem;
                 if (pathBackground.isEmpty() || !pathBackground.equals(assetPath)) {
                     pathBackground = assetPath;
-                    Completable.fromRunnable(() -> {
-                                try (InputStream inputStream = getContext().getAssets().open(assetPath)) {
-                                    Drawable drawable = Drawable.createFromStream(inputStream, null);
 
-                                    if (drawable != null && controlSettingIosModel.isFilterBackgroundViewItem()) {
+                    Glide.with(getContext())
+                            .load(assetPath)
+                            .diskCacheStrategy(DiskCacheStrategy.NONE) // Không cache nếu không cần
+                            .override(100, 100) // Kích thước mục tiêu
+                            .into(new CustomTarget<Drawable>() {
+                                @Override
+                                public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                                    if (controlSettingIosModel.isFilterBackgroundViewItem()) {
                                         int color = isSelect ?
                                                 Color.parseColor(controlSettingIosModel.getBackgroundColorSelectViewItem()) :
                                                 Color.parseColor(controlSettingIosModel.getBackgroundColorDefaultViewItem());
-                                        drawable.setTint(color);
+                                        resource.setTint(color);
                                     }
-                                    // Đẩy drawable lên main thread để set background
-                                    new Handler(Looper.getMainLooper()).post(() -> {
-                                        setBackground(drawable);
-                                    });
-
-
-                                } catch (IOException e) {
-                                    Timber.e("Duongcv error loading image from assets: %s", e.getMessage());
-                                    new Handler(Looper.getMainLooper()).post(() -> setBackground(null));
+                                    setBackground(resource);
                                 }
-                            })
-                            .subscribeOn(Schedulers.io())
-                            .subscribe();
+
+                                @Override
+                                public void onLoadCleared(@Nullable Drawable placeholder) {
+                                    setBackground(null);
+                                }
+                            });
                 } else {
                     Drawable drawable = getBackground();
                     if (drawable != null) {
@@ -307,11 +310,9 @@ public abstract class ImageBase extends ImageView {
                         setBackground(drawable);
                     }
                 }
-
-
             } else {
                 pathBackground = "";
-                setBackground(null); // Không có ảnh, đặt null cho background
+                setBackground(null);
             }
         }
     }
