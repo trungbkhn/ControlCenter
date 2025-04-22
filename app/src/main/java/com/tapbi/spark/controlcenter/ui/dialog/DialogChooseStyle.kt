@@ -51,22 +51,24 @@ class DialogChooseStyle : BaseBindingDialogFragment<DialogChooseStyleBinding>() 
             binding.tabLayout.addTab(binding.tabLayout.newTab())
         }
         startTransition()
-        binding.imgView1.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                binding.imgView1.viewTreeObserver.removeOnGlobalLayoutListener(this)
+        if (binding.imgView1 != null ){
+            binding.imgView1.viewTreeObserver.addOnGlobalLayoutListener(object :
+                ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    binding.imgView1.viewTreeObserver.removeOnGlobalLayoutListener(this)
 
-                val imgView1Width = binding.imgView1.width
+                    val imgView1Width = binding.imgView1.width
 
-                val margin = -(imgView1Width * 1) / 2
-                val layoutParams = binding.motion.layoutParams as ViewGroup.MarginLayoutParams
-                layoutParams.marginStart = margin
-                layoutParams.marginEnd = margin
+                    val margin = -(imgView1Width * 1) / 2
+                    val layoutParams = binding.motion.layoutParams as ViewGroup.MarginLayoutParams
+                    layoutParams.marginStart = margin
+                    layoutParams.marginEnd = margin
 
-                binding.motion.layoutParams = layoutParams
+                    binding.motion.layoutParams = layoutParams
 
-            }
-        })
+                }
+            })
+        }
 
         if (Common.checkAdsIsDisable(
                 requireContext().getString(R.string.tag_native_choose_style),
