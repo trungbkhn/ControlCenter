@@ -29,7 +29,7 @@ ext {
 
             /*other*/
             glideVersion             : '4.15.1',
-            coroutineVersion         : '1.4.2',
+            coroutineVersion         : '1.3.9',
             rxJava                   : '3.0.0',
             firebaseVersion          : '33.5.1'
 

@@ -82,18 +82,22 @@ object ThemesRepository{
 
     fun getAllListThemes(context: Context): MutableList<ThemeControl> {
         if (listAllThemes.isEmpty()) {
-            val inputStream =
-                context.assets.open("${Constant.FOLDER_THEMES_ASSETS}/${Constant.FILE_NAME_THEME_ASSETS}")
-            val size = inputStream.available()
-            val buffer = ByteArray(size)
-            inputStream.read(buffer)
-            inputStream.close()
-            val json = String(buffer, StandardCharsets.UTF_8)
-            val gson = Gson()
-            val objectList = gson.fromJson(json, Array<ThemeControl>::class.java).asList()
-            listAllThemes.addAll(objectList)
+            try {
+                val inputStream =
+                    context.assets.open("${Constant.FOLDER_THEMES_ASSETS}/${Constant.FILE_NAME_THEME_ASSETS}")
+                val size = inputStream.available()
+                val buffer = ByteArray(size)
+                inputStream.read(buffer)
+                inputStream.close()
+                val json = String(buffer, StandardCharsets.UTF_8)
+                val gson = Gson()
+                val objectList = gson.fromJson(json, Array<ThemeControl>::class.java).asList()
+                listAllThemes.addAll(objectList)
+            } catch (e: Exception) {
+                Timber.e(e, "Error loading themes from assets")
+                listAllThemes.clear()
+            }
         }
-
         return listAllThemes
     }
 

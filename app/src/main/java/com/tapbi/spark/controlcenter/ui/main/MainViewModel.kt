@@ -355,6 +355,7 @@ class MainViewModel @Inject constructor(
         ) {
             run {
                 Timber.e(throwable)
+                listThemes.postValue(mutableListOf())
             }
         })) {
             listThemes.postValue(ThemesRepository.getAllListThemes(context))
