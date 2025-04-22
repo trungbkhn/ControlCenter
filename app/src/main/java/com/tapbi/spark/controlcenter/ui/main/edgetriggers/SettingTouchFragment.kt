@@ -1,5 +1,6 @@
 package com.tapbi.spark.controlcenter.ui.main.edgetriggers
 
+import android.app.Activity
 import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
@@ -193,12 +194,16 @@ class SettingTouchFragment :
             }
 
         }
-        if (context == null) {
+        if (!isAdded || context == null || (context as? Activity)?.isFinishing == true) {
             return
         }
         Timber.e("hachung colorOld : $colorOld /check ${(colorOld == Color.TRANSPARENT)}")
         if (colorOld >= Color.TRANSPARENT) {
             colorOld = Color.WHITE
+        }
+
+        if (dialogColor?.isShowing == true) {
+            dialogColor?.dismiss()
         }
         colorSelectedCurrent = colorOld
         dialogColor =
