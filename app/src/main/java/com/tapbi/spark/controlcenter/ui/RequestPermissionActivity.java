@@ -203,7 +203,7 @@ public class RequestPermissionActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         if (PermissionManager.getInstance().checkPermission(this, permission[0])) {
-            if (alertDialog.isAdded() && !alertDialog.isStateSaved()){
+            if (!isFinishing() && alertDialog != null && alertDialog.isAdded() && !alertDialog.isStateSaved()) {
                 alertDialog.dismiss();
             }
             finish();
