@@ -7,12 +7,14 @@ import static com.tapbi.spark.controlcenter.common.Constant.STORE_WALLPAPER;
 import static com.tapbi.spark.controlcenter.common.Constant.STYLE_SELECTED;
 import static com.tapbi.spark.controlcenter.common.Constant.TRANSPARENT;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.util.Log;
 
 import androidx.core.content.ContextCompat;
 
@@ -107,8 +109,16 @@ public class BlurBackground {
             }
         });
     }
+    private boolean isLowMemory() {
+        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
+        activityManager.getMemoryInfo(memoryInfo);
+        return memoryInfo.lowMemory;
+    }
+
 
     private void loadBitmapBackgroundRx() {
+        Log.d("trung259", "loadBitmapBackgroundRx");
         bitmapBg = switch (ThemeHelper.itemControl.getTypeBackground()) {
             case TRANSPARENT -> createTransparentBackground();
             case CURRENT_BACKGROUND -> getCurrentBackgroundBitmap();
@@ -117,10 +127,15 @@ public class BlurBackground {
         };
 
         if (bitmapBg != null) {
-            Bitmap bitmapBlur = MethodUtils.blurImage(context, bitmapBg, 20, Constant.SCALE_BITMAP_BLUR);
+            int scaleFactor = isLowMemory() ? 8 : 4; // Giảm mạnh hơn nếu bộ nhớ thấp
+            Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmapBg, bitmapBg.getWidth() / scaleFactor, bitmapBg.getHeight() / scaleFactor, true);
+            Bitmap bitmapBlur = MethodUtils.blurImage(context, scaledBitmap, 20, Constant.SCALE_BITMAP_BLUR);
+            if (scaledBitmap != bitmapBg) {
+                scaledBitmap.recycle();
+            }
+
             if (bitmapBlur != null) {
                 bitmapBgBlur = Bitmap.createScaledBitmap(bitmapBlur, App.widthHeightScreenCurrent.w, App.widthHeightScreenCurrent.h, true);
-                // Đảm bảo bitmapBgBlur hoạt động đúng trước khi tái chế bitmapBlur
                 if (!bitmapBgBlur.isRecycled()) {
                     bitmapBlur.recycle();
                 }
@@ -150,13 +165,22 @@ public class BlurBackground {
     }
 
     public void setBitmapBgBlurRealTime(Bitmap bitmapBg) {
-        Timber.e("hachung setBitmapBgBlurRealTime:"+bitmapBg);
+        Timber.e("hachung setBitmapBgBlurRealTime:" + bitmapBg);
         this.bitmapBgBlur = MethodUtils.blurImage(context, bitmapBg, 20, ratio);
         setBitmapBgBlurScale();
     }
 
     public void setBitmapBgBlurScale() {
-        this.bitmapBgBlurScale = Bitmap.createScaledBitmap(BlurBackground.getInstance().getBitmapBgBlur(), App.widthHeightScreenCurrent.w / Constant.SCALE_BITMAP_BLUR, App.widthHeightScreenCurrent.h / Constant.SCALE_BITMAP_BLUR, true);
+        // Giải phóng bitmapBgBlurScale cũ nếu tồn tại
+        if (bitmapBgBlurScale != null && !bitmapBgBlurScale.isRecycled()) {
+            bitmapBgBlurScale.recycle();
+        }
+        Bitmap source = BlurBackground.getInstance().getBitmapBgBlur();
+        if (source != null) {
+            this.bitmapBgBlurScale = Bitmap.createScaledBitmap(source,
+                    App.widthHeightScreenCurrent.w / Constant.SCALE_BITMAP_BLUR,
+                    App.widthHeightScreenCurrent.h / Constant.SCALE_BITMAP_BLUR, true);
+        }
     }
 
     public Bitmap getBitmapBgBlur() {
