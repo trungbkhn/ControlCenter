@@ -8,6 +8,7 @@ import com.tapbi.spark.controlcenter.App
 import com.tapbi.spark.controlcenter.R
 import com.tapbi.spark.controlcenter.databinding.ItemFontBinding
 import com.tapbi.spark.controlcenter.utils.Utils
+import com.tapbi.spark.controlcenter.utils.Utils.setFontForTextView
 import com.tapbi.spark.controlcenter.utils.helper.ViewHelper
 import com.tapbi.spark.controlcenter.utils.hide
 import com.tapbi.spark.controlcenter.utils.invisible
@@ -56,7 +57,8 @@ class FontControlsAdapter : RecyclerView.Adapter<FontControlsAdapter.FontViewHol
 
     @Suppress("DEPRECATION")
     override fun onBindViewHolder(holder: FontViewHolder, position: Int) {
-        Utils.setFontForTextView(holder.binding.tvFont, listFont[holder.adapterPosition], App.ins)
+        val fontName = listFont[holder.adapterPosition]
+        setFontForTextView(holder.binding.tvFont, fontName, App.ins)
         if (currentSelect == holder.adapterPosition){
             holder.binding.viewBorder.show()
         } else {
@@ -65,8 +67,8 @@ class FontControlsAdapter : RecyclerView.Adapter<FontControlsAdapter.FontViewHol
         holder.binding.tvFont.setOnClickListener {
             ViewHelper.preventTwoClick(it,500)
             if (currentSelect != holder.adapterPosition){
-               setSelect(holder.adapterPosition, listFont[holder.adapterPosition])
-                clickListener?.onChooseFont(listFont[holder.adapterPosition])
+                setSelect(holder.adapterPosition, fontName)
+                clickListener?.onChooseFont(fontName)
             }
         }
     }

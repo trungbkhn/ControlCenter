@@ -50,6 +50,7 @@ import java.io.OutputStream
 
 
 object Utils {
+    private val fontCache = HashMap<String, Typeface>()
     fun setBackgroundIcon(context: Context?, img: ImageView, control: ControlCustomize) {
         Log.d("TRUNG259", "setBackgroundIcon: ")
         val action = control.name
@@ -393,14 +394,25 @@ object Utils {
         return Typeface.createFromAsset(assetManager, fontName)
     }
 
+    fun getTypeface(fontName: String, context: Context): Typeface? {
+        return fontCache[fontName] ?: run {
+            try {
+                val assetManager = context.assets
+                val typeface = Typeface.createFromAsset(assetManager, "${Constant.FONT_FOLDER}/$fontName")
+                fontCache[fontName] = typeface
+                typeface
+            } catch (e: Exception) {
+                Timber.e("NVQ FontCache getTypeface $e")
+                null
+            }
+        }
+    }
+
     fun setFontForTextView(textView: TextView, fontName: String, context: Context) {
-        try {
-            val assetManager = context.assets
-            val typeface =
-                Typeface.createFromAsset(assetManager, "${Constant.FONT_FOLDER}/$fontName")
+        Log.d("TRUNG259", "setFontForTextView")
+        val typeface = getTypeface(fontName, context)
+        typeface?.let {
             textView.typeface = typeface
-        } catch (e: Exception) {
-            Timber.e("NVQ setFontForTextView $e")
         }
     }
 
