@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Build
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.core.app.ActivityCompat
 import com.tapbi.spark.controlcenter.App
 import com.tapbi.spark.controlcenter.R
@@ -23,39 +24,74 @@ import timber.log.Timber
 import java.util.*
 
 object LocaleUtils {
-    var codeLanguageCurrent: String = Locale.getDefault().language
+    var codeLanguageCurrent: String = Locale.getDefault()?.language ?: "en"
+
     fun applyLocale(context: Context?) {
-        if (context == null)
-            return
+        Log.d("TRUNG259", "applyLocale: ")
+        if (context == null) return
+        // Lấy code ngôn ngữ từ SharedPreferences
         codeLanguageCurrent =
             SharedPreferenceHelper.getString(Constant.PREF_SETTING_LANGUAGE).toString()
+        // Đảm bảo codeLanguageCurrent hợp lệ
         if (codeLanguageCurrent == "null" || codeLanguageCurrent.isEmpty()) {
-            codeLanguageCurrent = Locale.getDefault().language
+            codeLanguageCurrent = Locale.getDefault()?.language ?: "en"
         }
-        val mLanguageCode = if(codeLanguageCurrent.contains("-")) codeLanguageCurrent.split("-")[0] else codeLanguageCurrent
-        val mCountry = if(codeLanguageCurrent.contains("-")) codeLanguageCurrent.split("-")[1] else ""
-        val newLocale = if(mCountry.isEmpty()) Locale(mLanguageCode) else Locale(mLanguageCode, mCountry)
+        // Xử lý mã ngôn ngữ và quốc gia
+        val mLanguageCode = if (codeLanguageCurrent.contains("-")) {
+            codeLanguageCurrent.split("-")[0]
+        } else {
+            codeLanguageCurrent
+        }
+        val mCountry =
+            if (codeLanguageCurrent.contains("-") && codeLanguageCurrent.split("-").size > 1) {
+                codeLanguageCurrent.split("-")[1]
+            } else {
+                ""
+            }
+        // Đảm bảo Locale không null
+        val newLocale = if (mCountry.isEmpty()) {
+            Locale(mLanguageCode)
+        } else {
+            Locale(mLanguageCode, mCountry)
+        }
         updateResource(context, newLocale)
-        NotyControlCenterServicev614.getInstance()?.let{ins -> updateResource(ins,newLocale) }
+        NotyControlCenterServicev614.getInstance()?.let { ins -> updateResource(ins, newLocale) }
         if (context != context.applicationContext) {
             updateResource(context.applicationContext, newLocale)
         }
     }
-    fun setCurrentResources(context: Context?,activity: Activity?=null){
+
+    fun setCurrentResources(context: Context?, activity: Activity? = null) {
         if (context == null) return
         try {
             codeLanguageCurrent =
                 SharedPreferenceHelper.getString(Constant.PREF_SETTING_LANGUAGE).toString()
-        }catch (_ : RuntimeException){}
-        if (codeLanguageCurrent == "null" || codeLanguageCurrent.isEmpty()) {
-            codeLanguageCurrent = Locale.getDefault().language
+        } catch (_: RuntimeException) {
+            codeLanguageCurrent = Locale.getDefault()?.language ?: "en"
         }
-        val mLanguageCode = if(codeLanguageCurrent.contains("-")) codeLanguageCurrent.split("-")[0] else codeLanguageCurrent
-        val mCountry = if(codeLanguageCurrent.contains("-")) codeLanguageCurrent.split("-")[1] else ""
-        val newLocale = if(mCountry.isEmpty()) Locale(mLanguageCode) else Locale(mLanguageCode, mCountry)
+        if (codeLanguageCurrent == "null" || codeLanguageCurrent.isEmpty()) {
+            codeLanguageCurrent = Locale.getDefault()?.language ?: "en"
+        }
+        val mLanguageCode = if (codeLanguageCurrent.contains("-")) {
+            codeLanguageCurrent.split("-")[0]
+        } else {
+            codeLanguageCurrent
+        }
+        val mCountry =
+            if (codeLanguageCurrent.contains("-") && codeLanguageCurrent.split("-").size > 1) {
+                codeLanguageCurrent.split("-")[1]
+            } else {
+                ""
+            }
+        val newLocale = if (mCountry.isEmpty()) {
+            Locale(mLanguageCode)
+        } else {
+            Locale(mLanguageCode, mCountry)
+        }
         updateResource(context, newLocale)
         if (activity is SplashActivity || activity is MainActivity) {
-            NotyControlCenterServicev614.getInstance()?.let{ins -> updateResource(ins,newLocale) }
+            NotyControlCenterServicev614.getInstance()
+                ?.let { ins -> updateResource(ins, newLocale) }
             updateResource(context.applicationContext, newLocale)
         }
     }
@@ -65,7 +101,7 @@ object LocaleUtils {
             codeLanguageCurrent =
                 SharedPreferenceHelper.getString(Constant.PREF_SETTING_LANGUAGE).toString()
             if (codeLanguageCurrent == "null" || codeLanguageCurrent.isEmpty()) {
-                codeLanguageCurrent = Locale.getDefault().language
+                codeLanguageCurrent = Locale.getDefault()?.language ?: "en"
             }
             val languageList = getLanguages(context)
             for (item in languageList) {
@@ -78,19 +114,21 @@ object LocaleUtils {
     }
 
     fun updateResource(context: Context, locale: Locale) {
-        Locale.setDefault(locale)
+        // Đảm bảo locale không null
+        val safeLocale = locale ?: Locale("en", "US")
+        Locale.setDefault(safeLocale)
         val resources = context.resources
         val current = getLocaleCompat(resources)
-        if (current === locale) {
+        if (current == safeLocale) {
             return
         }
         val configuration = Configuration(resources.configuration)
         if (isAtLeastSdkVersion(Build.VERSION_CODES.N)) {
-            configuration.setLocale(locale)
+            configuration.setLocale(safeLocale)
         } else if (isAtLeastSdkVersion(Build.VERSION_CODES.JELLY_BEAN_MR1)) {
-            configuration.setLocale(locale)
+            configuration.setLocale(safeLocale)
         } else {
-            configuration.locale = locale
+            configuration.locale = safeLocale
         }
         resources.updateConfiguration(configuration, resources.displayMetrics)
     }
@@ -98,7 +136,11 @@ object LocaleUtils {
     @JvmStatic
     fun getLocaleCompat(resources: Resources): Locale {
         val configuration = resources.configuration
-        return if (isAtLeastSdkVersion(Build.VERSION_CODES.N)) configuration.locales[0] else configuration.locale
+        return if (isAtLeastSdkVersion(Build.VERSION_CODES.N)) {
+            configuration.locales.get(0) ?: Locale("en", "US")
+        } else {
+            configuration.locale ?: Locale("en", "US")
+        }
     }
 
     fun applyLocaleAndRestart(
@@ -122,24 +164,94 @@ object LocaleUtils {
     }
 
     fun getLanguages(context: Context): MutableList<Language> {
-        val list: MutableList<Language> = ArrayList<Language>()
-        list.add(Language(Constant.ENGLISH_LANGUAGE_CODE, context.resources.getString(R.string.english)))
-        list.add(Language(Constant.ARABIC_LANGUAGE_CODE, context.resources.getString(R.string.arabic)))
-        list.add(Language(Constant.GERMAN_LANGUAGE_CODE, context.resources.getString(R.string.german)))
-        list.add(Language(Constant.SPANISH_LANGUAGE_CODE, context.resources.getString(R.string.spain)))
-        list.add(Language(Constant.PHILIPPINE_LANGUAGE_CODE, context.resources.getString(R.string.philippine)))
-        list.add(Language(Constant.FRENCH_LANGUAGE_CODE, context.resources.getString(R.string.france)))
-
-        list.add(Language(Constant.HINDI_LANGUAGE_CODE, context.resources.getString(R.string.hindi)))
-        list.add(Language(Constant.INDONESIA_LANGUAGE_CODE, context.resources.getString(R.string.indonesia)))
-        list.add(Language(Constant.JAPAN_LANGUAGE_CODE, context.resources.getString(R.string.japanese)))
-        list.add(Language(Constant.KOREA_LANGUAGE_CODE, context.resources.getString(R.string.korean)))
-        list.add(Language(Constant.PORTUGAL_LANGUAGE_CODE, context.resources.getString(R.string.portuguese)))
-        list.add(Language(Constant.RUSSIAN_LANGUAGE_CODE, context.resources.getString(R.string.russia)))
-        list.add(Language(Constant.TURKEY_LANGUAGE_CODE, context.resources.getString(R.string.turkish)))
-        list.add(Language(Constant.VIETNAM_LANGUAGE_CODE, context.resources.getString(R.string.vietnamese)))
+        val list: MutableList<Language> = ArrayList()
+        list.add(
+            Language(
+                Constant.ENGLISH_LANGUAGE_CODE,
+                context.resources.getString(R.string.english)
+            )
+        )
+        list.add(
+            Language(
+                Constant.ARABIC_LANGUAGE_CODE,
+                context.resources.getString(R.string.arabic)
+            )
+        )
+        list.add(
+            Language(
+                Constant.GERMAN_LANGUAGE_CODE,
+                context.resources.getString(R.string.german)
+            )
+        )
+        list.add(
+            Language(
+                Constant.SPANISH_LANGUAGE_CODE,
+                context.resources.getString(R.string.spain)
+            )
+        )
+        list.add(
+            Language(
+                Constant.PHILIPPINE_LANGUAGE_CODE,
+                context.resources.getString(R.string.philippine)
+            )
+        )
+        list.add(
+            Language(
+                Constant.FRENCH_LANGUAGE_CODE,
+                context.resources.getString(R.string.france)
+            )
+        )
+        list.add(
+            Language(
+                Constant.HINDI_LANGUAGE_CODE,
+                context.resources.getString(R.string.hindi)
+            )
+        )
+        list.add(
+            Language(
+                Constant.INDONESIA_LANGUAGE_CODE,
+                context.resources.getString(R.string.indonesia)
+            )
+        )
+        list.add(
+            Language(
+                Constant.JAPAN_LANGUAGE_CODE,
+                context.resources.getString(R.string.japanese)
+            )
+        )
+        list.add(
+            Language(
+                Constant.KOREA_LANGUAGE_CODE,
+                context.resources.getString(R.string.korean)
+            )
+        )
+        list.add(
+            Language(
+                Constant.PORTUGAL_LANGUAGE_CODE,
+                context.resources.getString(R.string.portuguese)
+            )
+        )
+        list.add(
+            Language(
+                Constant.RUSSIAN_LANGUAGE_CODE,
+                context.resources.getString(R.string.russia)
+            )
+        )
+        list.add(
+            Language(
+                Constant.TURKEY_LANGUAGE_CODE,
+                context.resources.getString(R.string.turkish)
+            )
+        )
+        list.add(
+            Language(
+                Constant.VIETNAM_LANGUAGE_CODE,
+                context.resources.getString(R.string.vietnamese)
+            )
+        )
         return list
     }
+
     fun applyLocaleAndRestartFirstTime(activity: Activity, localeString: String) {
         val preferences = PreferenceManager.getDefaultSharedPreferences(activity)
         preferences.edit().putString(Constant.PREF_SETTING_LANGUAGE, localeString).apply()
@@ -152,10 +264,9 @@ object LocaleUtils {
         ActivityCompat.finishAffinity(activity)
     }
 
-
     fun setLocal(local: String, context: Context): Context {
         var activity = context
-        val locale = Locale(local)
+        val locale = if (local.isEmpty()) Locale("en", "US") else Locale(local)
         Locale.setDefault(locale)
         val res = activity.resources
         val config = Configuration(res.configuration)
