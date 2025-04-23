@@ -16,6 +16,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -23,6 +24,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.widget.NestedScrollView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 import com.google.gson.Gson
 import com.tapbi.spark.controlcenter.App
 import com.tapbi.spark.controlcenter.R
@@ -46,28 +51,36 @@ import java.io.OutputStream
 
 object Utils {
     fun setBackgroundIcon(context: Context?, img: ImageView, control: ControlCustomize) {
+        Log.d("TRUNG259", "setBackgroundIcon: ")
         val action = control.name
-        if (control.isDefault != 0) {
-            if (action == context?.getString(R.string.flash_light)) {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control_flash)
-            } else if (action == context?.getString(R.string.clock)) {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control_clock)
-            } else if (action == context?.getString(R.string.calculator)) {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control_calculator)
-            } else if (action == context?.getString(R.string.screen_recoding)) {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control_recoder)
-            } else if (action == context?.getString(R.string.dark_mode)) {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control_dark_mode)
-            } else if (action == context?.getString(R.string.low_power_mode)) {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control_low_power_mode)
-            } else if (action == context?.getString(R.string.notes)) {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control_notes)
-            } else {
-                img.setBackgroundResource(R.drawable.background_icon_cusomize_control)
+        val resourceId = if (control.isDefault != 0) {
+            when (action) {
+                context?.getString(R.string.flash_light) -> R.drawable.background_icon_cusomize_control_flash
+                context?.getString(R.string.clock) -> R.drawable.background_icon_cusomize_control_clock
+                context?.getString(R.string.calculator) -> R.drawable.background_icon_cusomize_control_calculator
+                context?.getString(R.string.screen_recoding) -> R.drawable.background_icon_cusomize_control_recoder
+                context?.getString(R.string.dark_mode) -> R.drawable.background_icon_cusomize_control_dark_mode
+                context?.getString(R.string.low_power_mode) -> R.drawable.background_icon_cusomize_control_low_power_mode
+                context?.getString(R.string.notes) -> R.drawable.background_icon_cusomize_control_notes
+                else -> R.drawable.background_icon_cusomize_control
             }
         } else {
-            img.setBackgroundResource(R.drawable.background_icon_cusomize_control)
+            R.drawable.background_icon_cusomize_control
         }
+
+        Glide.with(img.context)
+            .load(resourceId)
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .override(100, 100) // Kích thước mục tiêu
+            .into(object : CustomTarget<Drawable>() {
+                override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
+                    img.background = resource
+                }
+
+                override fun onLoadCleared(placeholder: Drawable?) {
+                    img.background = null
+                }
+            })
     }
     @JvmStatic
     fun isViewVisibleInScrollView(nestedScrollView: NestedScrollView, childView: View): Boolean {
